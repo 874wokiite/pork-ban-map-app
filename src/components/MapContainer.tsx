@@ -10,10 +10,12 @@ interface MapContainerProps {
 /**
  * Google Maps コンテナコンポーネント
  * 神戸市中心の地図を表示する基本実装
+ * ReactとGoogle MapsのDOM操作競合を回避する安全な実装
  */
 export default function MapContainer({ className = "" }: MapContainerProps) {
   const mapRef = useRef<HTMLDivElement>(null);
   const googleMapRef = useRef<unknown>(null);
+  const initializationRef = useRef(false);
   const [isMapInitialized, setIsMapInitialized] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -21,15 +23,17 @@ export default function MapContainer({ className = "" }: MapContainerProps) {
     let isMounted = true;
 
     const initializeMap = async () => {
+      // 重複初期化防止
+      if (initializationRef.current) return;
+      initializationRef.current = true;
+
       try {
         // Google Maps APIが読み込まれるまで待機
         await waitForGoogleMaps();
 
         // コンポーネントがアンマウントされている場合は処理を中止
-        if (!isMounted) return;
-
-        if (!mapRef.current) {
-          throw new Error("Map container element not found");
+        if (!isMounted || !mapRef.current) {
+          return;
         }
 
         // 神戸市中心の座標
@@ -38,7 +42,7 @@ export default function MapContainer({ className = "" }: MapContainerProps) {
           lng: 135.5023,
         };
 
-        // 地図の初期化
+        // 地図の初期化 - Reactが管理するDOM要素に直接アタッチ
         googleMapRef.current = new window.google!.maps.Map(mapRef.current, {
           center: kobeCenter,
           zoom: 12,
@@ -75,12 +79,22 @@ export default function MapContainer({ className = "" }: MapContainerProps) {
     // クリーンアップ関数
     return () => {
       isMounted = false;
-      // 地図インスタンスのクリーンアップ
+      
+      // Google Mapsインスタンスのクリーンアップ
       if (googleMapRef.current) {
-        googleMapRef.current = null;
+        try {
+          // Google Maps インスタンスをnullに設定
+          // DOM操作は行わず、Reactに任せる
+          googleMapRef.current = null;
+        } catch (cleanupError) {
+          console.warn("Map cleanup warning:", cleanupError);
+        }
       }
+      
+      // 初期化フラグをリセット
+      initializationRef.current = false;
     };
-  }, []);
+  }, []); // 依存配列を空にして、一度だけ実行
 
   if (error) {
     return (
@@ -97,16 +111,25 @@ export default function MapContainer({ className = "" }: MapContainerProps) {
   }
 
   return (
-    <div
-      ref={mapRef}
-      className={`w-full h-full min-h-[400px] ${className}`}
-      data-testid="map-container"
-    >
+    <div className={`w-full h-full min-h-[400px] relative ${className}`}>
+      {/* Google Mapsが直接アタッチされるDOM要素 */}
+      <div
+        ref={mapRef}
+        className="w-full h-full min-h-[400px]"
+        data-testid="map-container"
+        style={{
+          // Google Maps用のスタイル設定
+          position: 'relative',
+          overflow: 'hidden',
+        }}
+      />
+      
+      {/* ローディングオーバーレイ */}
       {!isMapInitialized && (
-        <div className="flex items-center justify-center h-full text-gray-500">
+        <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-90 z-10">
           <div className="text-center">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
-            <div>Google Maps読み込み中...</div>
+            <div className="text-gray-500">Google Maps読み込み中...</div>
           </div>
         </div>
       )}

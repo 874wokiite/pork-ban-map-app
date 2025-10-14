@@ -298,12 +298,9 @@ const nextConfig = {
 
 ## 監視・分析設計
 
-### パフォーマンス監視
-- Core Web Vitals tracking
-- Google Analytics integration
-- Error tracking (Sentry)
+### 将来実装予定
+現在のフェーズでは基本機能の実装に集中し、以下の機能は将来のフェーズで対応予定：
 
-### ユーザー行動分析
-- マップ操作イベント追跡
-- 店舗詳細表示頻度
-- 外部リンククリック率
+- **パフォーマンス監視**: Core Web Vitals tracking、Error tracking
+- **ユーザー行動分析**: Google Analytics、マップ操作イベント追跡
+- **利用統計**: 店舗詳細表示頻度、外部リンククリック率

@@ -15,7 +15,7 @@ Kiro-style Spec Driven Development implementation using claude code slash comman
 **Specs** (`.kiro/specs/`) - Formalize development process for individual features
 
 ### Active Specifications
-- **butaman-map-kobe**: 神戸三宮・元町エリアの豚饅店舗マップと詳細情報表示機能 (initialized)
+- **butaman-map-kobe**: 神戸豚饅サミット参加店舗マップと詳細情報表示機能 (ready for implementation)
 - Use `/kiro:spec-status [feature-name]` to check progress
 
 ## Development Guidelines

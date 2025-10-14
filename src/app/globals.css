@@ -3,19 +3,34 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #8B4513;        /* 豚饅ブラウン */
+  --primary-light: #CD853F;   /* ライトブラウン */
+  --secondary: #FF6B35;       /* アクセントオレンジ */
+  --surface: #F8F9FA;        /* サーフェス */
+  --text-primary: #2D3748;   /* プライマリテキスト */
+  --text-secondary: #718096; /* セカンダリテキスト */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-secondary: var(--secondary);
+  --color-surface: var(--surface);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1A202C;
+    --foreground: #F7FAFC;
+    --surface: #2D3748;
+    --text-primary: #F7FAFC;
+    --text-secondary: #E2E8F0;
   }
 }
 

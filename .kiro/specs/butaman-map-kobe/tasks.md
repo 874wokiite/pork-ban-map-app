@@ -24,13 +24,13 @@
 
 ### タスク1-2: 型定義とデータ構造
 **優先度**: 🔴 最高
-**ステータス**: 未着手
+**ステータス**: 完了
 **推定工数**: 1時間
 
 #### 作業内容
-- [ ] `types/store.ts` - Store interface定義
-- [ ] `types/map.ts` - MapState interface定義
-- [ ] データ型のエクスポート設定
+- [x] `types/store.ts` - Store interface定義
+- [x] `types/map.ts` - MapState interface定義
+- [x] データ型のエクスポート設定
 
 #### 受入基準
 - 型定義ファイルがエラーなくコンパイルされる

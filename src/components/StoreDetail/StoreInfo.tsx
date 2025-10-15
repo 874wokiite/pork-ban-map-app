@@ -45,17 +45,6 @@ export default function StoreInfo({ store }: StoreInfoProps) {
             </p>
           </div>
 
-          {/* 電話番号（オプション） */}
-          {store.phone && (
-            <div>
-              <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-1">
-                電話番号
-              </h3>
-              <p className="text-gray-900 dark:text-white">
-                {store.phone}
-              </p>
-            </div>
-          )}
         </div>
       </div>
 
@@ -120,20 +109,6 @@ export default function StoreInfo({ store }: StoreInfoProps) {
           Googleマップで開く
         </a>
 
-        {/* 公式サイトリンク（オプション） */}
-        {store.website && (
-          <a
-            href={store.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-          >
-            <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 2l1.85 3.75L16 6.5l-3 2.93.71 4.07L10 11.75 6.29 13.5 7 9.43 4 6.5l4.15-.75L10 2z"/>
-            </svg>
-            公式サイト
-          </a>
-        )}
       </div>
     </div>
   )

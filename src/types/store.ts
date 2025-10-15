@@ -22,12 +22,6 @@ export interface Store {
   features: string[]
   /** 店舗・豚饅の説明文（オプション） */
   description?: string
-  /** 店舗・豚饅の画像URL配列 */
-  images: string[]
-  /** 電話番号（オプション） */
-  phone?: string
-  /** 公式サイトまたはSNS URL（オプション） */
-  website?: string
   /** GoogleマップでのURL */
   googleMapsUrl: string
   /** サービス形態 */

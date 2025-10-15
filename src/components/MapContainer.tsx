@@ -48,6 +48,12 @@ export default function MapContainer({ className = "", onMapReady }: MapContaine
           center: kobeCenter,
           zoom: 13,
           mapTypeId: "roadmap",
+          mapTypeControl: false,
+          streetViewControl: false,
+          rotateControl: false,
+          fullscreenControl: false,
+          zoomControl: false,
+          keyboardShortcuts: false,
           styles: [
             {
               featureType: "poi",

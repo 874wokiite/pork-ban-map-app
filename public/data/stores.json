@@ -1,0 +1,131 @@
+{
+  "stores": [
+    {
+      "id": "roushouki",
+      "name": "老祥記",
+      "address": "〒650-0022 兵庫県神戸市中央区元町通2-1-14",
+      "coordinates": {
+        "lat": 34.6918,
+        "lng": 135.1955
+      },
+      "district": "中央区",
+      "businessHours": "月〜土 8:30-18:30 (定休日: 日曜)",
+      "price": 100,
+      "features": ["伝統の味", "行列必至", "豚饅発祥", "老舗"],
+      "description": "豚饅の元祖として知られる老舗中の老舗。1915年創業以来受け継がれる伝統の味。",
+      "images": [
+        "/images/stores/roushouki/exterior.jpg",
+        "/images/stores/roushouki/butaman.jpg"
+      ],
+      "phone": "078-331-7714",
+      "googleMapsUrl": "https://maps.google.com/?q=老祥記+神戸市中央区元町通2-1-14",
+      "categories": ["テイクアウト"]
+    },
+    {
+      "id": "shikohroh",
+      "name": "四興樓",
+      "address": "〒650-0022 兵庫県神戸市中央区元町通2-9-1 元町プラザビル",
+      "coordinates": {
+        "lat": 34.6920,
+        "lng": 135.1958
+      },
+      "district": "中央区",
+      "businessHours": "11:00-20:00 (定休日: 火曜)",
+      "price": 120,
+      "features": ["ミニ豚饅あり", "店内飲食可", "通販対応", "バリエーション豊富"],
+      "description": "多彩な豚饅メニューを提供。ミニサイズから通常サイズまで選べる。",
+      "images": [
+        "/images/stores/shikohroh/exterior.jpg",
+        "/images/stores/shikohroh/butaman.jpg",
+        "/images/stores/shikohroh/mini-butaman.jpg"
+      ],
+      "phone": "078-331-0783",
+      "googleMapsUrl": "https://maps.google.com/?q=四興樓+神戸市中央区元町通2-9-1",
+      "categories": ["テイクアウト", "店内飲食", "通販"]
+    },
+    {
+      "id": "sannomiya-ikkanrou",
+      "name": "三宮一貫楼",
+      "address": "〒650-0021 兵庫県神戸市中央区三宮町3-9-9",
+      "coordinates": {
+        "lat": 34.6937,
+        "lng": 135.1955
+      },
+      "district": "中央区",
+      "businessHours": "11:30-20:30 (定休日: 月曜)",
+      "price": 110,
+      "features": ["小豚饅あり", "三宮立地", "アクセス良好", "観光客向け"],
+      "description": "三宮の中心部にあり観光客にも人気。小サイズの豚饅も提供。",
+      "images": [
+        "/images/stores/sannomiya-ikkanrou/exterior.jpg",
+        "/images/stores/sannomiya-ikkanrou/butaman.jpg"
+      ],
+      "phone": "078-331-1974",
+      "googleMapsUrl": "https://maps.google.com/?q=三宮一貫楼+神戸市中央区三宮町3-9-9",
+      "categories": ["テイクアウト", "店内飲食", "通販"]
+    },
+    {
+      "id": "sojaga-houzikan",
+      "name": "曹家包子館",
+      "address": "〒650-0023 兵庫県神戸市中央区栄町通2-8-11",
+      "coordinates": {
+        "lat": 34.6925,
+        "lng": 135.1975
+      },
+      "district": "中央区",
+      "businessHours": "11:00-19:00 (定休日: 水曜)",
+      "price": 130,
+      "features": ["本格中華", "手作り皮", "ジューシー", "中華街風味"],
+      "description": "本格的な中華の技法で作られる豚饅。手作りの皮が自慢。",
+      "images": [
+        "/images/stores/sojaga-houzikan/exterior.jpg",
+        "/images/stores/sojaga-houzikan/butaman.jpg"
+      ],
+      "phone": "078-331-2005",
+      "googleMapsUrl": "https://maps.google.com/?q=曹家包子館+神戸市中央区栄町通2-8-11",
+      "categories": ["テイクアウト", "店内飲食"]
+    },
+    {
+      "id": "taiheikatsu",
+      "name": "太平閣",
+      "address": "〒650-0021 兵庫県神戸市中央区三宮町1-4-1",
+      "coordinates": {
+        "lat": 34.6940,
+        "lng": 135.1950
+      },
+      "district": "中央区",
+      "businessHours": "11:00-21:00 (定休日: 不定休)",
+      "price": 140,
+      "features": ["老舗中華", "本格派", "大きめサイズ", "満腹感"],
+      "description": "歴史ある中華料理店の豚饅。ボリュームがあり食べ応え十分。",
+      "images": [
+        "/images/stores/taiheikatsu/exterior.jpg",
+        "/images/stores/taiheikatsu/butaman.jpg"
+      ],
+      "phone": "078-331-5422",
+      "googleMapsUrl": "https://maps.google.com/?q=太平閣+神戸市中央区三宮町1-4-1",
+      "categories": ["テイクアウト", "店内飲食"]
+    },
+    {
+      "id": "nada-baozi",
+      "name": "灘 包子",
+      "address": "〒657-0831 兵庫県神戸市灘区水道筋3-2-8",
+      "coordinates": {
+        "lat": 34.7128,
+        "lng": 135.2365
+      },
+      "district": "灘区",
+      "businessHours": "10:00-18:00 (定休日: 木曜)",
+      "price": 115,
+      "features": ["地域密着", "手頃な価格", "地元愛用", "昔ながらの味"],
+      "description": "灘区の地域に根ざした豚饅店。地元の人に愛され続けている。",
+      "images": [
+        "/images/stores/nada-baozi/exterior.jpg",
+        "/images/stores/nada-baozi/butaman.jpg"
+      ],
+      "phone": "078-801-2234",
+      "googleMapsUrl": "https://maps.google.com/?q=灘+包子+神戸市灘区水道筋3-2-8",
+      "categories": ["テイクアウト"]
+    }
+  ]
+}

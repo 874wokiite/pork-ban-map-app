@@ -2,7 +2,7 @@
  * Next.js設定のテスト
  */
 
-import type { NextConfig } from 'next'
+// Next.js設定テスト
 
 describe('Next.js設定', () => {
   test('静的サイト生成が有効になっている', async () => {

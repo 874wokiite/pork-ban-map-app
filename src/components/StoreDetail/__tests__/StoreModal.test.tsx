@@ -13,9 +13,6 @@ const mockStore: Store = {
   price: 150,
   features: ['テスト特徴1', 'テスト特徴2'],
   description: 'テスト店舗の説明文',
-  images: ['/images/test/test1.jpg'],
-  phone: '078-123-4567',
-  website: 'https://example.com',
   googleMapsUrl: 'https://maps.google.com/?q=test',
   categories: ['テイクアウト']
 }

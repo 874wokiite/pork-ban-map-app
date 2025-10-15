@@ -14,7 +14,6 @@ describe('MapState型定義', () => {
     businessHours: '10:00-18:00',
     price: 100,
     features: ['テスト特徴'],
-    images: ['/test.jpg'],
     googleMapsUrl: 'https://maps.google.com/?q=test',
     categories: ['テイクアウト']
   }

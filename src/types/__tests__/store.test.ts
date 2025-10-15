@@ -14,7 +14,6 @@ describe('Store型定義', () => {
       businessHours: '10:00-18:00',
       price: 100,
       features: ['テスト特徴1', 'テスト特徴2'],
-      images: ['/test-image.jpg'],
       googleMapsUrl: 'https://maps.google.com/?q=test',
       categories: ['テイクアウト']
     }
@@ -31,7 +30,6 @@ describe('Store型定義', () => {
         typeof store.businessHours === 'string' &&
         typeof store.price === 'number' &&
         Array.isArray(store.features) &&
-        Array.isArray(store.images) &&
         typeof store.googleMapsUrl === 'string' &&
         Array.isArray(store.categories)
       )
@@ -53,17 +51,15 @@ describe('Store型定義', () => {
       businessHours: '10:00-18:00',
       price: 150,
       features: ['特徴1'],
-      images: ['/test2.jpg'],
       googleMapsUrl: 'https://maps.google.com/?q=test2',
       categories: ['店内飲食'],
-      description: 'テスト店舗の説明',
-      phone: '078-123-4567',
-      website: 'https://example.com'
+      description: 'テスト店舗の説明'
     }
 
     expect(mockStoreWithOptionals.description).toBe('テスト店舗の説明')
-    expect(mockStoreWithOptionals.phone).toBe('078-123-4567')
-    expect(mockStoreWithOptionals.website).toBe('https://example.com')
+    // phoneとwebsiteフィールドが現在のStore型に存在しないためコメントアウト
+    // expect(mockStoreWithOptionals.phone).toBe('078-123-4567')
+    // expect(mockStoreWithOptionals.website).toBe('https://example.com')
   })
 
   it('categories配列が正しい値のみを受け入れる', () => {

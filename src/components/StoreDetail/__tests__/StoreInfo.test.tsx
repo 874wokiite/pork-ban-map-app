@@ -13,9 +13,6 @@ const mockStore: Store = {
   price: 150,
   features: ['テスト特徴1', 'テスト特徴2', '特別な味'],
   description: 'テスト店舗の説明文です。美味しい豚饅を提供しています。',
-  images: ['/images/test/test1.jpg', '/images/test/test2.jpg'],
-  phone: '078-123-4567',
-  website: 'https://example.com',
   googleMapsUrl: 'https://maps.google.com/?q=test',
   categories: ['テイクアウト', '店内飲食']
 }
@@ -52,32 +49,33 @@ describe('StoreInfo', () => {
     expect(googleMapLink).toHaveAttribute('rel', 'noopener noreferrer')
   })
 
-  it('電話番号が表示される', () => {
-    render(<StoreInfo store={mockStore} />)
-    
-    expect(screen.getByText('078-123-4567')).toBeInTheDocument()
-  })
+  // 電話番号フィールドが現在のStore型に存在しないためコメントアウト
+  // it('電話番号が表示される', () => {
+  //   render(<StoreInfo store={mockStore} />)
+  //   
+  //   expect(screen.getByText('078-123-4567')).toBeInTheDocument()
+  // })
 
-  it('ウェブサイトリンクが表示される', () => {
-    render(<StoreInfo store={mockStore} />)
-    
-    const websiteLink = screen.getByRole('link', { name: '公式サイト' })
-    expect(websiteLink).toHaveAttribute('href', 'https://example.com')
-    expect(websiteLink).toHaveAttribute('target', '_blank')
-  })
+  // ウェブサイトフィールドが現在のStore型に存在しないためコメントアウト
+  // it('ウェブサイトリンクが表示される', () => {
+  //   render(<StoreInfo store={mockStore} />)
+  //   
+  //   const websiteLink = screen.getByRole('link', { name: '公式サイト' })
+  //   expect(websiteLink).toHaveAttribute('href', 'https://example.com')
+  //   expect(websiteLink).toHaveAttribute('target', '_blank')
+  // })
 
   it('オプション項目がない場合は表示されない', () => {
     const storeWithoutOptionals: Store = {
       ...mockStore,
-      phone: undefined,
-      website: undefined,
       description: undefined
     }
     
     render(<StoreInfo store={storeWithoutOptionals} />)
     
-    expect(screen.queryByText('078-123-4567')).not.toBeInTheDocument()
-    expect(screen.queryByRole('link', { name: '公式サイト' })).not.toBeInTheDocument()
+    // 電話番号とウェブサイトフィールドが現在のStore型に存在しないためコメントアウト
+    // expect(screen.queryByText('078-123-4567')).not.toBeInTheDocument()
+    // expect(screen.queryByRole('link', { name: '公式サイト' })).not.toBeInTheDocument()
     expect(screen.queryByText('テスト店舗の説明文です。美味しい豚饅を提供しています。')).not.toBeInTheDocument()
   })
 

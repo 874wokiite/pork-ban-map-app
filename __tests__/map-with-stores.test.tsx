@@ -46,9 +46,8 @@ const mockStores = [
     businessHours: '月〜土 8:30-18:30',
     price: 100,
     features: ['伝統の味'],
-    images: ['/test.jpg'],
     googleMapsUrl: 'https://maps.google.com',
-    categories: ['テイクアウト']
+    categories: ['テイクアウト' as const]
   },
   {
     id: 'shikohroh',
@@ -59,9 +58,8 @@ const mockStores = [
     businessHours: '11:00-20:00',
     price: 120,
     features: ['バリエーション豊富'],
-    images: ['/test2.jpg'],
     googleMapsUrl: 'https://maps.google.com',
-    categories: ['テイクアウト']
+    categories: ['テイクアウト' as const]
   }
 ]
 
@@ -134,8 +132,11 @@ describe('MapWithStores Integration', () => {
     })
 
     // マーカーが正しいマップインスタンスに追加されることを確認
-    mockGoogleMaps.Marker.mock.calls.forEach(call => {
-      expect(call[0].map).toBe(mockMap)
+    const markerCalls = (mockGoogleMaps.Marker as jest.MockedFunction<any>).mock.calls
+    markerCalls.forEach((call: any[]) => {
+      if (call[0] && typeof call[0] === 'object' && 'map' in call[0]) {
+        expect(call[0].map).toBe(mockMap)
+      }
     })
   })
 

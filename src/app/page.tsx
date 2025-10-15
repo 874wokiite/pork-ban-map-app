@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback } from 'react'
 import dynamic from 'next/dynamic'
 import { loadGoogleMapsAPI } from '@/lib/google-maps'
 import { Store } from '@/types/store'
+import StoreModal from '@/components/StoreDetail/StoreModal'
 
 // MapWithStoresを動的にインポート（SSR無効）
 const MapWithStores = dynamic(() => import('@/components/MapWithStores'), {
@@ -21,6 +22,8 @@ const MapWithStores = dynamic(() => import('@/components/MapWithStores'), {
 export default function Home() {
   const [isMapReady, setIsMapReady] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [selectedStore, setSelectedStore] = useState<Store | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
     // Google Maps APIを読み込み
@@ -37,7 +40,14 @@ export default function Home() {
   // 店舗クリック時のハンドラー（useCallbackで安定化）
   const handleStoreClick = useCallback((store: Store) => {
     console.log('店舗クリック:', store.name);
-    // 将来的に店舗詳細モーダルを表示
+    setSelectedStore(store)
+    setIsModalOpen(true)
+  }, [])
+
+  // モーダル閉じるハンドラー
+  const handleCloseModal = useCallback(() => {
+    setIsModalOpen(false)
+    setSelectedStore(null)
   }, [])
 
   return (
@@ -91,6 +101,13 @@ export default function Home() {
           </p>
         </div>
       </main>
+
+      {/* 店舗詳細モーダル */}
+      <StoreModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        store={selectedStore}
+      />
     </div>
   )
 }

@@ -88,14 +88,14 @@
 
 ### タスク2-3: 店舗詳細モーダル
 **優先度**: 🔴 最高
-**ステータス**: 未着手
+**ステータス**: 完了
 **推定工数**: 5時間
 
 #### 作業内容
-- [ ] `components/StoreDetail/StoreModal.tsx` 作成
-- [ ] `components/StoreDetail/StoreInfo.tsx` 作成
-- [ ] モーダル表示・非表示制御
-- [ ] 店舗情報表示（必須項目）
+- [x] `components/StoreDetail/StoreModal.tsx` 作成
+- [x] `components/StoreDetail/StoreInfo.tsx` 作成
+- [x] モーダル表示・非表示制御
+- [x] 店舗情報表示（必須項目）
 
 #### 受入基準
 - マーカークリックでモーダルが開く

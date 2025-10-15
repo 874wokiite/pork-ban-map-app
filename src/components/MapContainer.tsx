@@ -5,6 +5,7 @@ import { waitForGoogleMaps, isGoogleMapsAvailable } from "@/lib/google-maps";
 
 interface MapContainerProps {
   className?: string;
+  onMapReady?: (map: google.maps.Map) => void;
 }
 
 /**
@@ -12,7 +13,7 @@ interface MapContainerProps {
  * 神戸市中心の地図を表示する基本実装
  * ReactとGoogle MapsのDOM操作競合を回避する安全な実装
  */
-export default function MapContainer({ className = "" }: MapContainerProps) {
+export default function MapContainer({ className = "", onMapReady }: MapContainerProps) {
   const mapRef = useRef<HTMLDivElement>(null);
   const googleMapRef = useRef<unknown>(null);
   const initializationRef = useRef(false);
@@ -36,16 +37,16 @@ export default function MapContainer({ className = "" }: MapContainerProps) {
           return;
         }
 
-        // 神戸市中心の座標
+        // 神戸市中心の座標（豚饅店舗が集中する元町・三宮エリア）
         const kobeCenter = {
-          lat: 34.6937,
-          lng: 135.5023,
+          lat: 34.6925,
+          lng: 135.1955,
         };
 
         // 地図の初期化 - Reactが管理するDOM要素に直接アタッチ
         googleMapRef.current = new window.google!.maps.Map(mapRef.current, {
           center: kobeCenter,
-          zoom: 12,
+          zoom: 13,
           mapTypeId: "roadmap",
           styles: [
             {
@@ -58,7 +59,6 @@ export default function MapContainer({ className = "" }: MapContainerProps) {
 
         if (isMounted) {
           setIsMapInitialized(true);
-          console.log("Google Maps initialized successfully");
         }
       } catch (error) {
         if (isMounted) {
@@ -94,7 +94,14 @@ export default function MapContainer({ className = "" }: MapContainerProps) {
       // 初期化フラグをリセット
       initializationRef.current = false;
     };
-  }, []); // 依存配列を空にして、一度だけ実行
+  }, []); // 初期化は一度だけ実行
+
+  // onMapReadyコールバック呼び出し用のuseEffect
+  useEffect(() => {
+    if (isMapInitialized && onMapReady && googleMapRef.current) {
+      onMapReady(googleMapRef.current as google.maps.Map);
+    }
+  }, [isMapInitialized, onMapReady]);
 
   if (error) {
     return (

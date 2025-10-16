@@ -6,6 +6,7 @@ import { loadGoogleMapsAPI } from '@/lib/google-maps'
 import { ExtendedStore } from '@/types/store'
 import { getExtendedStoresData } from '@/lib/store-data'
 import StoreModal from '@/components/StoreDetail/StoreModal'
+import AIAnalysisModal from '@/components/AIAnalysisModal'
 
 // MapWithStoresを動的にインポート（SSR無効）
 const MapWithStores = dynamic(() => import('@/components/MapWithStores'), {
@@ -26,6 +27,7 @@ export default function Home() {
   const [selectedStore, setSelectedStore] = useState<ExtendedStore | null>(null)
   const [allStores, setAllStores] = useState<ExtendedStore[]>([])
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isAIAnalysisModalOpen, setIsAIAnalysisModalOpen] = useState(false)
 
   useEffect(() => {
     // Google Maps APIを読み込み
@@ -66,6 +68,16 @@ export default function Home() {
     setSelectedStore(null)
   }, [])
 
+  // AI分析モーダル開くハンドラー
+  const handleOpenAIAnalysisModal = useCallback(() => {
+    setIsAIAnalysisModalOpen(true)
+  }, [])
+
+  // AI分析モーダル閉じるハンドラー
+  const handleCloseAIAnalysisModal = useCallback(() => {
+    setIsAIAnalysisModalOpen(false)
+  }, [])
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* ヘッダー */}
@@ -78,12 +90,6 @@ export default function Home() {
 
       {/* メインコンテンツ */}
       <main className="container mx-auto p-4 sm:p-6 lg:p-8">
-        <div className="mb-4">
-          <h2 className="text-xl font-semibold mb-2">店舗マップ</h2>
-          <p className="text-gray-600 dark:text-gray-400">
-            神戸豚饅サミット参加店舗の位置を地図で確認できます
-          </p>
-        </div>
 
         {/* エラー表示 */}
         {error && (
@@ -98,6 +104,7 @@ export default function Home() {
             <MapWithStores 
               className="h-[400px] sm:h-[500px] lg:h-[600px]"
               onStoreClick={handleStoreClick}
+              onSearchClick={handleOpenAIAnalysisModal}
             />
           ) : (
             <div className="h-[400px] sm:h-[500px] lg:h-[600px] flex items-center justify-center bg-gray-100 dark:bg-gray-800">
@@ -123,6 +130,12 @@ export default function Home() {
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         store={selectedStore}
+      />
+
+      {/* AI分析モーダル */}
+      <AIAnalysisModal
+        isOpen={isAIAnalysisModalOpen}
+        onClose={handleCloseAIAnalysisModal}
         allStores={allStores}
       />
     </div>

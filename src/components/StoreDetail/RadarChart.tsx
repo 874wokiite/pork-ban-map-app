@@ -57,6 +57,47 @@ const CustomTooltip = ({ active, payload, label }: TooltipProps) => {
 export function RadarChart({ stores, selectedStoreIds }: RadarChartProps) {
   const selectedStores = stores.filter(store => selectedStoreIds.includes(store.id))
   
+  // 選択された店舗がない場合は空のチャートを表示
+  if (selectedStoreIds.length === 0) {
+    // 空のレーダーチャート用データ
+    const emptyChartData = chartLabels.map(({ label }) => ({
+      axis: label
+    }))
+
+    return (
+      <div className="w-full space-y-4">
+        {/* 表示制限の警告プレースホルダー（空なので何も表示しない） */}
+        
+        <div className="w-full h-96" data-testid="radar-chart">
+          <ResponsiveContainer width="100%" height="100%">
+            <RechartsRadarChart cx="50%" cy="50%" outerRadius="80%" data={emptyChartData}>
+              <PolarGrid className="stroke-gray-200" />
+              <PolarAngleAxis 
+                dataKey="axis" 
+                tick={{ fontSize: 12, fill: '#374151' }}
+                className="text-gray-700"
+              />
+              <PolarRadiusAxis
+                angle={90}
+                domain={[0, 10]}
+                tick={{ fontSize: 10, fill: '#6B7280' }}
+                tickCount={6}
+              />
+              <Tooltip content={<CustomTooltip />} />
+              {/* Radarコンポーネント（データ線）は追加しない */}
+              <Legend 
+                verticalAlign="bottom" 
+                height={36}
+                wrapperStyle={{ paddingTop: '20px' }}
+              />
+            </RechartsRadarChart>
+          </ResponsiveContainer>
+        </div>
+
+      </div>
+    )
+  }
+  
   // AI分析データがない場合の処理
   const hasAnalysisData = selectedStores.some(store => store.aiAnalysis)
   
@@ -138,20 +179,6 @@ export function RadarChart({ stores, selectedStoreIds }: RadarChartProps) {
         </ResponsiveContainer>
       </div>
 
-      {/* 信頼度情報の表示 */}
-      {displayStores.length > 0 && (
-        <div className="text-xs text-gray-500 space-y-1">
-          <div className="font-semibold">分析信頼度:</div>
-          {displayStores.map((store) => (
-            store.aiAnalysis && (
-              <div key={store.id} className="flex justify-between">
-                <span>{store.name}:</span>
-                <span>{store.aiAnalysis.confidence}% ({store.aiAnalysis.reviewCount}件のレビュー)</span>
-              </div>
-            )
-          ))}
-        </div>
-      )}
     </div>
   )
 }

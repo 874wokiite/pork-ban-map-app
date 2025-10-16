@@ -22,6 +22,7 @@ export default function MapContainer({ className = "", onMapReady }: MapContaine
 
   useEffect(() => {
     let isMounted = true;
+    let handleResize: (() => void) | null = null;
 
     const initializeMap = async () => {
       // 重複初期化防止
@@ -43,10 +44,24 @@ export default function MapContainer({ className = "", onMapReady }: MapContaine
           lng: 135.1955,
         };
 
+        // ブラウザの横幅に応じてズーム率を調整
+        const getResponsiveZoom = () => {
+          const width = window.innerWidth;
+          if (width < 640) {        // sm未満 (スマートフォン)
+            return 12;
+          } else if (width < 768) { // md未満 (小タブレット)
+            return 13;
+          } else if (width < 1024) { // lg未満 (タブレット)
+            return 14;
+          } else {                  // lg以上 (デスクトップ)
+            return 15;
+          }
+        };
+
         // 地図の初期化 - Reactが管理するDOM要素に直接アタッチ
         googleMapRef.current = new window.google!.maps.Map(mapRef.current, {
           center: kobeCenter,
-          zoom: 13,
+          zoom: getResponsiveZoom(),
           mapTypeId: "roadmap",
           mapId: process.env.NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID || "DEMO_MAP_ID",
           mapTypeControl: false,
@@ -63,6 +78,17 @@ export default function MapContainer({ className = "", onMapReady }: MapContaine
             },
           ],
         });
+
+        // ウィンドウリサイズ時のズーム調整
+        handleResize = () => {
+          if (googleMapRef.current && window.google?.maps) {
+            const newZoom = getResponsiveZoom();
+            (googleMapRef.current as google.maps.Map).setZoom(newZoom);
+          }
+        };
+
+        // リサイズイベントリスナーを追加
+        window.addEventListener('resize', handleResize);
 
         if (isMounted) {
           setIsMapInitialized(true);
@@ -86,6 +112,11 @@ export default function MapContainer({ className = "", onMapReady }: MapContaine
     // クリーンアップ関数
     return () => {
       isMounted = false;
+      
+      // リサイズイベントリスナーを削除
+      if (handleResize) {
+        window.removeEventListener('resize', handleResize);
+      }
       
       // Google Mapsインスタンスのクリーンアップ
       if (googleMapRef.current) {

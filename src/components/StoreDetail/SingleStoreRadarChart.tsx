@@ -1,0 +1,110 @@
+'use client'
+
+import { ResponsiveContainer, RadarChart as RechartsRadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Tooltip } from 'recharts'
+import { ExtendedStore, FeatureAnalysis } from '@/types/store'
+
+interface SingleStoreRadarChartProps {
+  store: ExtendedStore
+}
+
+interface ChartDataPoint {
+  axis: string
+  value: number
+}
+
+const chartLabels = [
+  { key: 'taste', label: '味の濃さ' },
+  { key: 'texture', label: '食感' },
+  { key: 'size', label: 'ボリューム' },
+  { key: 'priceValue', label: '価格満足度' },
+  { key: 'atmosphere', label: '総合評価' }
+] as const
+
+interface TooltipPayload {
+  value: number
+}
+
+interface TooltipProps {
+  active?: boolean
+  payload?: TooltipPayload[]
+  label?: string
+}
+
+const CustomTooltip = ({ active, payload, label }: TooltipProps) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="bg-white p-3 border border-gray-300 rounded-lg shadow-lg">
+        <p className="font-semibold text-gray-800">{`${label}`}</p>
+        <p className="text-blue-600">
+          {`スコア: ${payload[0].value}/10`}
+        </p>
+      </div>
+    )
+  }
+  return null
+}
+
+export function SingleStoreRadarChart({ store }: SingleStoreRadarChartProps) {
+  // AI分析データがない場合の処理
+  if (!store.aiAnalysis) {
+    return (
+      <div className="flex items-center justify-center h-48 text-gray-500">
+        <div className="text-center">
+          <div className="text-lg mb-2">📊</div>
+          <div>AI分析データがありません</div>
+          <div className="text-sm text-gray-400 mt-1">
+            店舗の特徴分析が完了すると表示されます
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // レーダーチャート用データの変換
+  const chartData: ChartDataPoint[] = chartLabels.map(({ key, label }) => ({
+    axis: label,
+    value: store.aiAnalysis!.features[key as keyof FeatureAnalysis]
+  }))
+
+  return (
+    <div className="w-full space-y-4">
+      <div className="text-center">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+          豚饅特徴分析
+        </h3>
+        <p className="text-sm text-gray-600 dark:text-gray-400">
+          AI分析による味、食感、ボリュームなどの特徴
+        </p>
+      </div>
+      
+      <div className="w-full h-64" data-testid="single-store-radar-chart">
+        <ResponsiveContainer width="100%" height="100%">
+          <RechartsRadarChart cx="50%" cy="50%" outerRadius="80%" data={chartData}>
+            <PolarGrid className="stroke-gray-200" />
+            <PolarAngleAxis 
+              dataKey="axis" 
+              tick={{ fontSize: 12, fill: '#374151' }}
+              className="text-gray-700"
+            />
+            <PolarRadiusAxis
+              angle={90}
+              domain={[0, 10]}
+              tick={{ fontSize: 10, fill: '#6B7280' }}
+              tickCount={6}
+            />
+            <Tooltip content={<CustomTooltip />} />
+            <Radar
+              dataKey="value"
+              stroke="#8884d8"
+              fill="#8884d8"
+              fillOpacity={0.3}
+              strokeWidth={2}
+              dot={{ r: 4, fill: '#8884d8' }}
+            />
+          </RechartsRadarChart>
+        </ResponsiveContainer>
+      </div>
+
+    </div>
+  )
+}

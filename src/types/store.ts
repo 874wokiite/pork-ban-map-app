@@ -78,4 +78,6 @@ export interface ExtendedStore extends Store {
   aiAnalysis?: AIAnalysisData
   /** データ収集メタデータ */
   dataSource: DataSourceMetadata
+  /** 特典・サービス一覧（オプション） */
+  benefits?: string[]
 }

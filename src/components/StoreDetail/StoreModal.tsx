@@ -3,23 +3,19 @@
 import React, { useEffect, useState } from 'react'
 import { ExtendedStore } from '@/types/store'
 import StoreInfo from './StoreInfo'
-import { RadarChartComparison } from './RadarChartComparison'
+import { SingleStoreRadarChart } from './SingleStoreRadarChart'
 
 interface StoreModalProps {
   isOpen: boolean
   onClose: () => void
   store: ExtendedStore | null
-  allStores?: ExtendedStore[]
 }
-
-type TabType = 'info' | 'analysis'
 
 /**
  * 店舗詳細モーダルコンポーネント
- * 店舗の詳細情報とAI分析チャートを表示し、ユーザーの操作に応じて開閉する
+ * 店舗の詳細情報、レーダーチャート、特典を表示し、ユーザーの操作に応じて開閉する
  */
-export default function StoreModal({ isOpen, onClose, store, allStores = [] }: StoreModalProps) {
-  const [activeTab, setActiveTab] = useState<TabType>('info')
+export default function StoreModal({ isOpen, onClose, store }: StoreModalProps) {
   // Escキーでモーダルを閉じる
   useEffect(() => {
     const handleEscapeKey = (event: KeyboardEvent) => {
@@ -95,52 +91,124 @@ export default function StoreModal({ isOpen, onClose, store, allStores = [] }: S
           </button>
         </div>
 
-        {/* タブナビゲーション */}
-        <div className="border-b border-gray-200 dark:border-gray-700">
-          <nav className="flex">
-            <button
-              onClick={() => setActiveTab('info')}
-              className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors ${
-                activeTab === 'info'
-                  ? 'border-blue-500 text-blue-600 dark:text-blue-400'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
-              }`}
-            >
-              店舗情報
-            </button>
-            {store?.aiAnalysis && (
-              <button
-                onClick={() => setActiveTab('analysis')}
-                className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors ${
-                  activeTab === 'analysis'
-                    ? 'border-blue-500 text-blue-600 dark:text-blue-400'
-                    : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
-                }`}
-              >
-                AI分析・比較
-              </button>
-            )}
-          </nav>
-        </div>
-
-        {/* タブコンテンツ */}
+        {/* コンテンツ */}
         <div className="p-6">
-          {activeTab === 'info' && (
-            <StoreInfo store={store} />
-          )}
-          {activeTab === 'analysis' && store?.aiAnalysis && (
-            <div className="space-y-6">
-              <div className="text-center">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  豚饅特徴分析
+          <div className="space-y-6">
+            {/* 1. 豚饅特徴分析（レーダーチャート） */}
+            {store?.aiAnalysis && (
+              <div>
+                <SingleStoreRadarChart store={store} />
+              </div>
+            )}
+            
+            {/* 2. 説明文 */}
+            {store.description && (
+              <div>
+                <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">
+                  説明
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  AI分析による味、食感、ボリュームなどの特徴比較
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                  {store.description}
                 </p>
               </div>
-              <RadarChartComparison stores={allStores} />
+            )}
+
+            {/* 3. 住所と営業時間（横並び） */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* 住所 */}
+              <div>
+                <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-1">
+                  住所
+                </h3>
+                <p className="text-gray-900 dark:text-white">
+                  {store.address}
+                </p>
+              </div>
+
+              {/* 営業時間 */}
+              <div>
+                <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-1">
+                  営業時間
+                </h3>
+                <p className="text-gray-900 dark:text-white">
+                  {store.businessHours}
+                </p>
+              </div>
             </div>
-          )}
+
+            {/* 5. 特徴 */}
+            <div>
+              <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">
+                特徴
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {store.features.map((feature, index) => (
+                  <span
+                    key={index}
+                    className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium"
+                  >
+                    {feature}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* 6. サービス形態 */}
+            <div>
+              <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">
+                サービス形態
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {store.categories.map((category, index) => (
+                  <span
+                    key={index}
+                    className="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium"
+                  >
+                    {category}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* 7. 特典・サービス（最後） */}
+            {store?.benefits && store.benefits.length > 0 && (
+              <div>
+                <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">
+                  特典・サービス
+                </h3>
+                <div className="space-y-2">
+                  {store.benefits.map((benefit, index) => (
+                    <div 
+                      key={index}
+                      className="flex items-center p-3 bg-green-50 dark:bg-green-900/20 rounded-lg"
+                    >
+                      <div className="text-green-600 dark:text-green-400 mr-3">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-900 dark:text-white">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Googleマップリンク */}
+            <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+              <a
+                href={store.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
+              >
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 2C6.69 2 4 4.69 4 8c0 5.25 6 12 6 12s6-6.75 6-12c0-3.31-2.69-6-6-6zm0 8.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                Googleマップで開く
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

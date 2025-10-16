@@ -75,13 +75,15 @@ export function RadarChartComparison({ stores, onStoreSelect }: RadarChartCompar
                     e.stopPropagation()
                     onStoreSelect?.(store)
                   }}
-                  className="text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 transition-colors"
+                  className="hover:opacity-70 transition-opacity"
                   aria-label={`${store.name}の詳細を開く`}
                   title="店舗詳細を開く"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 2C6.69 2 4 4.69 4 8c0 5.25 6 12 6 12s6-6.75 6-12c0-3.31-2.69-6-6-6zm0 8.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                  </svg>
+                  <img 
+                    src="/icons/ban-logo.svg" 
+                    alt="店舗詳細" 
+                    className="w-5 h-5"
+                  />
                 </button>
               </label>
             ))}

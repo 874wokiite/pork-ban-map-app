@@ -12,7 +12,7 @@ import AIAnalysisModal from '@/components/AIAnalysisModal'
 const MapWithStores = dynamic(() => import('@/components/MapWithStores'), {
   ssr: false,
   loading: () => (
-    <div className="w-full h-[400px] sm:h-[500px] lg:h-[600px] flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-lg">
+    <div className="w-full h-[calc(100vh-120px)] flex items-center justify-center bg-gray-100 dark:bg-gray-800">
       <div className="text-center">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
         <div className="text-gray-500">地図を読み込み中...</div>
@@ -88,42 +88,49 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* ヘッダー */}
-      <header className="bg-primary text-white p-4 sm:p-6">
-        <div className="container mx-auto">
-          <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold font-[var(--font-noto-serif-jp)]">神戸豚饅マップ</h1>
-          <p className="text-sm sm:text-base opacity-90 font-[var(--font-zen-old-mincho)]">神戸豚饅サミット参加店舗を探そう。豚饅アイコンをクリックすると店舗の詳細情報を確認できます。</p>
+      <header className="bg-white p-4 sm:p-6">
+        <div className="container mx-auto flex items-center gap-4">
+          {/* 豚饅ロゴ */}
+          <div className="flex-shrink-0">
+            <img 
+              src="/icons/ban-logo.svg" 
+              alt="豚饅ロゴ" 
+              className="w-12 h-12 sm:w-16 sm:h-16"
+            />
+          </div>
+          
+          {/* テキスト部分 */}
+          <div className="flex-1">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold font-[var(--font-noto-serif-jp)] text-red-600">神戸豚饅マップ</h1>
+            <p className="text-sm sm:text-base font-[var(--font-zen-old-mincho)] text-black">神戸豚饅サミット参加店舗を探そう。豚饅アイコンをクリックすると店舗の詳細情報を確認できます。</p>
+          </div>
         </div>
       </header>
 
-      {/* メインコンテンツ */}
-      <main className="container mx-auto p-4 sm:p-6 lg:p-8">
+      {/* エラー表示 */}
+      {error && (
+        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4 mx-4">
+          <strong>エラー:</strong> {error}
+        </div>
+      )}
 
-        {/* エラー表示 */}
-        {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-            <strong>エラー:</strong> {error}
+      {/* 地図表示エリア */}
+      <div className="w-full">
+        {isMapReady ? (
+          <MapWithStores 
+            className="w-full h-[calc(100vh-120px)]"
+            onStoreClick={handleStoreClick}
+            onSearchClick={handleOpenAIAnalysisModal}
+          />
+        ) : (
+          <div className="w-full h-[calc(100vh-120px)] flex items-center justify-center bg-gray-100 dark:bg-gray-800">
+            <div className="text-center">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
+              <div className="text-gray-500">Google Maps APIを読み込み中...</div>
+            </div>
           </div>
         )}
-
-        {/* 地図表示エリア */}
-        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden">
-          {isMapReady ? (
-            <MapWithStores 
-              className="h-[400px] sm:h-[500px] lg:h-[600px]"
-              onStoreClick={handleStoreClick}
-              onSearchClick={handleOpenAIAnalysisModal}
-            />
-          ) : (
-            <div className="h-[400px] sm:h-[500px] lg:h-[600px] flex items-center justify-center bg-gray-100 dark:bg-gray-800">
-              <div className="text-center">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
-                <div className="text-gray-500">Google Maps APIを読み込み中...</div>
-              </div>
-            </div>
-          )}
-        </div>
-
-      </main>
+      </div>
 
       {/* 店舗詳細モーダル */}
       <StoreModal

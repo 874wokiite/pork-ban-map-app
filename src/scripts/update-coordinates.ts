@@ -15,7 +15,7 @@ interface StoreData {
     lat: number;
     lng: number;
   };
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 interface StoresJson {

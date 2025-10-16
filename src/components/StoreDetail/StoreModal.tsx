@@ -1,8 +1,7 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { ExtendedStore } from '@/types/store'
-import StoreInfo from './StoreInfo'
 import { SingleStoreRadarChart } from './SingleStoreRadarChart'
 
 interface StoreModalProps {

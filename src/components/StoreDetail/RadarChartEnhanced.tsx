@@ -259,7 +259,7 @@ export function RadarChartEnhanced({
                         <span className="text-sm">{store.name}</span>
                       </div>
                       <span className="text-sm font-medium">
-                        {store.aiAnalysis.confidence}% ({store.aiAnalysis.reviewCount}件)
+                        AI分析済み
                       </span>
                     </div>
                   )

@@ -90,8 +90,8 @@ export default function Home() {
       {/* ヘッダー */}
       <header className="bg-primary text-white p-4 sm:p-6">
         <div className="container mx-auto">
-          <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold">神戸豚饅マップ</h1>
-          <p className="text-sm sm:text-base opacity-90">神戸豚饅サミット参加店舗を探そう</p>
+          <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold font-[var(--font-noto-serif-jp)]">神戸豚饅マップ</h1>
+          <p className="text-sm sm:text-base opacity-90 font-[var(--font-zen-old-mincho)]">神戸豚饅サミット参加店舗を探そう。豚饅アイコンをクリックすると店舗の詳細情報を確認できます。</p>
         </div>
       </header>
 
@@ -123,13 +123,6 @@ export default function Home() {
           )}
         </div>
 
-        {/* 説明 */}
-        <div className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-          <p>
-            このマップには神戸豚饅サミット参加店舗が表示されます。
-            豚饅アイコンをクリックすると店舗の詳細情報を確認できます。
-          </p>
-        </div>
       </main>
 
       {/* 店舗詳細モーダル */}

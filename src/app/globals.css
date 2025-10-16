@@ -3,9 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #8B4513;        /* 豚饅ブラウン */
-  --primary-light: #CD853F;   /* ライトブラウン */
-  --secondary: #FF6B35;       /* アクセントオレンジ */
+  --primary: #BB353C;        /* 中華赤 */
+  --primary-light: #DB943A;   /* 中華橙 */
+  --secondary: #8B5A9B;       /* 神戸紫（濃いめ） */
+  --accent-green: #507E57;    /* 神戸緑 */
   --surface: #F8F9FA;        /* サーフェス */
   --text-primary: #2D3748;   /* プライマリテキスト */
   --text-secondary: #718096; /* セカンダリテキスト */
@@ -21,6 +22,7 @@
   --color-primary: var(--primary);
   --color-primary-light: var(--primary-light);
   --color-secondary: var(--secondary);
+  --color-accent-green: var(--accent-green);
   --color-surface: var(--surface);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
@@ -30,12 +32,18 @@
   --color-button-hover: var(--button-hover);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-japanese: var(--font-noto-serif-jp);
+  --font-zen: var(--font-zen-old-mincho);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #1A202C;
     --foreground: #F7FAFC;
+    --primary: #D44E54;        /* 中華赤 (ダーク版) */
+    --primary-light: #E8A854;   /* 中華橙 (ダーク版) */
+    --secondary: #C2A6CC;       /* 神戸紫 (ダーク版) */
+    --accent-green: #6A9E71;    /* 神戸緑 (ダーク版) */
     --surface: #2D3748;
     --text-primary: #F7FAFC;
     --text-secondary: #E2E8F0;

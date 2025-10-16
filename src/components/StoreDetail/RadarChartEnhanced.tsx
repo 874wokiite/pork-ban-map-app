@@ -163,7 +163,7 @@ export function RadarChartEnhanced({
     >
       {/* 表示制限の警告 */}
       {selectedStores.length > 3 && (
-        <div className="text-sm text-amber-600 bg-amber-50 p-3 rounded-lg border border-amber-200">
+        <div className="text-sm text-primary-light bg-primary-light/10 p-3 rounded-lg border border-primary-light/20">
           <div className="flex items-center">
             <span className="mr-2">⚠️</span>
             <span>比較表示は最大3店舗までです。最初の3店舗を表示しています。</span>

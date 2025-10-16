@@ -47,7 +47,7 @@ export default function StoreInfo({ store }: StoreInfoProps) {
           {store.features.map((feature, index) => (
             <span
               key={index}
-              className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium"
+              className="inline-block bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium"
             >
               {feature}
             </span>
@@ -64,7 +64,7 @@ export default function StoreInfo({ store }: StoreInfoProps) {
           {store.categories.map((category, index) => (
             <span
               key={index}
-              className="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium"
+              className="inline-block bg-primary-light/10 text-primary-light px-3 py-1 rounded-full text-sm font-medium"
             >
               {category}
             </span>
@@ -91,7 +91,7 @@ export default function StoreInfo({ store }: StoreInfoProps) {
           href={store.googleMapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
+          className="inline-flex items-center px-4 py-2 bg-accent-green text-white rounded-md hover:bg-accent-green/80 transition-colors"
         >
           <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 2C6.69 2 4 4.69 4 8c0 5.25 6 12 6 12s6-6.75 6-12c0-3.31-2.69-6-6-6zm0 8.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>

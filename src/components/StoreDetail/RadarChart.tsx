@@ -24,7 +24,7 @@ const chartLabels = [
   { key: 'atmosphere', label: '総合評価' }
 ] as const
 
-const colors = ['#8884d8', '#82ca9d', '#ffc658']
+const colors = ['#BB353C', '#C2A6CC', '#507E57'] // 中華赤、神戸紫、神戸緑
 
 interface TooltipPayload {
   color: string
@@ -135,7 +135,7 @@ export function RadarChart({ stores, selectedStoreIds }: RadarChartProps) {
     <div className="w-full space-y-4">
       {/* 表示制限の警告 */}
       {selectedStores.length > 3 && (
-        <div className="text-sm text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/20 p-2 rounded">
+        <div className="text-sm bg-primary-light/10 text-primary-light dark:text-primary-light p-2 rounded">
           ⚠️ 比較表示は最大3店舗までです。最初の3店舗を表示しています。
         </div>
       )}

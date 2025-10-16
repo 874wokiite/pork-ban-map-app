@@ -88,7 +88,7 @@ export function RadarChartComparison({ stores, onStoreSelect }: RadarChartCompar
         </div>
 
         {selectedStoreIds.length >= 3 && (
-          <div className="text-sm text-amber-600 dark:text-amber-400">
+          <div className="text-sm text-primary-light dark:text-primary-light">
             ⚠️ 最大3店舗まで選択できます
           </div>
         )}

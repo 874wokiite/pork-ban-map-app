@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
+import Image from "next/image";
 import MapContainer from "@/components/MapContainer";
 import StoreMarker from "@/components/StoreMarker";
 import { getExtendedStoresData } from "@/lib/store-data";
@@ -62,23 +63,17 @@ export default function MapWithStores({ className, onStoreClick, onSearchClick }
       {onSearchClick && (
         <button
           onClick={onSearchClick}
-          className="absolute top-4 right-4 z-10 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-lg rounded-full p-3 transition-colors"
+          className="absolute top-4 right-4 z-10 bg-accent-green hover:bg-accent-green/90 text-white shadow-xl hover:shadow-2xl rounded-full p-4 transition-all duration-300 transform hover:scale-110"
           aria-label="AI分析・比較を開く"
           title="AI分析・比較"
         >
-          <svg
-            className="w-6 h-6 text-gray-700 dark:text-gray-300"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-            />
-          </svg>
+          <Image
+            src="/icons/ban-logo.svg"
+            alt="豚饅ロゴ"
+            width={40}
+            height={40}
+            className="w-10 h-10"
+          />
         </button>
       )}
       

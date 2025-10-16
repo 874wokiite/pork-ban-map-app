@@ -96,11 +96,11 @@ export function SingleStoreRadarChart({ store }: SingleStoreRadarChartProps) {
             <Tooltip content={<CustomTooltip />} />
             <Radar
               dataKey="value"
-              stroke="#8884d8"
-              fill="#8884d8"
+              stroke="#BB353C"
+              fill="#BB353C"
               fillOpacity={0.3}
               strokeWidth={2}
-              dot={{ r: 4, fill: '#8884d8' }}
+              dot={{ r: 4, fill: '#BB353C' }}
             />
           </RechartsRadarChart>
         </ResponsiveContainer>

@@ -1,4 +1,4 @@
-import { Store, ExtendedStore } from './store'
+import { ExtendedStore } from './store'
 import { Coordinates } from './map'
 
 /**
@@ -73,7 +73,7 @@ export interface CollectionError {
   /** エラー発生日時 */
   timestamp: string
   /** 追加のエラー詳細 */
-  details?: Record<string, any>
+  details?: Record<string, unknown>
 }
 
 /**

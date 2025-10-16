@@ -1,6 +1,5 @@
 import { 
   RawStoreData, 
-  ValidatedStoreData, 
   CollectionError, 
   AnalysisError,
   Result,

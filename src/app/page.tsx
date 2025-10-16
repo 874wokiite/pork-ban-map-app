@@ -78,6 +78,13 @@ export default function Home() {
     setIsAIAnalysisModalOpen(false)
   }, [])
 
+  // AI分析モーダルから店舗選択時のハンドラー
+  const handleStoreSelectFromAIModal = useCallback((store: ExtendedStore) => {
+    setIsAIAnalysisModalOpen(false)
+    setSelectedStore(store)
+    setIsModalOpen(true)
+  }, [])
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* ヘッダー */}
@@ -137,6 +144,7 @@ export default function Home() {
         isOpen={isAIAnalysisModalOpen}
         onClose={handleCloseAIAnalysisModal}
         allStores={allStores}
+        onStoreSelect={handleStoreSelectFromAIModal}
       />
     </div>
   )

@@ -8,12 +8,14 @@ interface AIAnalysisModalProps {
   isOpen: boolean;
   onClose: () => void;
   allStores: ExtendedStore[];
+  onStoreSelect?: (store: ExtendedStore) => void;
 }
 
 export default function AIAnalysisModal({
   isOpen,
   onClose,
   allStores,
+  onStoreSelect,
 }: AIAnalysisModalProps) {
   // Escキーでモーダルを閉じる
   useEffect(() => {
@@ -92,7 +94,7 @@ export default function AIAnalysisModal({
 
         {/* コンテンツ */}
         <div className="p-6">
-          <RadarChartComparison stores={allStores} />
+          <RadarChartComparison stores={allStores} onStoreSelect={onStoreSelect} />
         </div>
       </div>
     </div>

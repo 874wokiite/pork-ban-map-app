@@ -6,9 +6,10 @@ import { RadarChart } from './RadarChart'
 
 interface RadarChartComparisonProps {
   stores: ExtendedStore[]
+  onStoreSelect?: (store: ExtendedStore) => void
 }
 
-export function RadarChartComparison({ stores }: RadarChartComparisonProps) {
+export function RadarChartComparison({ stores, onStoreSelect }: RadarChartComparisonProps) {
   const [selectedStoreIds, setSelectedStoreIds] = useState<string[]>(['roushouki'])
 
   const handleStoreToggle = (storeId: string) => {
@@ -69,19 +70,19 @@ export function RadarChartComparison({ stores }: RadarChartComparisonProps) {
                 <div className="flex-1">
                   <div className="font-medium text-gray-900">{store.name}</div>
                 </div>
-                <a
-                  href={store.googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    onStoreSelect?.(store)
+                  }}
                   className="text-green-600 hover:text-green-700 transition-colors"
-                  aria-label={`${store.name}をGoogleマップで開く`}
-                  title="Googleマップで開く"
-                  onClick={(e) => e.stopPropagation()}
+                  aria-label={`${store.name}の詳細を開く`}
+                  title="店舗詳細を開く"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10 2C6.69 2 4 4.69 4 8c0 5.25 6 12 6 12s6-6.75 6-12c0-3.31-2.69-6-6-6zm0 8.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                   </svg>
-                </a>
+                </button>
               </label>
             ))}
         </div>

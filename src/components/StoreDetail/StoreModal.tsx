@@ -1,20 +1,25 @@
 'use client'
 
-import React, { useEffect } from 'react'
-import { Store } from '@/types/store'
+import React, { useEffect, useState } from 'react'
+import { ExtendedStore } from '@/types/store'
 import StoreInfo from './StoreInfo'
+import { RadarChartComparison } from './RadarChartComparison'
 
 interface StoreModalProps {
   isOpen: boolean
   onClose: () => void
-  store: Store | null
+  store: ExtendedStore | null
+  allStores?: ExtendedStore[]
 }
+
+type TabType = 'info' | 'analysis'
 
 /**
  * 店舗詳細モーダルコンポーネント
- * 店舗の詳細情報を表示し、ユーザーの操作に応じて開閉する
+ * 店舗の詳細情報とAI分析チャートを表示し、ユーザーの操作に応じて開閉する
  */
-export default function StoreModal({ isOpen, onClose, store }: StoreModalProps) {
+export default function StoreModal({ isOpen, onClose, store, allStores = [] }: StoreModalProps) {
+  const [activeTab, setActiveTab] = useState<TabType>('info')
   // Escキーでモーダルを閉じる
   useEffect(() => {
     const handleEscapeKey = (event: KeyboardEvent) => {
@@ -90,9 +95,52 @@ export default function StoreModal({ isOpen, onClose, store }: StoreModalProps) 
           </button>
         </div>
 
-        {/* 店舗情報コンテンツ */}
+        {/* タブナビゲーション */}
+        <div className="border-b border-gray-200 dark:border-gray-700">
+          <nav className="flex">
+            <button
+              onClick={() => setActiveTab('info')}
+              className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors ${
+                activeTab === 'info'
+                  ? 'border-blue-500 text-blue-600 dark:text-blue-400'
+                  : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
+              }`}
+            >
+              店舗情報
+            </button>
+            {store?.aiAnalysis && (
+              <button
+                onClick={() => setActiveTab('analysis')}
+                className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors ${
+                  activeTab === 'analysis'
+                    ? 'border-blue-500 text-blue-600 dark:text-blue-400'
+                    : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
+                }`}
+              >
+                AI分析・比較
+              </button>
+            )}
+          </nav>
+        </div>
+
+        {/* タブコンテンツ */}
         <div className="p-6">
-          <StoreInfo store={store} />
+          {activeTab === 'info' && (
+            <StoreInfo store={store} />
+          )}
+          {activeTab === 'analysis' && store?.aiAnalysis && (
+            <div className="space-y-6">
+              <div className="text-center">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  豚饅特徴分析
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  AI分析による味、食感、ボリュームなどの特徴比較
+                </p>
+              </div>
+              <RadarChartComparison stores={allStores} />
+            </div>
+          )}
         </div>
       </div>
     </div>

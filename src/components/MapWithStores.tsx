@@ -3,12 +3,12 @@
 import { useEffect, useState, useCallback } from "react";
 import MapContainer from "@/components/MapContainer";
 import StoreMarker from "@/components/StoreMarker";
-import { getStoresData } from "@/lib/store-data";
-import { Store } from "@/types/store";
+import { getExtendedStoresData } from "@/lib/store-data";
+import { ExtendedStore } from "@/types/store";
 
 interface MapWithStoresProps {
   className?: string;
-  onStoreClick?: (store: Store) => void;
+  onStoreClick?: (store: ExtendedStore) => void;
 }
 
 /**
@@ -16,7 +16,7 @@ interface MapWithStoresProps {
  * MapContainerと店舗データを組み合わせて、店舗位置を表示
  */
 export default function MapWithStores({ className, onStoreClick }: MapWithStoresProps) {
-  const [stores, setStores] = useState<Store[]>([]);
+  const [stores, setStores] = useState<ExtendedStore[]>([]);
   const [mapInstance, setMapInstance] = useState<google.maps.Map | null>(null);
   const [isStoresLoaded, setIsStoresLoaded] = useState(false);
 
@@ -24,7 +24,7 @@ export default function MapWithStores({ className, onStoreClick }: MapWithStores
   useEffect(() => {
     const loadStores = async () => {
       try {
-        const storeData = await getStoresData();
+        const storeData = await getExtendedStoresData();
         setStores(storeData);
         setIsStoresLoaded(true);
       } catch (error) {
@@ -42,7 +42,7 @@ export default function MapWithStores({ className, onStoreClick }: MapWithStores
   }, []);
 
   // マーカークリック時のハンドラ（useCallbackで最適化）
-  const handleMarkerClick = useCallback((store: Store) => {
+  const handleMarkerClick = useCallback((store: ExtendedStore) => {
     console.log("店舗マーカークリック:", store.name);
     if (onStoreClick) {
       onStoreClick(store);

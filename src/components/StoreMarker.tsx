@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Store } from "@/types/store";
+import { ExtendedStore } from "@/types/store";
 
 interface StoreMarkerProps {
-  store: Store;
+  store: ExtendedStore;
   map: google.maps.Map | unknown;
-  onMarkerClick?: (store: Store) => void;
+  onMarkerClick?: (store: ExtendedStore) => void;
 }
 
 /**

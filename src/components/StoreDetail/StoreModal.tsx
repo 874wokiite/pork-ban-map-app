@@ -165,7 +165,7 @@ export default function StoreModal({ isOpen, onClose, store }: StoreModalProps) 
                     className="flex items-center gap-2"
                   >
                     <ServiceTypeIcon serviceType={category} />
-                    <span className="text-black text-sm font-medium">
+                    <span className="text-gray-900 dark:text-white text-sm font-medium">
                       {category}
                     </span>
                   </div>

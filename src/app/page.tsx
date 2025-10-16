@@ -88,7 +88,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* ヘッダー */}
-      <header className="bg-white p-4 sm:p-6">
+      <header className="bg-white dark:bg-gray-800 p-4 sm:p-6">
         <div className="container mx-auto flex items-center gap-4">
           {/* 豚饅ロゴ */}
           <div className="flex-shrink-0">
@@ -102,7 +102,7 @@ export default function Home() {
           {/* テキスト部分 */}
           <div className="flex-1">
             <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold font-[var(--font-noto-serif-jp)] text-red-600">神戸豚饅マップ</h1>
-            <p className="text-sm sm:text-base font-[var(--font-zen-old-mincho)] text-black">神戸豚饅サミット参加店舗を探そう。豚饅アイコンをクリックすると店舗の詳細情報を確認できます。</p>
+            <p className="text-sm sm:text-base font-[var(--font-zen-old-mincho)] text-gray-800 dark:text-gray-200">神戸豚饅サミット参加店舗を探そう。豚饅アイコンをクリックすると店舗の詳細情報を確認できます。</p>
           </div>
         </div>
       </header>

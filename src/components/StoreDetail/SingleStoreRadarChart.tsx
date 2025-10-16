@@ -83,14 +83,14 @@ export function SingleStoreRadarChart({ store }: SingleStoreRadarChartProps) {
             <PolarGrid className="stroke-gray-200 dark:stroke-gray-600" />
             <PolarAngleAxis 
               dataKey="axis" 
-              tick={{ fontSize: 12, fill: '#374151' }}
+              tick={{ fontSize: 12, fill: 'currentColor' }}
               className="text-gray-700 dark:text-gray-300"
             />
             <PolarRadiusAxis
               angle={90}
               domain={[0, 10]}
-              tick={{ fontSize: 10, fill: '#6B7280' }}
-              className="dark:text-gray-400"
+              tick={{ fontSize: 10, fill: 'currentColor' }}
+              className="text-gray-500 dark:text-gray-400"
               tickCount={6}
             />
             <Tooltip content={<CustomTooltip />} />

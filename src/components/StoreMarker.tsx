@@ -44,7 +44,7 @@ export default function StoreMarker({ store, map, onMarkerClick }: StoreMarkerPr
 
     // カスタムマーカーアイコンを作成
     const iconElement = document.createElement('img');
-    iconElement.src = '/icons/butaman-marker.svg';
+    iconElement.src = '/icons/ban-logo.svg';
     iconElement.style.width = '40px';
     iconElement.style.height = '40px';
     iconElement.alt = store.name;

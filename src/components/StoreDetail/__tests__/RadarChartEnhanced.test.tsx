@@ -21,8 +21,6 @@ const mockStore: ExtendedStore = {
       priceValue: 9,
       atmosphere: 8
     },
-    confidence: 85,
-    reviewCount: 50,
     analysisDate: '2025-10-15'
   },
   dataSource: {

@@ -5,14 +5,14 @@
       "name": "老祥記",
       "address": "神戸市中央区元町通2-1-14",
       "coordinates": {
-        "lat": 34.6909,
+        "lat": 34.6917,
         "lng": 135.1913
       },
       "district": "中央区",
       "businessHours": "月〜土 8:30-18:30 (定休日: 日曜)",
       "features": ["伝統の醤油味", "もちもち麹発酵皮", "小ぶりサイズ", "老舗"],
       "description": "豚饅の元祖として知られる老舗中の老舗。1915年創業以来受け継がれる伝統の醤油味ともちもちの麹発酵皮が特徴。",
-      "googleMapsUrl": "https://maps.google.com/?q=老祥記+神戸市中央区元町通1-3-7",
+      "googleMapsUrl": "https://maps.google.com/?q=老祥記+神戸市中央区元町通2-1-14",
       "categories": ["テイクアウト"],
       "aiAnalysis": {
         "features": {
@@ -22,8 +22,6 @@
           "priceValue": 9,
           "atmosphere": 8
         },
-        "confidence": 92,
-        "reviewCount": 150,
         "analysisDate": "2025-10-15"
       },
       "dataSource": {
@@ -35,7 +33,7 @@
     {
       "id": "shikohroh",
       "name": "四興樓",
-      "address": "神戸市中央区元町通２-９-１ 元町プラザビル",
+      "address": "神戸市中央区元町通2-9-1 元町プラザビル",
       "coordinates": {
         "lat": 34.6912,
         "lng": 135.1920
@@ -44,7 +42,7 @@
       "businessHours": "11:00-20:00 (定休日: 火曜)",
       "features": ["大ぶりサイズ", "ふっくら甘い皮", "ジューシー餡", "添加物なし"],
       "description": "大ぶりでふっくらとした甘い皮が特徴。ジューシーな餡と添加物を使わない自然な味わい。",
-      "googleMapsUrl": "https://maps.google.com/?q=四興樓+神戸市中央区元町通2-9-1",
+      "googleMapsUrl": "https://maps.google.com/?q=四興樓+神戸市中央区元町通2-9-1+元町プラザビル",
       "categories": ["テイクアウト", "店内飲食", "通販"],
       "aiAnalysis": {
         "features": {
@@ -54,8 +52,6 @@
           "priceValue": 6,
           "atmosphere": 7
         },
-        "confidence": 85,
-        "reviewCount": 89,
         "analysisDate": "2025-10-15"
       },
       "dataSource": {
@@ -70,7 +66,7 @@
       "address": "神戸市中央区三宮町3-9-9",
       "coordinates": {
         "lat": 34.6925,
-        "lng": 135.1900
+        "lng": 135.1902
       },
       "district": "中央区",
       "businessHours": "11:30-20:30 (定休日: 月曜)",
@@ -86,8 +82,6 @@
           "priceValue": 6,
           "atmosphere": 7
         },
-        "confidence": 78,
-        "reviewCount": 65,
         "analysisDate": "2025-10-15"
       },
       "dataSource": {
@@ -101,14 +95,14 @@
       "name": "曹家包子館",
       "address": "神戸市中央区元町通1-3-7",
       "coordinates": {
-        "lat": 34.6915,
-        "lng": 135.1925
+        "lat": 34.6909,
+        "lng": 135.1914
       },
       "district": "中央区",
       "businessHours": "11:00-19:00 (定休日: 水曜)",
       "features": ["椎茸豚肉包専門", "老祥記姉店", "手作り皮", "中華街風味"],
       "description": "椎茸豚肉包専門店で老祥記の姉店。本格的な中華の技法で作られる豚饅。手作りの皮が自慢。",
-      "googleMapsUrl": "https://maps.google.com/?q=曹家包子館+神戸市中央区栄町通2-8-11",
+      "googleMapsUrl": "https://maps.google.com/?q=曹家包子館+神戸市中央区元町通1-3-7",
       "categories": ["テイクアウト", "店内飲食"],
       "aiAnalysis": {
         "features": {
@@ -118,8 +112,6 @@
           "priceValue": 8,
           "atmosphere": 7
         },
-        "confidence": 82,
-        "reviewCount": 45,
         "analysisDate": "2025-10-15"
       },
       "dataSource": {
@@ -133,14 +125,14 @@
       "name": "太平閣",
       "address": "神戸市中央区三宮町1-8-1 さんプラザ １F",
       "coordinates": {
-        "lat": 34.6930,
-        "lng": 135.1890
+        "lat": 34.6931,
+        "lng": 135.1895
       },
       "district": "中央区",
       "businessHours": "11:00-21:00 (定休日: 不定休)",
       "features": ["大サイズ", "甘くジューシー", "70年伝統", "満腹感"],
       "description": "70年の伝統を持つ歴史ある中華料理店。大サイズで甘くジューシーな豚饅が特徴。ボリュームがあり食べ応え十分。",
-      "googleMapsUrl": "https://maps.google.com/?q=太平閣+神戸市中央区三宮町1-4-1",
+      "googleMapsUrl": "https://maps.google.com/?q=太平閣+神戸市中央区三宮町1-8-1+さんプラザ+１F",
       "categories": ["テイクアウト", "店内飲食"],
       "aiAnalysis": {
         "features": {
@@ -150,8 +142,6 @@
           "priceValue": 7,
           "atmosphere": 8
         },
-        "confidence": 88,
-        "reviewCount": 72,
         "analysisDate": "2025-10-15"
       },
       "dataSource": {
@@ -165,14 +155,14 @@
       "name": "皇蘭",
       "address": "神戸市中央区栄町通2-10-6",
       "coordinates": {
-        "lat": 34.6910,
-        "lng": 135.1915
+        "lat": 34.6904,
+        "lng": 135.1925
       },
       "district": "中央区",
       "businessHours": "11:00-19:00 (定休日: 月曜)",
       "features": ["神戸牛まん人気", "厳選素材", "手作り製法", "高級感"],
       "description": "神戸牛まんで人気の店舗。厳選された素材と手作り製法にこだわった高級感のある豚饅を提供。",
-      "googleMapsUrl": "https://maps.google.com/?q=皇蘭+神戸市中央区元町通1-5-8",
+      "googleMapsUrl": "https://maps.google.com/?q=皇蘭+神戸市中央区栄町通2-10-6",
       "categories": ["テイクアウト", "店内飲食"],
       "aiAnalysis": {
         "features": {
@@ -182,8 +172,6 @@
           "priceValue": 5,
           "atmosphere": 9
         },
-        "confidence": 75,
-        "reviewCount": 38,
         "analysisDate": "2025-10-15"
       },
       "dataSource": {
@@ -197,14 +185,14 @@
       "name": "朋榮",
       "address": "神戸市中央区元町通2-3-1",
       "coordinates": {
-        "lat": 34.6918,
-        "lng": 135.1922
+        "lat": 34.6916,
+        "lng": 135.1919
       },
       "district": "中央区",
       "businessHours": "11:00-20:00 (定休日: 木曜)",
       "features": ["ジューシー豚まん", "焼き豚まん", "フカヒレ豚まん", "専門店"],
       "description": "ジューシーな豚まん、焼き豚まん、フカヒレ豚まんを専門とする店舗。バリエーション豊富なメニューが魅力。",
-      "googleMapsUrl": "https://maps.google.com/?q=朋榮+神戸市中央区栄町通2-3-5",
+      "googleMapsUrl": "https://maps.google.com/?q=朋榮+神戸市中央区元町通2-3-1",
       "categories": ["テイクアウト", "店内飲食"],
       "aiAnalysis": {
         "features": {
@@ -214,8 +202,6 @@
           "priceValue": 7,
           "atmosphere": 7
         },
-        "confidence": 80,
-        "reviewCount": 52,
         "analysisDate": "2025-10-15"
       },
       "dataSource": {
@@ -229,14 +215,14 @@
       "name": "杏杏（シンシン）",
       "address": "神戸市中央区下山手通4-13-14",
       "coordinates": {
-        "lat": 34.6913,
-        "lng": 135.1918
+        "lat": 34.6875,
+        "lng": 135.1880
       },
       "district": "中央区",
       "businessHours": "11:00-21:00 (定休日: 水曜)",
       "features": ["伝統中華粥店", "粥との相性", "老舗の味", "中華街文化"],
       "description": "伝統的な中華粥店として知られ、粥との相性を考えた豚饅を提供。老舗ならではの中華街文化を感じられる味。",
-      "googleMapsUrl": "https://maps.google.com/?q=杏杏+神戸市中央区元町通2-2-7",
+      "googleMapsUrl": "https://maps.google.com/?q=杏杏+神戸市中央区下山手通4-13-14",
       "categories": ["テイクアウト", "店内飲食"],
       "aiAnalysis": {
         "features": {
@@ -246,8 +232,6 @@
           "priceValue": 7,
           "atmosphere": 8
         },
-        "confidence": 72,
-        "reviewCount": 34,
         "analysisDate": "2025-10-15"
       },
       "dataSource": {
@@ -261,14 +245,14 @@
       "name": "点心Tsubakien",
       "address": "神戸市中央区旗塚通3-1-18 ベルメゾン旗塚 1F",
       "coordinates": {
-        "lat": 34.6895,
-        "lng": 135.1875
+        "lat": 34.6845,
+        "lng": 135.1835
       },
       "district": "中央区",
       "businessHours": "10:00-19:00 (定休日: 火曜)",
       "features": ["本格点心", "冷凍対応", "技術力高", "モダン中華"],
       "description": "本格的な点心技術を駆使し、冷凍にも対応した高品質な豚饅を提供。モダンな中華料理店として技術力の高さが評価される。",
-      "googleMapsUrl": "https://maps.google.com/?q=点心Tsubakien+神戸市中央区海岸通3-1-17",
+      "googleMapsUrl": "https://maps.google.com/?q=点心Tsubakien+神戸市中央区旗塚通3-1-18+ベルメゾン旗塚+1F",
       "categories": ["テイクアウト", "店内飲食", "通販"],
       "aiAnalysis": {
         "features": {
@@ -278,8 +262,6 @@
           "priceValue": 6,
           "atmosphere": 8
         },
-        "confidence": 70,
-        "reviewCount": 28,
         "analysisDate": "2025-10-15"
       },
       "dataSource": {
@@ -293,31 +275,19 @@
       "name": "新安源商店",
       "address": "神戸市中央区八雲通4丁目6-8",
       "coordinates": {
-        "lat": 34.7050,
-        "lng": 135.2200
+        "lat": 34.6855,
+        "lng": 135.1825
       },
-      "district": "灘区",
-      "businessHours": "9:00-18:00 (定休日: 日曜)",
-      "features": ["地元密着型", "庶民的価格", "家庭的な味", "地域貢献"],
-      "description": "灘区で地元密着型の商店として親しまれている。庶民的な価格で家庭的な味の豚饅を提供し、地域に貢献している。",
-      "googleMapsUrl": "https://maps.google.com/?q=新安源商店+神戸市灘区森後町3-1-15",
+      "district": "中央区",
+      "businessHours": "Coming Soon...",
+      "features": ["Coming Soon"],
+      "description": "詳細情報を調査中です。近日中に詳しい情報をお届けします。",
+      "googleMapsUrl": "https://maps.google.com/?q=新安源商店+神戸市中央区八雲通4丁目6-8",
       "categories": ["テイクアウト"],
-      "aiAnalysis": {
-        "features": {
-          "taste": 6,
-          "texture": 6,
-          "size": 6,
-          "priceValue": 8,
-          "atmosphere": 7
-        },
-        "confidence": 65,
-        "reviewCount": 22,
-        "analysisDate": "2025-10-15"
-      },
       "dataSource": {
-        "collectionDate": "2025-10-15",
-        "sourceUrl": "https://tabelog.com/hyogo/A2801/A280103/28001009/",
-        "isEnhanced": true
+        "collectionDate": "2025-10-16",
+        "sourceUrl": "",
+        "isEnhanced": false
       }
     }
   ]

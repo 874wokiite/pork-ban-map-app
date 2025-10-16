@@ -15,8 +15,6 @@ const mockStores: ExtendedStore[] = [
     categories: ['テイクアウト'],
     aiAnalysis: {
       features: { taste: 8, texture: 9, size: 4, priceValue: 9, atmosphere: 8 },
-      confidence: 92,
-      reviewCount: 150,
       analysisDate: '2025-10-15'
     },
     dataSource: { collectionDate: '2025-10-15', sourceUrl: 'https://example.com', isEnhanced: true }
@@ -33,8 +31,6 @@ const mockStores: ExtendedStore[] = [
     categories: ['テイクアウト'],
     aiAnalysis: {
       features: { taste: 7, texture: 8, size: 9, priceValue: 6, atmosphere: 7 },
-      confidence: 85,
-      reviewCount: 89,
       analysisDate: '2025-10-15'
     },
     dataSource: { collectionDate: '2025-10-15', sourceUrl: 'https://example.com', isEnhanced: true }
@@ -51,8 +47,6 @@ const mockStores: ExtendedStore[] = [
     categories: ['テイクアウト'],
     aiAnalysis: {
       features: { taste: 6, texture: 7, size: 7, priceValue: 6, atmosphere: 7 },
-      confidence: 78,
-      reviewCount: 65,
       analysisDate: '2025-10-15'
     },
     dataSource: { collectionDate: '2025-10-15', sourceUrl: 'https://example.com', isEnhanced: true }

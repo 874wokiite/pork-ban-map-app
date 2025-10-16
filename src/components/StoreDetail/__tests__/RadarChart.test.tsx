@@ -21,8 +21,6 @@ const mockStore: ExtendedStore = {
       priceValue: 9,
       atmosphere: 8
     },
-    confidence: 85,
-    reviewCount: 50,
     analysisDate: '2025-10-15'
   },
   dataSource: {
@@ -75,8 +73,6 @@ describe('RadarChart コンポーネント', () => {
           priceValue: 7,
           atmosphere: 6
         },
-        confidence: 90,
-        reviewCount: 30,
         analysisDate: '2025-10-15'
       }
     }

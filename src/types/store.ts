@@ -53,10 +53,6 @@ export interface FeatureAnalysis {
 export interface AIAnalysisData {
   /** 5軸特徴スコア */
   features: FeatureAnalysis
-  /** 信頼度スコア (0-100%) */
-  confidence: number
-  /** 分析対象口コミ数 */
-  reviewCount: number
   /** 分析実行日時 */
   analysisDate: string
 }

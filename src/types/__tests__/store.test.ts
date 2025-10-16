@@ -12,7 +12,6 @@ describe('Store型定義', () => {
       },
       district: '中央区',
       businessHours: '10:00-18:00',
-      price: 100,
       features: ['テスト特徴1', 'テスト特徴2'],
       googleMapsUrl: 'https://maps.google.com/?q=test',
       categories: ['テイクアウト']
@@ -28,7 +27,6 @@ describe('Store型定義', () => {
         typeof store.coordinates.lng === 'number' &&
         typeof store.district === 'string' &&
         typeof store.businessHours === 'string' &&
-        typeof store.price === 'number' &&
         Array.isArray(store.features) &&
         typeof store.googleMapsUrl === 'string' &&
         Array.isArray(store.categories)
@@ -49,7 +47,6 @@ describe('Store型定義', () => {
       },
       district: '中央区',
       businessHours: '10:00-18:00',
-      price: 150,
       features: ['特徴1'],
       googleMapsUrl: 'https://maps.google.com/?q=test2',
       categories: ['店内飲食'],

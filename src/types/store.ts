@@ -16,8 +16,6 @@ export interface Store {
   district: string
   /** 営業時間（定休日含む） */
   businessHours: string
-  /** 豚饅1個の価格（円） */
-  price: number
   /** 豚饅の特徴タグ */
   features: string[]
   /** 店舗・豚饅の説明文（オプション） */

@@ -41,7 +41,6 @@ const mockStore: Store = {
   },
   district: '中央区',
   businessHours: '月〜土 8:30-18:30 (定休日: 日曜)',
-  price: 100,
   features: ['伝統の味', '行列必至', '豚饅発祥', '老舗'],
   description: '豚饅の元祖として知られる老舗',
   googleMapsUrl: 'https://maps.google.com/?q=老祥記',

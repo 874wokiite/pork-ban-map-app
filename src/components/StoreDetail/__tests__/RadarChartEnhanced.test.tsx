@@ -9,7 +9,6 @@ const mockStore: ExtendedStore = {
   coordinates: { lat: 34.6937, lng: 135.5023 },
   district: '中央区',
   businessHours: '10:00-18:00',
-  price: 150,
   features: ['特徴1', '特徴2'],
   description: 'テスト用の店舗です',
   googleMapsUrl: 'https://maps.google.com/?q=test',

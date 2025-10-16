@@ -44,7 +44,6 @@ const mockStores = [
     coordinates: { lat: 34.6918, lng: 135.1955 },
     district: '中央区',
     businessHours: '月〜土 8:30-18:30',
-    price: 100,
     features: ['伝統の味'],
     googleMapsUrl: 'https://maps.google.com',
     categories: ['テイクアウト' as const]
@@ -56,7 +55,6 @@ const mockStores = [
     coordinates: { lat: 34.6920, lng: 135.1958 },
     district: '中央区',
     businessHours: '11:00-20:00',
-    price: 120,
     features: ['バリエーション豊富'],
     googleMapsUrl: 'https://maps.google.com',
     categories: ['テイクアウト' as const]

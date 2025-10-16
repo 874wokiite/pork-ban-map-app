@@ -10,7 +10,6 @@ const mockStore: Store = {
   coordinates: { lat: 34.6937, lng: 135.5023 },
   district: '中央区',
   businessHours: '10:00-18:00 (定休日: 月曜)',
-  price: 150,
   features: ['テスト特徴1', 'テスト特徴2'],
   description: 'テスト店舗の説明文',
   googleMapsUrl: 'https://maps.google.com/?q=test',

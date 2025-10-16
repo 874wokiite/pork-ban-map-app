@@ -36,7 +36,6 @@ describe('Store Data Validation', () => {
       expect(store.coordinates).toBeDefined()
       expect(store.district).toBeDefined()
       expect(store.businessHours).toBeDefined()
-      expect(store.price).toBeDefined()
       expect(store.features).toBeDefined()
       // imagesフィールドはStore型定義にないためコメントアウト
       // expect(store.images).toBeDefined()
@@ -49,7 +48,6 @@ describe('Store Data Validation', () => {
       expect(typeof store.address).toBe('string')
       expect(typeof store.district).toBe('string')
       expect(typeof store.businessHours).toBe('string')
-      expect(typeof store.price).toBe('number')
       expect(typeof store.googleMapsUrl).toBe('string')
       expect(Array.isArray(store.features)).toBe(true)
       // imagesフィールドのチェックをコメントアウト
@@ -70,12 +68,6 @@ describe('Store Data Validation', () => {
     })
   })
 
-  test('価格が正の整数であること', () => {
-    storesData.stores.forEach((store) => {
-      expect(store.price).toBeGreaterThan(0)
-      expect(Number.isInteger(store.price)).toBe(true)
-    })
-  })
 
   test('featuresが1つ以上含まれていること', () => {
     storesData.stores.forEach((store) => {

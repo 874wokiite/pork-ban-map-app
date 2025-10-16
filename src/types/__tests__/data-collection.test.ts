@@ -17,7 +17,6 @@ describe('データ収集・分析型定義', () => {
         coordinates: { lat: 34.6937, lng: 135.5023 },
         district: '中央区',
         businessHours: '10:00-18:00',
-        price: 100,
         features: ['特徴1'],
         categories: ['テイクアウト'],
         sourceUrl: 'https://example.com/store'

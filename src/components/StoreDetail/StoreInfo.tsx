@@ -35,16 +35,6 @@ export default function StoreInfo({ store }: StoreInfoProps) {
             </p>
           </div>
 
-          {/* 価格 */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-1">
-              価格
-            </h3>
-            <p className="text-gray-900 dark:text-white font-semibold">
-              ¥{store.price}
-            </p>
-          </div>
-
         </div>
       </div>
 

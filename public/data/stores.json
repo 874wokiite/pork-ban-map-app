@@ -3,14 +3,13 @@
     {
       "id": "roushouki",
       "name": "老祥記",
-      "address": "〒650-0022 兵庫県神戸市中央区元町通1-3-7",
+      "address": "神戸市中央区元町通2-1-14",
       "coordinates": {
         "lat": 34.6909,
         "lng": 135.1913
       },
       "district": "中央区",
       "businessHours": "月〜土 8:30-18:30 (定休日: 日曜)",
-      "price": 120,
       "features": ["伝統の醤油味", "もちもち麹発酵皮", "小ぶりサイズ", "老舗"],
       "description": "豚饅の元祖として知られる老舗中の老舗。1915年創業以来受け継がれる伝統の醤油味ともちもちの麹発酵皮が特徴。",
       "googleMapsUrl": "https://maps.google.com/?q=老祥記+神戸市中央区元町通1-3-7",
@@ -36,14 +35,13 @@
     {
       "id": "shikohroh",
       "name": "四興樓",
-      "address": "〒650-0022 兵庫県神戸市中央区元町通2-9-1 元町プラザビル",
+      "address": "神戸市中央区元町通２-９-１ 元町プラザビル",
       "coordinates": {
         "lat": 34.6912,
         "lng": 135.1920
       },
       "district": "中央区",
       "businessHours": "11:00-20:00 (定休日: 火曜)",
-      "price": 211,
       "features": ["大ぶりサイズ", "ふっくら甘い皮", "ジューシー餡", "添加物なし"],
       "description": "大ぶりでふっくらとした甘い皮が特徴。ジューシーな餡と添加物を使わない自然な味わい。",
       "googleMapsUrl": "https://maps.google.com/?q=四興樓+神戸市中央区元町通2-9-1",
@@ -69,14 +67,13 @@
     {
       "id": "sannomiya-ikkanrou",
       "name": "三宮一貫楼",
-      "address": "〒650-0021 兵庫県神戸市中央区三宮町3-9-9",
+      "address": "神戸市中央区三宮町3-9-9",
       "coordinates": {
         "lat": 34.6925,
         "lng": 135.1900
       },
       "district": "中央区",
       "businessHours": "11:30-20:30 (定休日: 月曜)",
-      "price": 200,
       "features": ["玉ねぎの甘み", "甘めの皮", "ジューシー", "観光客向け"],
       "description": "玉ねぎの甘みが強く、甘めの皮とジューシーな餡が特徴。三宮の中心部にあり観光客にも人気。",
       "googleMapsUrl": "https://maps.google.com/?q=三宮一貫楼+神戸市中央区三宮町3-9-9",
@@ -102,14 +99,13 @@
     {
       "id": "sojaga-houzikan",
       "name": "曹家包子館",
-      "address": "〒650-0023 兵庫県神戸市中央区栄町通2-8-11",
+      "address": "神戸市中央区元町通1-3-7",
       "coordinates": {
         "lat": 34.6915,
         "lng": 135.1925
       },
       "district": "中央区",
       "businessHours": "11:00-19:00 (定休日: 水曜)",
-      "price": 140,
       "features": ["椎茸豚肉包専門", "老祥記姉店", "手作り皮", "中華街風味"],
       "description": "椎茸豚肉包専門店で老祥記の姉店。本格的な中華の技法で作られる豚饅。手作りの皮が自慢。",
       "googleMapsUrl": "https://maps.google.com/?q=曹家包子館+神戸市中央区栄町通2-8-11",
@@ -135,14 +131,13 @@
     {
       "id": "taiheikatsu",
       "name": "太平閣",
-      "address": "〒650-0021 兵庫県神戸市中央区三宮町1-4-1",
+      "address": "神戸市中央区三宮町1-8-1 さんプラザ １F",
       "coordinates": {
         "lat": 34.6930,
         "lng": 135.1890
       },
       "district": "中央区",
       "businessHours": "11:00-21:00 (定休日: 不定休)",
-      "price": 198,
       "features": ["大サイズ", "甘くジューシー", "70年伝統", "満腹感"],
       "description": "70年の伝統を持つ歴史ある中華料理店。大サイズで甘くジューシーな豚饅が特徴。ボリュームがあり食べ応え十分。",
       "googleMapsUrl": "https://maps.google.com/?q=太平閣+神戸市中央区三宮町1-4-1",
@@ -168,14 +163,13 @@
     {
       "id": "kouran",
       "name": "皇蘭",
-      "address": "〒650-0022 兵庫県神戸市中央区元町通1-5-8",
+      "address": "神戸市中央区栄町通2-10-6",
       "coordinates": {
         "lat": 34.6910,
         "lng": 135.1915
       },
       "district": "中央区",
       "businessHours": "11:00-19:00 (定休日: 月曜)",
-      "price": 250,
       "features": ["神戸牛まん人気", "厳選素材", "手作り製法", "高級感"],
       "description": "神戸牛まんで人気の店舗。厳選された素材と手作り製法にこだわった高級感のある豚饅を提供。",
       "googleMapsUrl": "https://maps.google.com/?q=皇蘭+神戸市中央区元町通1-5-8",
@@ -201,14 +195,13 @@
     {
       "id": "houei",
       "name": "朋榮",
-      "address": "〒650-0023 兵庫県神戸市中央区栄町通2-3-5",
+      "address": "神戸市中央区元町通2-3-1",
       "coordinates": {
         "lat": 34.6918,
         "lng": 135.1922
       },
       "district": "中央区",
       "businessHours": "11:00-20:00 (定休日: 木曜)",
-      "price": 180,
       "features": ["ジューシー豚まん", "焼き豚まん", "フカヒレ豚まん", "専門店"],
       "description": "ジューシーな豚まん、焼き豚まん、フカヒレ豚まんを専門とする店舗。バリエーション豊富なメニューが魅力。",
       "googleMapsUrl": "https://maps.google.com/?q=朋榮+神戸市中央区栄町通2-3-5",
@@ -234,14 +227,13 @@
     {
       "id": "shinshin",
       "name": "杏杏（シンシン）",
-      "address": "〒650-0022 兵庫県神戸市中央区元町通2-2-7",
+      "address": "神戸市中央区下山手通4-13-14",
       "coordinates": {
         "lat": 34.6913,
         "lng": 135.1918
       },
       "district": "中央区",
       "businessHours": "11:00-21:00 (定休日: 水曜)",
-      "price": 160,
       "features": ["伝統中華粥店", "粥との相性", "老舗の味", "中華街文化"],
       "description": "伝統的な中華粥店として知られ、粥との相性を考えた豚饅を提供。老舗ならではの中華街文化を感じられる味。",
       "googleMapsUrl": "https://maps.google.com/?q=杏杏+神戸市中央区元町通2-2-7",
@@ -267,14 +259,13 @@
     {
       "id": "tsubakien",
       "name": "点心Tsubakien",
-      "address": "〒650-0024 兵庫県神戸市中央区海岸通3-1-17",
+      "address": "神戸市中央区旗塚通3-1-18 ベルメゾン旗塚 1F",
       "coordinates": {
         "lat": 34.6895,
         "lng": 135.1875
       },
       "district": "中央区",
       "businessHours": "10:00-19:00 (定休日: 火曜)",
-      "price": 220,
       "features": ["本格点心", "冷凍対応", "技術力高", "モダン中華"],
       "description": "本格的な点心技術を駆使し、冷凍にも対応した高品質な豚饅を提供。モダンな中華料理店として技術力の高さが評価される。",
       "googleMapsUrl": "https://maps.google.com/?q=点心Tsubakien+神戸市中央区海岸通3-1-17",
@@ -300,14 +291,13 @@
     {
       "id": "shinangen",
       "name": "新安源商店",
-      "address": "〒657-0028 兵庫県神戸市灘区森後町3-1-15",
+      "address": "神戸市中央区八雲通4丁目6-8",
       "coordinates": {
         "lat": 34.7050,
         "lng": 135.2200
       },
       "district": "灘区",
       "businessHours": "9:00-18:00 (定休日: 日曜)",
-      "price": 130,
       "features": ["地元密着型", "庶民的価格", "家庭的な味", "地域貢献"],
       "description": "灘区で地元密着型の商店として親しまれている。庶民的な価格で家庭的な味の豚饅を提供し、地域に貢献している。",
       "googleMapsUrl": "https://maps.google.com/?q=新安源商店+神戸市灘区森後町3-1-15",

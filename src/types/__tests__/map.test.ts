@@ -12,7 +12,6 @@ describe('MapState型定義', () => {
     },
     district: '中央区',
     businessHours: '10:00-18:00',
-    price: 100,
     features: ['テスト特徴'],
     googleMapsUrl: 'https://maps.google.com/?q=test',
     categories: ['テイクアウト']

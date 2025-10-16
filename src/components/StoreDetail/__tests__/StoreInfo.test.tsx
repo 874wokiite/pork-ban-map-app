@@ -10,7 +10,6 @@ const mockStore: Store = {
   coordinates: { lat: 34.6937, lng: 135.5023 },
   district: '中央区',
   businessHours: '10:00-18:00 (定休日: 月曜)',
-  price: 150,
   features: ['テスト特徴1', 'テスト特徴2', '特別な味'],
   description: 'テスト店舗の説明文です。美味しい豚饅を提供しています。',
   googleMapsUrl: 'https://maps.google.com/?q=test',
@@ -23,7 +22,6 @@ describe('StoreInfo', () => {
     
     expect(screen.getByText('〒650-0001 兵庫県神戸市中央区テスト町1-2-3')).toBeInTheDocument()
     expect(screen.getByText('10:00-18:00 (定休日: 月曜)')).toBeInTheDocument()
-    expect(screen.getByText('¥150')).toBeInTheDocument()
   })
 
   it('特徴タグが正しく表示される', () => {

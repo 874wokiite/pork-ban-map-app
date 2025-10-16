@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react'
 import { ExtendedStore } from '@/types/store'
 import { SingleStoreRadarChart } from './SingleStoreRadarChart'
+import ServiceTypeIcon from '@/components/ServiceTypeIcon'
 
 interface StoreModalProps {
   isOpen: boolean
@@ -157,14 +158,17 @@ export default function StoreModal({ isOpen, onClose, store }: StoreModalProps) 
               <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">
                 サービス形態
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {store.categories.map((category, index) => (
-                  <span
+                  <div
                     key={index}
-                    className="inline-block bg-primary-light/10 text-primary-light px-3 py-1 rounded-full text-sm font-medium"
+                    className="flex items-center gap-2"
                   >
-                    {category}
-                  </span>
+                    <ServiceTypeIcon serviceType={category} />
+                    <span className="text-black text-sm font-medium">
+                      {category}
+                    </span>
+                  </div>
                 ))}
               </div>
             </div>

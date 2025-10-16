@@ -9,6 +9,10 @@
   --surface: #F8F9FA;        /* サーフェス */
   --text-primary: #2D3748;   /* プライマリテキスト */
   --text-secondary: #718096; /* セカンダリテキスト */
+  --border: #E2E8F0;         /* ボーダー */
+  --card: #ffffff;           /* カード背景 */
+  --button-bg: #ffffff;      /* ボタン背景 */
+  --button-hover: #f7fafc;   /* ボタンホバー */
 }
 
 @theme inline {
@@ -20,6 +24,10 @@
   --color-surface: var(--surface);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-button-bg: var(--button-bg);
+  --color-button-hover: var(--button-hover);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -31,6 +39,10 @@
     --surface: #2D3748;
     --text-primary: #F7FAFC;
     --text-secondary: #E2E8F0;
+    --border: #4A5568;
+    --card: #2D3748;
+    --button-bg: #4A5568;
+    --button-hover: #718096;
   }
 }
 

@@ -41,8 +41,8 @@ interface TooltipProps {
 const CustomTooltip = ({ active, payload, label }: TooltipProps) => {
   if (active && payload && payload.length) {
     return (
-      <div className="bg-white p-3 border border-gray-300 rounded-lg shadow-lg">
-        <p className="font-semibold text-gray-800">{`${label}`}</p>
+      <div className="bg-white dark:bg-gray-800 p-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg">
+        <p className="font-semibold text-gray-800 dark:text-white">{`${label}`}</p>
         {payload.map((entry, index: number) => (
           <p key={index} style={{ color: entry.color }}>
             {`${entry.dataKey}: ${entry.value}/10`}
@@ -71,11 +71,11 @@ export function RadarChart({ stores, selectedStoreIds }: RadarChartProps) {
         <div className="w-full h-96" data-testid="radar-chart">
           <ResponsiveContainer width="100%" height="100%">
             <RechartsRadarChart cx="50%" cy="50%" outerRadius="80%" data={emptyChartData}>
-              <PolarGrid className="stroke-gray-200" />
+              <PolarGrid className="stroke-gray-200 dark:stroke-gray-600" />
               <PolarAngleAxis 
                 dataKey="axis" 
                 tick={{ fontSize: 12, fill: '#374151' }}
-                className="text-gray-700"
+                className="text-gray-700 dark:text-gray-300"
               />
               <PolarRadiusAxis
                 angle={90}
@@ -103,11 +103,11 @@ export function RadarChart({ stores, selectedStoreIds }: RadarChartProps) {
   
   if (!hasAnalysisData) {
     return (
-      <div className="flex items-center justify-center h-64 text-gray-500">
+      <div className="flex items-center justify-center h-64 text-gray-500 dark:text-gray-400">
         <div className="text-center">
           <div className="text-lg mb-2">📊</div>
           <div>AI分析データがありません</div>
-          <div className="text-sm text-gray-400 mt-1">
+          <div className="text-sm text-gray-400 dark:text-gray-500 mt-1">
             店舗の特徴分析が完了すると表示されます
           </div>
         </div>
@@ -135,7 +135,7 @@ export function RadarChart({ stores, selectedStoreIds }: RadarChartProps) {
     <div className="w-full space-y-4">
       {/* 表示制限の警告 */}
       {selectedStores.length > 3 && (
-        <div className="text-sm text-amber-600 bg-amber-50 p-2 rounded">
+        <div className="text-sm text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/20 p-2 rounded">
           ⚠️ 比較表示は最大3店舗までです。最初の3店舗を表示しています。
         </div>
       )}
@@ -143,16 +143,17 @@ export function RadarChart({ stores, selectedStoreIds }: RadarChartProps) {
       <div className="w-full h-96" data-testid="radar-chart">
         <ResponsiveContainer width="100%" height="100%">
           <RechartsRadarChart cx="50%" cy="50%" outerRadius="80%" data={chartData}>
-            <PolarGrid className="stroke-gray-200" />
+            <PolarGrid className="stroke-gray-200 dark:stroke-gray-600" />
             <PolarAngleAxis 
               dataKey="axis" 
               tick={{ fontSize: 12, fill: '#374151' }}
-              className="text-gray-700"
+              className="text-gray-700 dark:text-gray-300"
             />
             <PolarRadiusAxis
               angle={90}
               domain={[0, 10]}
               tick={{ fontSize: 10, fill: '#6B7280' }}
+              className="dark:text-gray-400"
               tickCount={6}
             />
             <Tooltip content={<CustomTooltip />} />

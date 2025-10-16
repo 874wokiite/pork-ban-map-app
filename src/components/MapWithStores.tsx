@@ -62,12 +62,12 @@ export default function MapWithStores({ className, onStoreClick, onSearchClick }
       {onSearchClick && (
         <button
           onClick={onSearchClick}
-          className="absolute top-4 right-4 z-10 bg-white hover:bg-gray-50 shadow-lg rounded-full p-3 transition-colors"
+          className="absolute top-4 right-4 z-10 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-lg rounded-full p-3 transition-colors"
           aria-label="AI分析・比較を開く"
           title="AI分析・比較"
         >
           <svg
-            className="w-6 h-6 text-gray-700"
+            className="w-6 h-6 text-gray-700 dark:text-gray-300"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

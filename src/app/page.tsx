@@ -88,24 +88,30 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* ヘッダー */}
-      <header className="bg-white dark:bg-gray-800 p-4 sm:p-6">
-        <div className="container mx-auto flex items-center gap-4">
-          {/* 豚饅ロゴ */}
-          <div className="flex-shrink-0">
-            <img 
-              src="/icons/ban-logo.svg" 
-              alt="豚饅ロゴ" 
-              className="w-12 h-12 sm:w-16 sm:h-16"
-            />
-          </div>
-          
-          {/* テキスト部分 */}
-          <div className="flex-1">
-            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold font-[var(--font-noto-serif-jp)] text-red-600">神戸豚饅マップ</h1>
-            <p className="text-sm sm:text-base font-[var(--font-zen-old-mincho)] text-gray-800 dark:text-gray-200">神戸豚饅サミット参加店舗を探そう。豚饅アイコンをクリックすると店舗の詳細情報を確認できます。</p>
-          </div>
-        </div>
+      <header className="bg-accent-green flex justify-center items-center sm:items-end px-4 sm:px-0">
+        <img
+          src="/images/girl-kanon-up.png"
+          alt="かのん"
+          className="w-1/4 sm:w-auto sm:h-16 md:h-20 object-contain"
+        />
+        <img
+          src="/images/kobe-ban-service-logo.png"
+          alt="神戸豚饅マップ"
+          className="w-1/2 sm:w-auto sm:h-16 md:h-24 object-contain"
+        />
+        <img
+          src="/images/girl-saki-up.png"
+          alt="さき"
+          className="w-1/4 sm:w-auto sm:h-16 md:h-20 object-contain"
+        />
       </header>
+
+      {/* マーキー帯 */}
+      <div className="bg-black text-white text-xs py-1 overflow-hidden whitespace-nowrap">
+        <div className="animate-marquee inline-block font-bold">
+          神戸豚饅MAPどんどんアプデ中！お楽しみに！　豚饅アイコンをクリックすると店舗の詳細情報を確認できます。
+        </div>
+      </div>
 
       {/* エラー表示 */}
       {error && (

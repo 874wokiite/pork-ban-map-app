@@ -67,9 +67,9 @@ export default function AIAnalysisModal({
     >
       <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
         {/* ヘッダー部分 */}
-        <div className="flex justify-between items-center p-6 border-b border-gray-200 dark:border-gray-700">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-            AI分析・比較
+        <div className="flex justify-between items-center py-4 px-6 border-b border-gray-200 dark:border-gray-700">
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white">
+            店舗比較（AI分析）
           </h2>
           <button
             onClick={onClose}

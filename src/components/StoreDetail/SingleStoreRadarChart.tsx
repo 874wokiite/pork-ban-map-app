@@ -69,12 +69,9 @@ export function SingleStoreRadarChart({ store }: SingleStoreRadarChartProps) {
   return (
     <div className="w-full space-y-4">
       <div className="text-center">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-          豚饅特徴分析
+        <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">
+          豚饅の特徴チャート（AI分析）
         </h3>
-        <p className="text-sm text-gray-600 dark:text-gray-400">
-          AI分析による味、食感、ボリュームなどの特徴
-        </p>
       </div>
       
       <div className="w-full h-64" data-testid="single-store-radar-chart">

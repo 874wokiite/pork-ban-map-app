@@ -28,11 +28,6 @@ export function RadarChartComparison({ stores, onStoreSelect }: RadarChartCompar
 
   return (
     <div className="space-y-6">
-      {/* ヘッダー */}
-      <div className="text-center">
-        <h3 className="text-lg font-semibold text-gray-800 dark:text-white">店舗比較</h3>
-        <p className="text-sm text-gray-600 dark:text-gray-400">AI分析による豚饅の特徴を比較できます</p>
-      </div>
 
       {/* チャート表示エリア */}
       <div>

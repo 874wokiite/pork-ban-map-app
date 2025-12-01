@@ -34,6 +34,7 @@
   --font-mono: var(--font-geist-mono);
   --font-japanese: var(--font-noto-serif-jp);
   --font-zen: var(--font-zen-old-mincho);
+  --font-maru: var(--font-zen-maru-gothic);
 }
 
 @media (prefers-color-scheme: dark) {

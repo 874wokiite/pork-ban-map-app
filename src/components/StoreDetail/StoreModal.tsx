@@ -64,7 +64,7 @@ export default function StoreModal({ isOpen, onClose, store }: StoreModalProps) 
       data-testid="modal-backdrop"
       onClick={handleBackdropClick}
     >
-      <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+      <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" style={{ fontFamily: 'var(--font-zen-maru-gothic)' }}>
         {/* ヘッダー部分 */}
         <div className="flex justify-between items-center py-4 px-6 border-b border-gray-200 dark:border-gray-700">
           <h2 className="text-lg font-bold text-gray-900 dark:text-white">

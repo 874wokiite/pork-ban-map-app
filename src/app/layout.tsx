@@ -32,11 +32,30 @@ const zenMaruGothic = Zen_Maru_Gothic({
 
 export const metadata: Metadata = {
   title: "神戸豚饅マップ",
-  description: "神戸豚饅サミット参加店舗のマップアプリ",
+  description: "神戸の名物・豚饅の名店を地図で探せる！各店舗の場所や特徴をチェックして、お気に入りの一軒を見つけよう。",
   icons: {
     icon: "/icons/ban-logo.svg",
     shortcut: "/icons/ban-logo.svg",
     apple: "/icons/ban-logo.svg",
+  },
+  openGraph: {
+    title: "神戸豚饅マップ",
+    description: "神戸の名物・豚饅の名店を地図で探せる！各店舗の場所や特徴をチェックして、お気に入りの一軒を見つけよう。",
+    images: [
+      {
+        url: "/images/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "神戸豚饅マップ",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "神戸豚饅マップ",
+    description: "神戸の名物・豚饅の名店を地図で探せる！各店舗の場所や特徴をチェックして、お気に入りの一軒を見つけよう。",
+    images: ["/images/opengraph-image.png"],
   },
 };
 

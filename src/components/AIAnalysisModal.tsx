@@ -61,7 +61,7 @@ export default function AIAnalysisModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm"
       data-testid="ai-analysis-modal-backdrop"
       onClick={handleBackdropClick}
     >

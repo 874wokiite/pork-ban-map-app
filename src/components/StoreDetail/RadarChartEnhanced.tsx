@@ -27,7 +27,7 @@ const chartLabels = [
   { key: 'atmosphere', label: '総合評価', description: '店舗と商品の総合的な評価' }
 ] as const
 
-const colors = ['#8884d8', '#82ca9d', '#ffc658']
+const colors = ['#F32D00', '#7c3aed', '#3AAF05'] // 中華赤、神戸紫、神戸緑
 
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center h-64" data-testid="loading-spinner">

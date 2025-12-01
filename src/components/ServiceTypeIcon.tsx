@@ -8,7 +8,7 @@ interface ServiceTypeIconProps {
 }
 
 const ServiceTypeIcon: React.FC<ServiceTypeIconProps> = ({ serviceType, className = '' }) => {
-  const iconStyle = "text-purple-700"
+  const iconStyle = "text-secondary"
   const baseClassName = `w-5 h-5 ${iconStyle} ${className}`
 
   switch (serviceType) {

@@ -24,7 +24,7 @@ const chartLabels = [
   { key: 'atmosphere', label: '総合評価' }
 ] as const
 
-const colors = ['#BB353C', '#C2A6CC', '#507E57'] // 中華赤、神戸紫、神戸緑
+const colors = ['#F32D00', '#7c3aed', '#3AAF05'] // 中華赤、神戸紫、神戸緑
 
 interface TooltipPayload {
   color: string

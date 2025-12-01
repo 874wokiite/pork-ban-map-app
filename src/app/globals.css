@@ -3,12 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #BB353C;        /* 中華赤 */
-  --primary-light: #DB943A;   /* 中華橙 */
-  --secondary: #8B5A9B;       /* 神戸紫（濃いめ） */
-  --accent-green: #507E57;    /* 神戸緑 */
+  --primary: #F32D00;        /* 中華赤 */
+  --primary-light: #FEC611;   /* 中華橙 */
+  --secondary: #7c3aed;       /* 神戸紫（purple-700） */
+  --accent-green: #3AAF05;    /* 神戸緑 */
   --surface: #F8F9FA;        /* サーフェス */
-  --text-primary: #2D3748;   /* プライマリテキスト */
+  --text-primary: #070001;   /* プライマリテキスト */
   --text-secondary: #718096; /* セカンダリテキスト */
   --border: #E2E8F0;         /* ボーダー */
   --card: #ffffff;           /* カード背景 */
@@ -40,10 +40,10 @@
   :root {
     --background: #1A202C;
     --foreground: #F7FAFC;
-    --primary: #D44E54;        /* 中華赤 (ダーク版) */
-    --primary-light: #E8A854;   /* 中華橙 (ダーク版) */
-    --secondary: #C2A6CC;       /* 神戸紫 (ダーク版) */
-    --accent-green: #6A9E71;    /* 神戸緑 (ダーク版) */
+    --primary: #F32D00;        /* 中華赤 (ライトと同じ) */
+    --primary-light: #FEC611;   /* 中華橙 (ライトと同じ) */
+    --secondary: #7c3aed;       /* 神戸紫（purple-700） */
+    --accent-green: #3AAF05;    /* 神戸緑 (ライトと同じ) */
     --surface: #2D3748;
     --text-primary: #F7FAFC;
     --text-secondary: #E2E8F0;

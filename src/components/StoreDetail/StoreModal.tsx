@@ -145,7 +145,7 @@ export default function StoreModal({ isOpen, onClose, store }: StoreModalProps) 
                 {store.features.map((feature, index) => (
                   <span
                     key={index}
-                    className="inline-block bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium"
+                    className="inline-block bg-secondary/20 text-secondary dark:bg-secondary dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                   >
                     {feature}
                   </span>

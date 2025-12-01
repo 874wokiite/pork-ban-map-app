@@ -35,7 +35,7 @@ const CustomTooltip = ({ active, payload, label }: TooltipProps) => {
     return (
       <div className="bg-white dark:bg-gray-800 p-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg">
         <p className="font-semibold text-gray-800 dark:text-white">{`${label}`}</p>
-        <p className="text-blue-600 dark:text-blue-400">
+        <p className="text-primary dark:text-primary">
           {`スコア: ${payload[0].value}/10`}
         </p>
       </div>
@@ -96,11 +96,11 @@ export function SingleStoreRadarChart({ store }: SingleStoreRadarChartProps) {
             <Tooltip content={<CustomTooltip />} />
             <Radar
               dataKey="value"
-              stroke="#BB353C"
-              fill="#BB353C"
+              stroke="#F32D00"
+              fill="#F32D00"
               fillOpacity={0.3}
               strokeWidth={2}
-              dot={{ r: 4, fill: '#BB353C' }}
+              dot={{ r: 4, fill: '#F32D00' }}
             />
           </RechartsRadarChart>
         </ResponsiveContainer>

@@ -31,6 +31,7 @@ const zenMaruGothic = Zen_Maru_Gothic({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://pork-ban-map-kobe-app.netlify.app"),
   title: "神戸豚饅マップ",
   description: "神戸の名物・豚饅の名店を地図で探せる！各店舗の場所や特徴をチェックして、お気に入りの一軒を見つけよう。",
   icons: {

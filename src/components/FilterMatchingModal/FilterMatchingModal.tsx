@@ -76,17 +76,12 @@ export default function FilterMatchingModal({
       role="dialog"
       aria-modal="true"
       aria-labelledby="filter-modal-title"
-      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm"
+      data-testid="modal-backdrop"
+      onClick={handleBackdropClick}
     >
-      {/* 背景オーバーレイ */}
-      <div
-        data-testid="modal-backdrop"
-        className="absolute inset-0 bg-black/20 backdrop-blur-sm"
-        onClick={handleBackdropClick}
-      />
-
       {/* モーダル本体 */}
-      <div className="relative bg-white dark:bg-gray-800 w-full sm:max-w-lg sm:mx-4 max-h-[90vh] rounded-t-2xl sm:rounded-2xl flex flex-col overflow-hidden" style={{ fontFamily: 'var(--font-zen-maru-gothic)' }}>
+      <div className="relative bg-white dark:bg-gray-800 w-full max-w-lg mx-4 max-h-[90vh] rounded-2xl flex flex-col overflow-hidden" style={{ fontFamily: 'var(--font-zen-maru-gothic)' }}>
         {/* ヘッダー */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200 dark:border-gray-700">
           <h2 id="filter-modal-title" className="text-lg font-bold text-gray-900 dark:text-white">
@@ -155,7 +150,7 @@ export default function FilterMatchingModal({
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <img src="/icons/ban-logo.svg" alt="" className="w-8 h-8" />
+                        <img src="/icons/ban-logo.svg" alt="" className="w-6 h-6" />
                         <div>
                           <div className="font-medium text-gray-900 dark:text-white">{result.store.name}</div>
                           <div className="text-xs text-gray-500 dark:text-gray-400">{result.store.district}</div>

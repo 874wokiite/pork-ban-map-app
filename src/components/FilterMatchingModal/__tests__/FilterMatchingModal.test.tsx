@@ -66,7 +66,7 @@ describe('FilterMatchingModal', () => {
     it('タイトルが表示される', () => {
       render(<FilterMatchingModal {...defaultProps} />)
 
-      expect(screen.getByText('好みで探す')).toBeInTheDocument()
+      expect(screen.getByText('ぴったりな豚饅を探そう！')).toBeInTheDocument()
     })
   })
 

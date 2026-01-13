@@ -9,6 +9,51 @@ interface MapContainerProps {
 }
 
 /**
+ * 現在地を取得してマーカーを表示する
+ * 位置情報の許可が得られない場合でもマップ機能は通常通り動作
+ */
+const showCurrentLocation = (map: google.maps.Map) => {
+  if (!navigator.geolocation) {
+    console.log("このブラウザはGeolocationをサポートしていません");
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      };
+
+      // 現在地マーカーを作成（青い丸）
+      new google.maps.Marker({
+        position: pos,
+        map: map,
+        icon: {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 10,
+          fillColor: "#4285F4",
+          fillOpacity: 1,
+          strokeColor: "#ffffff",
+          strokeWeight: 3,
+        },
+        title: "現在地",
+        zIndex: 1000,
+      });
+    },
+    (error) => {
+      // 位置情報が拒否されても、マップ機能は通常通り動作
+      console.log("位置情報の取得をスキップしました:", error.message);
+    },
+    {
+      enableHighAccuracy: true,
+      timeout: 10000,
+      maximumAge: 60000, // 1分間キャッシュ
+    }
+  );
+};
+
+/**
  * Google Maps コンテナコンポーネント
  * 神戸市中心の地図を表示する基本実装
  * ReactとGoogle MapsのDOM操作競合を回避する安全な実装
@@ -89,6 +134,11 @@ export default function MapContainer({ className = "", onMapReady }: MapContaine
 
         // リサイズイベントリスナーを追加
         window.addEventListener('resize', handleResize);
+
+        // 現在地マーカーを表示
+        if (isMounted && googleMapRef.current) {
+          showCurrentLocation(googleMapRef.current as google.maps.Map);
+        }
 
         if (isMounted) {
           setIsMapInitialized(true);

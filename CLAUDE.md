@@ -16,6 +16,7 @@ Kiro-style Spec Driven Development implementation using claude code slash comman
 
 ### Active Specifications
 - **butaman-map-kobe**: 神戸豚饅サミット参加店舗マップと詳細情報表示機能 (ready for implementation)
+- **store-comparison-filter**: 店舗比較・フィルター式マッチング機能 (initialized)
 - Use `/kiro:spec-status [feature-name]` to check progress
 
 ## Development Guidelines

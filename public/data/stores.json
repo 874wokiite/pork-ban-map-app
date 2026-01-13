@@ -16,13 +16,12 @@
       "categories": ["テイクアウト"],
       "aiAnalysis": {
         "features": {
-          "taste": 8,
-          "texture": 9,
-          "size": 4,
-          "priceValue": 9,
-          "atmosphere": 8
+          "skinStyle": 8,
+          "fillingStyle": 5,
+          "overallTaste": 6,
+          "size": 3
         },
-        "analysisDate": "2025-10-15"
+        "analysisDate": "2026-01-13"
       },
       "dataSource": {
         "collectionDate": "2025-10-15",
@@ -46,13 +45,12 @@
       "categories": ["テイクアウト", "店内飲食", "通販"],
       "aiAnalysis": {
         "features": {
-          "taste": 7,
-          "texture": 8,
-          "size": 9,
-          "priceValue": 6,
-          "atmosphere": 7
+          "skinStyle": 4,
+          "fillingStyle": 7,
+          "overallTaste": 4,
+          "size": 9
         },
-        "analysisDate": "2025-10-15"
+        "analysisDate": "2026-01-13"
       },
       "dataSource": {
         "collectionDate": "2025-10-15",
@@ -76,13 +74,12 @@
       "categories": ["テイクアウト", "店内飲食", "通販"],
       "aiAnalysis": {
         "features": {
-          "taste": 6,
-          "texture": 7,
-          "size": 7,
-          "priceValue": 6,
-          "atmosphere": 7
+          "skinStyle": 4,
+          "fillingStyle": 6,
+          "overallTaste": 4,
+          "size": 7
         },
-        "analysisDate": "2025-10-15"
+        "analysisDate": "2026-01-13"
       },
       "dataSource": {
         "collectionDate": "2025-10-15",
@@ -106,13 +103,12 @@
       "categories": ["テイクアウト", "店内飲食"],
       "aiAnalysis": {
         "features": {
-          "taste": 8,
-          "texture": 8,
-          "size": 6,
-          "priceValue": 8,
-          "atmosphere": 7
+          "skinStyle": 7,
+          "fillingStyle": 6,
+          "overallTaste": 7,
+          "size": 5
         },
-        "analysisDate": "2025-10-15"
+        "analysisDate": "2026-01-13"
       },
       "dataSource": {
         "collectionDate": "2025-10-15",
@@ -136,13 +132,12 @@
       "categories": ["テイクアウト", "店内飲食"],
       "aiAnalysis": {
         "features": {
-          "taste": 7,
-          "texture": 8,
-          "size": 9,
-          "priceValue": 7,
-          "atmosphere": 8
+          "skinStyle": 5,
+          "fillingStyle": 8,
+          "overallTaste": 5,
+          "size": 9
         },
-        "analysisDate": "2025-10-15"
+        "analysisDate": "2026-01-13"
       },
       "dataSource": {
         "collectionDate": "2025-10-15",
@@ -166,13 +161,12 @@
       "categories": ["テイクアウト", "店内飲食"],
       "aiAnalysis": {
         "features": {
-          "taste": 9,
-          "texture": 8,
-          "size": 7,
-          "priceValue": 5,
-          "atmosphere": 9
+          "skinStyle": 6,
+          "fillingStyle": 8,
+          "overallTaste": 7,
+          "size": 6
         },
-        "analysisDate": "2025-10-15"
+        "analysisDate": "2026-01-13"
       },
       "dataSource": {
         "collectionDate": "2025-10-15",
@@ -196,13 +190,12 @@
       "categories": ["テイクアウト", "店内飲食"],
       "aiAnalysis": {
         "features": {
-          "taste": 8,
-          "texture": 9,
-          "size": 7,
-          "priceValue": 7,
-          "atmosphere": 7
+          "skinStyle": 7,
+          "fillingStyle": 8,
+          "overallTaste": 7,
+          "size": 6
         },
-        "analysisDate": "2025-10-15"
+        "analysisDate": "2026-01-13"
       },
       "dataSource": {
         "collectionDate": "2025-10-15",
@@ -226,13 +219,12 @@
       "categories": ["テイクアウト", "店内飲食"],
       "aiAnalysis": {
         "features": {
-          "taste": 7,
-          "texture": 7,
-          "size": 6,
-          "priceValue": 7,
-          "atmosphere": 8
+          "skinStyle": 5,
+          "fillingStyle": 4,
+          "overallTaste": 4,
+          "size": 5
         },
-        "analysisDate": "2025-10-15"
+        "analysisDate": "2026-01-13"
       },
       "dataSource": {
         "collectionDate": "2025-10-15",
@@ -256,13 +248,12 @@
       "categories": ["テイクアウト", "店内飲食", "通販"],
       "aiAnalysis": {
         "features": {
-          "taste": 8,
-          "texture": 9,
-          "size": 8,
-          "priceValue": 6,
-          "atmosphere": 8
+          "skinStyle": 8,
+          "fillingStyle": 7,
+          "overallTaste": 6,
+          "size": 7
         },
-        "analysisDate": "2025-10-15"
+        "analysisDate": "2026-01-13"
       },
       "dataSource": {
         "collectionDate": "2025-10-15",
@@ -306,11 +297,10 @@
       "categories": ["テイクアウト"],
       "aiAnalysis": {
         "features": {
-          "taste": 7,
-          "texture": 8,
-          "size": 5,
-          "priceValue": 8,
-          "atmosphere": 7
+          "skinStyle": 8,
+          "fillingStyle": 3,
+          "overallTaste": 3,
+          "size": 5
         },
         "analysisDate": "2026-01-13"
       },

@@ -309,6 +309,93 @@
         "sourceUrl": "https://tabelog.com/hyogo/A2801/A280108/28020416/",
         "isEnhanced": true
       }
+    },
+    {
+      "id": "butamanya",
+      "name": "ぶたまんや",
+      "address": "神戸市灘区岸地通4-1-10 坂本ハイツ 1F",
+      "coordinates": {
+        "lat": 34.711230,
+        "lng": 135.223215
+      },
+      "district": "灘区",
+      "businessHours": "月〜土 10:00-18:00 (定休日: 日曜) ※売切れ次第閉店",
+      "features": ["もちもち皮", "野菜の甘みある餡", "昭和32年創業老舗", "午前中で売り切れる人気"],
+      "description": "1957年創業の老舗豚まん専門店。住宅街の裏路地にひっそりと構え、平日でも午後早くには売り切れる人気店。モチモチの皮と野菜の甘みが感じられる優しい味付けの餡が特徴。1個108円とリーズナブル。",
+      "googleMapsUrl": "https://maps.google.com/?q=ぶたまんや+神戸市灘区岸地通4-1-10",
+      "categories": ["テイクアウト"],
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 7,
+          "fillingStyle": 4,
+          "overallTaste": 3,
+          "size": 3
+        },
+        "analysisDate": "2026-01-13"
+      },
+      "dataSource": {
+        "collectionDate": "2026-01-13",
+        "sourceUrl": "https://tabelog.com/hyogo/A2801/A280103/28005070/",
+        "isEnhanced": true
+      }
+    },
+    {
+      "id": "oishi-ikkanrou",
+      "name": "大石一貫楼",
+      "address": "神戸市灘区鹿ノ下通2-3-10",
+      "coordinates": {
+        "lat": 34.709306,
+        "lng": 135.233411
+      },
+      "district": "灘区",
+      "businessHours": "11:00-21:00 (定休日: 水曜)",
+      "features": ["あっさり味", "味噌タレ餃子", "リーズナブル", "地元密着の老舗"],
+      "description": "1969年創業、一貫楼ののれん分け店舗の一つ。住宅街にある地元密着型の大衆中華料理店で、優しい味付けと驚きの安さが魅力。中華ランチ550円、ワンタン400円と財布に優しく、常連客で賑わう人気店。",
+      "googleMapsUrl": "https://maps.google.com/?q=大石一貫楼+神戸市灘区鹿ノ下通2-3-10",
+      "categories": ["テイクアウト", "イートイン"],
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 5,
+          "fillingStyle": 4,
+          "overallTaste": 3,
+          "size": 5
+        },
+        "analysisDate": "2026-01-13"
+      },
+      "dataSource": {
+        "collectionDate": "2026-01-13",
+        "sourceUrl": "https://retty.me/area/PRE28/ARE100/SUB10001/100000562339/",
+        "isEnhanced": true
+      }
+    },
+    {
+      "id": "tarumi-hanten-rokkomichi",
+      "name": "垂水飯店 六甲道店",
+      "address": "神戸市灘区深田町4-1-1 ウェルブ六甲道2番街1F",
+      "coordinates": {
+        "lat": 34.714297,
+        "lng": 135.2391141
+      },
+      "district": "灘区",
+      "businessHours": "11:00-21:30 (定休日: 木曜)",
+      "features": ["駅直結の好立地", "優しい味わい", "地元民に愛される", "リーズナブル"],
+      "description": "JR六甲道駅直結の便利な立地にある町中華。垂水に本店があったが現在は名谷と六甲道のみ。優しい味わいと素朴だが上質なスープが評判。地元客に愛される繁盛店で、焼飯やワンタン麺も人気。",
+      "googleMapsUrl": "https://maps.google.com/?q=垂水飯店+六甲道店+神戸市灘区深田町4-1-1",
+      "categories": ["テイクアウト", "イートイン"],
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 5,
+          "fillingStyle": 5,
+          "overallTaste": 4,
+          "size": 5
+        },
+        "analysisDate": "2026-01-13"
+      },
+      "dataSource": {
+        "collectionDate": "2026-01-13",
+        "sourceUrl": "https://tabelog.com/hyogo/A2801/A280108/28013352/",
+        "isEnhanced": true
+      }
     }
   ]
 }

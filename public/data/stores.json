@@ -289,6 +289,36 @@
         "sourceUrl": "",
         "isEnhanced": false
       }
+    },
+    {
+      "id": "tenichi-seika",
+      "name": "天一製菓",
+      "address": "神戸市灘区新在家北町2-4-22",
+      "coordinates": {
+        "lat": 34.7108,
+        "lng": 135.241
+      },
+      "district": "灘区",
+      "businessHours": "火〜日 10:00-19:00 (定休日: 月曜)",
+      "features": ["もも肉使用であっさり", "天然酵母もちもち皮", "台湾仕込み点心", "中華菓子も豊富"],
+      "description": "昭和52年創業の台湾仕込み点心専門店。豚まんは主流のバラ肉ではなくもも肉を使用し、天然酵母でゆっくり発酵させたもちもちの皮が特徴。あっさりした味わいの中に深みがあり、健康志向の方に人気。",
+      "googleMapsUrl": "https://maps.google.com/?q=天一製菓+神戸市灘区新在家北町2-4-22",
+      "categories": ["テイクアウト"],
+      "aiAnalysis": {
+        "features": {
+          "taste": 7,
+          "texture": 8,
+          "size": 5,
+          "priceValue": 8,
+          "atmosphere": 7
+        },
+        "analysisDate": "2026-01-13"
+      },
+      "dataSource": {
+        "collectionDate": "2026-01-13",
+        "sourceUrl": "https://tabelog.com/hyogo/A2801/A280108/28020416/",
+        "isEnhanced": true
+      }
     }
   ]
 }

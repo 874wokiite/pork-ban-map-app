@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Serif_JP, Zen_Old_Mincho, Zen_Maru_Gothic } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,13 +12,57 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const notoSerifJP = Noto_Serif_JP({
+  variable: "--font-noto-serif-jp",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const zenOldMincho = Zen_Old_Mincho({
+  variable: "--font-zen-old-mincho",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const zenMaruGothic = Zen_Maru_Gothic({
+  variable: "--font-zen-maru-gothic",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://pork-ban-map-kobe-app.netlify.app"),
   title: "神戸豚饅マップ",
-  description: "神戸豚饅サミット参加店舗のマップアプリ",
+  description: "神戸の名物・豚饅の名店を地図で探せる！各店舗の場所や特徴をチェックして、お気に入りの一軒を見つけよう。",
   icons: {
     icon: "/icons/ban-logo.svg",
     shortcut: "/icons/ban-logo.svg",
     apple: "/icons/ban-logo.svg",
+  },
+  openGraph: {
+    type: "website",
+    title: "神戸豚饅マップ",
+    description: "神戸の名物・豚饅の名店を地図で探せる！各店舗の場所や特徴をチェックして、お気に入りの一軒を見つけよう。",
+    siteName: "神戸豚饅マップ",
+    url: "https://pork-ban-map-kobe-app.netlify.app/",
+    images: {
+      url: "/images/opengraph-image.png",
+      type: "image/png",
+      width: 1200,
+      height: 630,
+    },
+    locale: "ja_JP",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "神戸豚饅マップ",
+    description: "神戸の名物・豚饅の名店を地図で探せる！各店舗の場所や特徴をチェックして、お気に入りの一軒を見つけよう。",
+    images: {
+      url: "/images/opengraph-image.png",
+      type: "image/png",
+      width: 1200,
+      height: 630,
+    },
   },
 };
 
@@ -30,7 +74,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${notoSerifJP.variable} ${zenOldMincho.variable} ${zenMaruGothic.variable} antialiased`}
       >
         {children}
       </body>

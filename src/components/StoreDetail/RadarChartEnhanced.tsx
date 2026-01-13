@@ -27,7 +27,7 @@ const chartLabels = [
   { key: 'atmosphere', label: '総合評価', description: '店舗と商品の総合的な評価' }
 ] as const
 
-const colors = ['#8884d8', '#82ca9d', '#ffc658']
+const colors = ['#F32D00', '#7c3aed', '#3AAF05'] // 中華赤、神戸紫、神戸緑
 
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center h-64" data-testid="loading-spinner">
@@ -163,7 +163,7 @@ export function RadarChartEnhanced({
     >
       {/* 表示制限の警告 */}
       {selectedStores.length > 3 && (
-        <div className="text-sm text-amber-600 bg-amber-50 p-3 rounded-lg border border-amber-200">
+        <div className="text-sm text-primary-light bg-primary-light/10 p-3 rounded-lg border border-primary-light/20">
           <div className="flex items-center">
             <span className="mr-2">⚠️</span>
             <span>比較表示は最大3店舗までです。最初の3店舗を表示しています。</span>

@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react'
 import { ExtendedStore } from '@/types/store'
 import { SingleStoreRadarChart } from './SingleStoreRadarChart'
+import ServiceTypeIcon from '@/components/ServiceTypeIcon'
 
 interface StoreModalProps {
   isOpen: boolean
@@ -59,14 +60,14 @@ export default function StoreModal({ isOpen, onClose, store }: StoreModalProps) 
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm"
       data-testid="modal-backdrop"
       onClick={handleBackdropClick}
     >
-      <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+      <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" style={{ fontFamily: 'var(--font-zen-maru-gothic)' }}>
         {/* ヘッダー部分 */}
-        <div className="flex justify-between items-center p-6 border-b border-gray-200 dark:border-gray-700">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+        <div className="flex justify-between items-center py-4 px-6 border-b border-gray-200 dark:border-gray-700">
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white">
             {store.name}
           </h2>
           <button
@@ -144,7 +145,7 @@ export default function StoreModal({ isOpen, onClose, store }: StoreModalProps) 
                 {store.features.map((feature, index) => (
                   <span
                     key={index}
-                    className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium"
+                    className="inline-block bg-secondary/20 text-secondary dark:bg-secondary dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                   >
                     {feature}
                   </span>
@@ -157,14 +158,17 @@ export default function StoreModal({ isOpen, onClose, store }: StoreModalProps) 
               <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">
                 サービス形態
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {store.categories.map((category, index) => (
-                  <span
+                  <div
                     key={index}
-                    className="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium"
+                    className="flex items-center gap-2"
                   >
-                    {category}
-                  </span>
+                    <ServiceTypeIcon serviceType={category} />
+                    <span className="text-gray-900 dark:text-white text-sm font-medium">
+                      {category}
+                    </span>
+                  </div>
                 ))}
               </div>
             </div>
@@ -199,7 +203,7 @@ export default function StoreModal({ isOpen, onClose, store }: StoreModalProps) 
                 href={store.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
+                className="inline-flex items-center px-4 py-2 bg-accent-green text-white rounded-md hover:bg-accent-green/80 transition-colors"
               >
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M10 2C6.69 2 4 4.69 4 8c0 5.25 6 12 6 12s6-6.75 6-12c0-3.31-2.69-6-6-6zm0 8.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>

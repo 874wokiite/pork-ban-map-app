@@ -12,7 +12,7 @@ import AIAnalysisModal from '@/components/AIAnalysisModal'
 const MapWithStores = dynamic(() => import('@/components/MapWithStores'), {
   ssr: false,
   loading: () => (
-    <div className="w-full h-[400px] sm:h-[500px] lg:h-[600px] flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-lg">
+    <div className="w-full h-[calc(100vh-120px)] flex items-center justify-center bg-gray-100 dark:bg-gray-800">
       <div className="text-center">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
         <div className="text-gray-500">地図を読み込み中...</div>
@@ -88,49 +88,55 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* ヘッダー */}
-      <header className="bg-primary text-white p-4 sm:p-6">
-        <div className="container mx-auto">
-          <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold">神戸豚饅マップ</h1>
-          <p className="text-sm sm:text-base opacity-90">神戸豚饅サミット参加店舗を探そう</p>
-        </div>
+      <header className="bg-accent-green flex justify-center items-center sm:items-end px-4 sm:px-0">
+        <img
+          src="/images/girl-kanon-up.png"
+          alt="かのん"
+          className="w-1/4 sm:w-auto sm:h-16 md:h-20 object-contain"
+        />
+        <img
+          src="/images/kobe-ban-service-logo.png"
+          alt="神戸豚饅マップ"
+          className="w-1/2 sm:w-auto sm:h-16 md:h-24 object-contain"
+        />
+        <img
+          src="/images/girl-saki-up.png"
+          alt="さき"
+          className="w-1/4 sm:w-auto sm:h-16 md:h-20 object-contain"
+        />
       </header>
 
-      {/* メインコンテンツ */}
-      <main className="container mx-auto p-4 sm:p-6 lg:p-8">
+      {/* マーキー帯 */}
+      <div className="bg-black text-white text-xs py-1 overflow-hidden whitespace-nowrap">
+        <div className="animate-marquee inline-block font-bold">
+          神戸豚饅MAPどんどんアプデ中！お楽しみに！　豚饅アイコンをクリックすると店舗の詳細情報を確認できます。
+        </div>
+      </div>
 
-        {/* エラー表示 */}
-        {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-            <strong>エラー:</strong> {error}
+      {/* エラー表示 */}
+      {error && (
+        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4 mx-4">
+          <strong>エラー:</strong> {error}
+        </div>
+      )}
+
+      {/* 地図表示エリア */}
+      <div className="w-full">
+        {isMapReady ? (
+          <MapWithStores 
+            className="w-full h-[calc(100vh-120px)]"
+            onStoreClick={handleStoreClick}
+            onSearchClick={handleOpenAIAnalysisModal}
+          />
+        ) : (
+          <div className="w-full h-[calc(100vh-120px)] flex items-center justify-center bg-gray-100 dark:bg-gray-800">
+            <div className="text-center">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
+              <div className="text-gray-500">Google Maps APIを読み込み中...</div>
+            </div>
           </div>
         )}
-
-        {/* 地図表示エリア */}
-        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden">
-          {isMapReady ? (
-            <MapWithStores 
-              className="h-[400px] sm:h-[500px] lg:h-[600px]"
-              onStoreClick={handleStoreClick}
-              onSearchClick={handleOpenAIAnalysisModal}
-            />
-          ) : (
-            <div className="h-[400px] sm:h-[500px] lg:h-[600px] flex items-center justify-center bg-gray-100 dark:bg-gray-800">
-              <div className="text-center">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
-                <div className="text-gray-500">Google Maps APIを読み込み中...</div>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* 説明 */}
-        <div className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-          <p>
-            このマップには神戸豚饅サミット参加店舗が表示されます。
-            豚饅アイコンをクリックすると店舗の詳細情報を確認できます。
-          </p>
-        </div>
-      </main>
+      </div>
 
       {/* 店舗詳細モーダル */}
       <StoreModal

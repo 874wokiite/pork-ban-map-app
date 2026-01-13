@@ -171,10 +171,10 @@ export default function MapContainer({ className = "", onMapReady }: MapContaine
       
       {/* ローディングオーバーレイ */}
       {!isMapInitialized && (
-        <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-90 z-10">
+        <div className="absolute inset-0 flex items-center justify-center bg-white dark:bg-gray-800 bg-opacity-90 dark:bg-opacity-90 z-10">
           <div className="text-center">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
-            <div className="text-gray-500">Google Maps読み込み中...</div>
+            <div className="text-gray-500 dark:text-gray-400">Google Maps読み込み中...</div>
           </div>
         </div>
       )}

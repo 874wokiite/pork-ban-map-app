@@ -7,6 +7,9 @@
   --primary-light: #FEC611;   /* 中華橙 */
   --secondary: #7c3aed;       /* 神戸紫（purple-700） */
   --accent-green: #3AAF05;    /* 神戸緑 */
+  --pig-pink: #f9a8d4;        /* 豚鼻ピンク（pink-300） */
+  --pig-pink-border: #f472b6; /* 豚鼻ボーダー（pink-400） */
+  --pig-pink-dark: #ec4899;   /* 豚鼻穴（pink-500） */
   --surface: #F8F9FA;        /* サーフェス */
   --text-primary: #070001;   /* プライマリテキスト */
   --text-secondary: #718096; /* セカンダリテキスト */
@@ -23,6 +26,9 @@
   --color-primary-light: var(--primary-light);
   --color-secondary: var(--secondary);
   --color-accent-green: var(--accent-green);
+  --color-pig-pink: var(--pig-pink);
+  --color-pig-pink-border: var(--pig-pink-border);
+  --color-pig-pink-dark: var(--pig-pink-dark);
   --color-surface: var(--surface);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);

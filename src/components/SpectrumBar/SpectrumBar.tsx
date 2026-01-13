@@ -43,16 +43,35 @@ export default function SpectrumBar({
 
       {/* バー本体 */}
       <div className="relative h-3 flex items-center">
-        {/* 背景バー */}
-        <div className="absolute inset-x-0 h-2 bg-gradient-to-r from-primary-light/30 to-primary/30 dark:from-primary-light/20 dark:to-primary/20 rounded-full" />
+        {/* 背景バー - 読み取り専用：薄いグレー / 編集モード：黒 */}
+        <div className={`absolute inset-x-0 h-2 rounded-full ${
+          readonly
+            ? 'bg-gray-300 dark:bg-gray-600'
+            : 'bg-gray-900 dark:bg-gray-700'
+        }`} />
 
-        {/* インジケーター（読み取り専用モード） */}
+        {/* 目盛り（編集モードのみ） */}
+        {!readonly && (
+          <div className="absolute inset-x-0 h-2 flex justify-between items-center px-1">
+            {[...Array(10)].map((_, i) => (
+              <div
+                key={i}
+                className="w-0.5 h-1.5 bg-gray-500 rounded-full"
+              />
+            ))}
+          </div>
+        )}
+
+        {/* インジケーター（読み取り専用モード）- 豚鼻デザイン、シャドウなし */}
         {readonly && (
           <div
             data-testid="spectrum-indicator"
-            className="absolute w-4 h-4 bg-primary rounded-full border-2 border-white shadow-md"
+            className="absolute w-7 h-5 bg-pig-pink rounded-full border-2 border-pig-pink-border pointer-events-none flex items-center justify-center gap-1"
             style={{ left: `${indicatorPosition}%`, transform: 'translateX(-50%)' }}
-          />
+          >
+            <div className="w-1.5 h-2 bg-pig-pink-dark rounded-full" />
+            <div className="w-1.5 h-2 bg-pig-pink-dark rounded-full" />
+          </div>
         )}
 
         {/* スライダー（編集モード） */}
@@ -68,13 +87,17 @@ export default function SpectrumBar({
           />
         )}
 
-        {/* スライダーのカスタムサム（編集モード） */}
+        {/* スライダーのカスタムサム（編集モード）- 豚鼻デザイン */}
         {!readonly && onChange && (
           <div
             data-testid="spectrum-indicator"
-            className="absolute w-5 h-5 bg-primary rounded-full border-2 border-white shadow-md pointer-events-none"
+            className="absolute w-7 h-5 bg-pig-pink rounded-full border-2 border-pig-pink-border shadow-md pointer-events-none flex items-center justify-center gap-1"
             style={{ left: `${indicatorPosition}%`, transform: 'translateX(-50%)' }}
-          />
+          >
+            {/* 鼻の穴 */}
+            <div className="w-1.5 h-2 bg-pig-pink-dark rounded-full" />
+            <div className="w-1.5 h-2 bg-pig-pink-dark rounded-full" />
+          </div>
         )}
       </div>
     </div>

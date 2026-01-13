@@ -23,7 +23,7 @@ export default function StoreSpectrumSection({ store }: StoreSpectrumSectionProp
   return (
     <div data-testid="spectrum-section">
       <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">
-        豚饅の特徴
+        豚饅の特徴（AI分析）
       </h3>
       <div className="space-y-1">
         {SPECTRUM_AXES.map((axis) => (

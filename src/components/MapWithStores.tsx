@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import Image from "next/image";
 import MapContainer from "@/components/MapContainer";
 import StoreMarker from "@/components/StoreMarker";
 import FilterButton from "@/components/FilterButton";
@@ -12,14 +11,13 @@ import { ExtendedStore } from "@/types/store";
 interface MapWithStoresProps {
   className?: string;
   onStoreClick?: (store: ExtendedStore) => void;
-  onSearchClick?: () => void;
 }
 
 /**
  * 店舗マーカー付き地図コンポーネント
  * MapContainerと店舗データを組み合わせて、店舗位置を表示
  */
-export default function MapWithStores({ className, onStoreClick, onSearchClick }: MapWithStoresProps) {
+export default function MapWithStores({ className, onStoreClick }: MapWithStoresProps) {
   const [stores, setStores] = useState<ExtendedStore[]>([]);
   const [mapInstance, setMapInstance] = useState<google.maps.Map | null>(null);
   const [isStoresLoaded, setIsStoresLoaded] = useState(false);
@@ -80,26 +78,8 @@ export default function MapWithStores({ className, onStoreClick, onSearchClick }
         onMapReady={handleMapReady}
       />
       
-      {/* 検索ボタン */}
-      {onSearchClick && (
-        <button
-          onClick={onSearchClick}
-          className="absolute top-4 right-4 z-10 bg-accent-green hover:bg-accent-green/90 text-white shadow-xl hover:shadow-2xl rounded-full p-4 transition-all duration-300 transform hover:scale-110"
-          aria-label="AI分析・比較を開く"
-          title="AI分析・比較"
-        >
-          <Image
-            src="/icons/ban-logo.svg"
-            alt="豚饅ロゴ"
-            width={40}
-            height={40}
-            className="w-10 h-10"
-          />
-        </button>
-      )}
-
       {/* フィルターボタン */}
-      <div className="absolute top-4 left-4 z-10">
+      <div className="absolute top-4 right-4 z-10">
         <FilterButton onClick={handleFilterClick} />
       </div>
 

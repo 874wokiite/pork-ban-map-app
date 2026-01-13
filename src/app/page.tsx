@@ -4,9 +4,7 @@ import { useEffect, useState, useCallback } from 'react'
 import dynamic from 'next/dynamic'
 import { loadGoogleMapsAPI } from '@/lib/google-maps'
 import { ExtendedStore } from '@/types/store'
-import { getExtendedStoresData } from '@/lib/store-data'
 import StoreModal from '@/components/StoreDetail/StoreModal'
-import AIAnalysisModal from '@/components/AIAnalysisModal'
 
 // MapWithStoresを動的にインポート（SSR無効）
 const MapWithStores = dynamic(() => import('@/components/MapWithStores'), {
@@ -25,9 +23,7 @@ export default function Home() {
   const [isMapReady, setIsMapReady] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [selectedStore, setSelectedStore] = useState<ExtendedStore | null>(null)
-  const [allStores, setAllStores] = useState<ExtendedStore[]>([])
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [isAIAnalysisModalOpen, setIsAIAnalysisModalOpen] = useState(false)
 
   useEffect(() => {
     // Google Maps APIを読み込み
@@ -41,20 +37,6 @@ export default function Home() {
       })
   }, [])
 
-  // 店舗データを読み込み
-  useEffect(() => {
-    const loadStores = async () => {
-      try {
-        const stores = await getExtendedStoresData()
-        setAllStores(stores)
-      } catch (error) {
-        console.error('店舗データ読み込みエラー:', error)
-      }
-    }
-    
-    loadStores()
-  }, [])
-
   // 店舗クリック時のハンドラー（useCallbackで安定化）
   const handleStoreClick = useCallback((store: ExtendedStore) => {
     console.log('店舗クリック:', store.name);
@@ -66,23 +48,6 @@ export default function Home() {
   const handleCloseModal = useCallback(() => {
     setIsModalOpen(false)
     setSelectedStore(null)
-  }, [])
-
-  // AI分析モーダル開くハンドラー
-  const handleOpenAIAnalysisModal = useCallback(() => {
-    setIsAIAnalysisModalOpen(true)
-  }, [])
-
-  // AI分析モーダル閉じるハンドラー
-  const handleCloseAIAnalysisModal = useCallback(() => {
-    setIsAIAnalysisModalOpen(false)
-  }, [])
-
-  // AI分析モーダルから店舗選択時のハンドラー
-  const handleStoreSelectFromAIModal = useCallback((store: ExtendedStore) => {
-    setIsAIAnalysisModalOpen(false)
-    setSelectedStore(store)
-    setIsModalOpen(true)
   }, [])
 
   return (
@@ -123,10 +88,9 @@ export default function Home() {
       {/* 地図表示エリア */}
       <div className="w-full">
         {isMapReady ? (
-          <MapWithStores 
+          <MapWithStores
             className="w-full h-[calc(100vh-120px)]"
             onStoreClick={handleStoreClick}
-            onSearchClick={handleOpenAIAnalysisModal}
           />
         ) : (
           <div className="w-full h-[calc(100vh-120px)] flex items-center justify-center bg-gray-100 dark:bg-gray-800">
@@ -143,14 +107,6 @@ export default function Home() {
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         store={selectedStore}
-      />
-
-      {/* AI分析モーダル */}
-      <AIAnalysisModal
-        isOpen={isAIAnalysisModalOpen}
-        onClose={handleCloseAIAnalysisModal}
-        allStores={allStores}
-        onStoreSelect={handleStoreSelectFromAIModal}
       />
     </div>
   )

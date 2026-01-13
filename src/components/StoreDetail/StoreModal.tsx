@@ -64,19 +64,19 @@ export default function StoreModal({ isOpen, onClose, store }: StoreModalProps) 
       data-testid="modal-backdrop"
       onClick={handleBackdropClick}
     >
-      <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" style={{ fontFamily: 'var(--font-zen-maru-gothic)' }}>
-        {/* ヘッダー部分 */}
-        <div className="flex justify-between items-center py-4 px-6 border-b border-gray-200 dark:border-gray-700">
+      <div className="relative bg-white dark:bg-gray-800 rounded-t-2xl sm:rounded-2xl shadow-xl max-w-2xl w-full mx-4 max-h-[90vh] flex flex-col overflow-hidden" style={{ fontFamily: 'var(--font-zen-maru-gothic)' }}>
+        {/* ヘッダー部分（固定） */}
+        <div className="flex justify-between items-center py-4 px-6 border-b border-gray-200 dark:border-gray-700 shrink-0">
           <h2 className="text-lg font-bold text-gray-900 dark:text-white">
             {store.name}
           </h2>
           <button
             onClick={onClose}
-            className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+            className="text-text-secondary hover:text-text-primary dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
             aria-label="閉じる"
           >
             <svg
-              className="w-6 h-6"
+              className="w-5 h-5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -91,8 +91,8 @@ export default function StoreModal({ isOpen, onClose, store }: StoreModalProps) 
           </button>
         </div>
 
-        {/* コンテンツ */}
-        <div className="p-6">
+        {/* コンテンツ（スクロール領域） */}
+        <div className="flex-1 overflow-y-auto p-6">
           <div className="space-y-6">
             {/* 1. 豚饅特徴分析（スペクトラムバー） */}
             {store?.aiAnalysis && (

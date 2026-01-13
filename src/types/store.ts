@@ -1,4 +1,5 @@
 import { Coordinates } from './map'
+import type { SpectrumFeatureAnalysis } from './spectrum'
 
 /**
  * 神戸豚饅サミット参加店舗の型定義
@@ -32,7 +33,9 @@ export interface Store {
 export type StoreCategory = 'テイクアウト' | '店内飲食' | '通販'
 
 /**
- * AI分析による豚饅特徴データ
+ * AI分析による豚饅特徴データ（旧形式）
+ * @deprecated SpectrumFeatureAnalysisを使用してください
+ * @see SpectrumFeatureAnalysis from './spectrum'
  */
 export interface FeatureAnalysis {
   /** 味の濃さ (0-10) */
@@ -49,10 +52,12 @@ export interface FeatureAnalysis {
 
 /**
  * AI分析結果の包括データ
+ * stores.jsonのデータ構造はSpectrumFeatureAnalysis形式を使用
+ * FeatureAnalysisは後方互換性のために残存
  */
 export interface AIAnalysisData {
-  /** 5軸特徴スコア */
-  features: FeatureAnalysis
+  /** 特徴スコア（新形式: SpectrumFeatureAnalysis、旧形式: FeatureAnalysis） */
+  features: SpectrumFeatureAnalysis | FeatureAnalysis
   /** 分析実行日時 */
   analysisDate: string
 }

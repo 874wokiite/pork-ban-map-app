@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react'
 import { ExtendedStore } from '@/types/store'
-import { SingleStoreRadarChart } from './SingleStoreRadarChart'
+import StoreSpectrumSection from './StoreSpectrumSection'
 import ServiceTypeIcon from '@/components/ServiceTypeIcon'
 
 interface StoreModalProps {
@@ -94,11 +94,9 @@ export default function StoreModal({ isOpen, onClose, store }: StoreModalProps) 
         {/* コンテンツ */}
         <div className="p-6">
           <div className="space-y-6">
-            {/* 1. 豚饅特徴分析（レーダーチャート） */}
+            {/* 1. 豚饅特徴分析（スペクトラムバー） */}
             {store?.aiAnalysis && (
-              <div>
-                <SingleStoreRadarChart store={store} />
-              </div>
+              <StoreSpectrumSection store={store} />
             )}
             
             {/* 2. 説明文 */}

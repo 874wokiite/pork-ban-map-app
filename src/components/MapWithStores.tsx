@@ -4,6 +4,8 @@ import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import MapContainer from "@/components/MapContainer";
 import StoreMarker from "@/components/StoreMarker";
+import FilterButton from "@/components/FilterButton";
+import FilterMatchingModal from "@/components/FilterMatchingModal";
 import { getExtendedStoresData } from "@/lib/store-data";
 import { ExtendedStore } from "@/types/store";
 
@@ -21,6 +23,7 @@ export default function MapWithStores({ className, onStoreClick, onSearchClick }
   const [stores, setStores] = useState<ExtendedStore[]>([]);
   const [mapInstance, setMapInstance] = useState<google.maps.Map | null>(null);
   const [isStoresLoaded, setIsStoresLoaded] = useState(false);
+  const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
 
   // 店舗データを読み込み
   useEffect(() => {
@@ -51,6 +54,24 @@ export default function MapWithStores({ className, onStoreClick, onSearchClick }
     }
   }, [onStoreClick]);
 
+  // フィルターボタンクリック時のハンドラ
+  const handleFilterClick = useCallback(() => {
+    setIsFilterModalOpen(true);
+  }, []);
+
+  // フィルターモーダル閉じるハンドラ
+  const handleFilterClose = useCallback(() => {
+    setIsFilterModalOpen(false);
+  }, []);
+
+  // フィルターモーダルから店舗選択時のハンドラ
+  const handleFilterStoreSelect = useCallback((store: ExtendedStore) => {
+    setIsFilterModalOpen(false);
+    if (onStoreClick) {
+      onStoreClick(store);
+    }
+  }, [onStoreClick]);
+
   return (
     <div className={`relative ${className || ''}`}>
       {/* ベースとなる地図コンポーネント */}
@@ -76,6 +97,19 @@ export default function MapWithStores({ className, onStoreClick, onSearchClick }
           />
         </button>
       )}
+
+      {/* フィルターボタン */}
+      <div className="absolute top-4 left-4 z-10">
+        <FilterButton onClick={handleFilterClick} />
+      </div>
+
+      {/* フィルターモーダル */}
+      <FilterMatchingModal
+        isOpen={isFilterModalOpen}
+        onClose={handleFilterClose}
+        stores={stores}
+        onStoreSelect={handleFilterStoreSelect}
+      />
       
       {/* 店舗マーカーを地図上に配置 */}
       {mapInstance && isStoresLoaded && stores.map((store) => (

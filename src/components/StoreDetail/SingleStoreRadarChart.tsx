@@ -1,8 +1,17 @@
 'use client'
 
+/**
+ * @deprecated このコンポーネントは非推奨です。
+ * 代わりに StoreSpectrumSection を使用してください。
+ * @see StoreSpectrumSection
+ */
+
 import { ResponsiveContainer, RadarChart as RechartsRadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Tooltip } from 'recharts'
 import { ExtendedStore, FeatureAnalysis } from '@/types/store'
 
+/**
+ * @deprecated このコンポーネントは非推奨です。StoreSpectrumSectionを使用してください。
+ */
 interface SingleStoreRadarChartProps {
   store: ExtendedStore
 }

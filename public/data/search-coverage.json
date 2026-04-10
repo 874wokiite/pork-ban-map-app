@@ -1,0 +1,39 @@
+{
+  "lastUpdated": "2026-04-10",
+  "coveredAreas": {
+    "withStores": [
+      { "area": "神戸市中央区", "storeCount": 10, "searchDate": "2025-10-15" },
+      { "area": "神戸市灘区", "storeCount": 4, "searchDate": "2026-01-13" },
+      { "area": "神戸市兵庫区", "storeCount": 3, "searchDate": "2026-04-10" },
+      { "area": "神戸市長田区", "storeCount": 5, "searchDate": "2026-04-10" },
+      { "area": "神戸市須磨区", "storeCount": 4, "searchDate": "2026-04-10" },
+      { "area": "神戸市北区", "storeCount": 1, "searchDate": "2026-04-10" },
+      { "area": "神戸市東灘区", "storeCount": 1, "searchDate": "2026-04-10" },
+      { "area": "神戸市西区", "storeCount": 1, "searchDate": "2026-04-10" },
+      { "area": "尼崎市", "storeCount": 1, "searchDate": "2026-04-10" },
+      { "area": "明石市", "storeCount": 1, "searchDate": "2026-04-10" },
+      { "area": "加古川市", "storeCount": 1, "searchDate": "2026-04-10" },
+      { "area": "姫路市", "storeCount": 1, "searchDate": "2026-04-10" }
+    ],
+    "noStoresFound": [
+      { "area": "神戸市垂水区", "searchDate": "2026-04-10", "note": "豚饅サミット参加店舗なし" },
+      { "area": "芦屋市", "searchDate": "2026-04-10", "note": "個人の豚饅専門店なし。551蓬莱のみ" },
+      { "area": "西宮市", "searchDate": "2026-04-10", "note": "個人の豚饅専門店なし。551蓬莱の店舗（西宮阪神店・阪急西宮北口駅店）のみ" },
+      { "area": "伊丹市", "searchDate": "2026-04-10", "note": "該当店舗なし" },
+      { "area": "川西市", "searchDate": "2026-04-10", "note": "該当店舗なし" },
+      { "area": "宝塚市", "searchDate": "2026-04-10", "note": "ラーメン店（黒兵衛）に豚まんあるが専門ではない" },
+      { "area": "三田市", "searchDate": "2026-04-10", "note": "該当店舗なし" },
+      { "area": "淡路島（洲本市・南あわじ市・淡路市）", "searchDate": "2026-04-10", "note": "該当店舗なし" },
+      { "area": "丹波地域（丹波市・丹波篠山市）", "searchDate": "2026-04-10", "note": "該当店舗なし" },
+      { "area": "但馬地域（豊岡市・養父市・朝来市等）", "searchDate": "2026-04-10", "note": "該当店舗なし" },
+      { "area": "播磨地域（高砂市・たつの市・赤穂市等）", "searchDate": "2026-04-10", "note": "該当店舗なし" }
+    ],
+    "removedStores": [
+      { "name": "六甲苑", "area": "神戸市灘区", "reason": "2023年1月閉店", "removedDate": "2026-04-10" },
+      { "name": "南京楼", "area": "神戸市長田区", "reason": "食べログ掲載保留・Google Maps閉店表示", "removedDate": "2026-04-10" },
+      { "name": "福々", "area": "神戸市灘区", "reason": "Google Maps閉店表示", "removedDate": "2026-04-10" },
+      { "name": "北海ラーメン 淡河店", "area": "神戸市北区", "reason": "豚まん提供の確認取れず", "removedDate": "2026-04-10" },
+      { "name": "北海しゃらんべ 須磨パティオ店", "area": "神戸市須磨区", "reason": "食べログ閉店表記", "removedDate": "2026-04-10" }
+    ]
+  }
+}

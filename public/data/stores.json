@@ -676,6 +676,106 @@
         "sourceUrl": "https://tabelog.com/hyogo/A2801/A280106/28022335/",
         "isEnhanced": false
       }
+    },
+    {
+      "id": "ryufuku-amagasaki",
+      "name": "龍福 尼崎店",
+      "address": "兵庫県尼崎市神田中通4-88-6",
+      "coordinates": {
+        "lat": 34.7205785,
+        "lng": 135.4091745
+      },
+      "district": "尼崎市",
+      "businessHours": "10:00〜20:00 (定休日: 火曜)",
+      "features": ["手作り豚まん専門", "大阪発チェーン", "全国発送対応", "テイクアウト専門"],
+      "description": "大阪・駒川中野発の手作り豚まん専門店。本格中華の技法で日本人好みにアレンジした豚まんが人気。1日400個売れる実力店の尼崎支店。",
+      "googleMapsUrl": "https://maps.google.com/?q=龍福+尼崎店+尼崎市神田中通4-88-6",
+      "categories": ["テイクアウト", "通販"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://tabelog.com/hyogo/A2803/A280304/28047854/",
+        "isEnhanced": false
+      }
+    },
+    {
+      "id": "himeji-ikkanrou-sanyo",
+      "name": "姫路一貫楼 山陽百貨店",
+      "address": "兵庫県姫路市南町1 山陽百貨店B1F",
+      "coordinates": {
+        "lat": 34.8284327,
+        "lng": 134.6874646
+      },
+      "district": "姫路市",
+      "businessHours": "10:00〜19:30 (定休日: 山陽百貨店休館日に準ずる)",
+      "features": ["淡路産玉葱使用", "皮から手作り", "百貨店地下", "姫路名物"],
+      "description": "淡路産玉ねぎを使い皮から手作りする姫路の豚まん名店。山陽百貨店B1Fで手軽に購入可能。1個230円の手頃な価格も魅力。",
+      "googleMapsUrl": "https://maps.google.com/?q=姫路一貫楼+山陽百貨店+姫路市南町1",
+      "categories": ["テイクアウト"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://tabelog.com/hyogo/A2805/A280501/28039035/",
+        "isEnhanced": false
+      }
+    },
+    {
+      "id": "himeji-ikkanrou-seishin",
+      "name": "姫路一貫楼 西神中央店",
+      "address": "兵庫県神戸市西区糀台5-9-4 エキソアレ西神中央",
+      "coordinates": {
+        "lat": 34.7190098,
+        "lng": 135.0150139
+      },
+      "district": "神戸市西区",
+      "businessHours": "10:00〜20:00 (定休日: エキソアレ西神中央休館日に準ずる)",
+      "features": ["淡路産玉葱使用", "皮から手作り", "駅直結商業施設", "姫路の味"],
+      "description": "姫路一貫楼の西神中央支店。エキソアレ西神中央内にあり、西神中央駅直結で便利。姫路本店と同じ淡路産玉ねぎの手作り豚まんを提供。",
+      "googleMapsUrl": "https://maps.google.com/?q=姫路一貫楼+エキソアレ西神中央+神戸市西区糀台5-9-4",
+      "categories": ["テイクアウト"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://tabelog.com/hyogo/A2801/A280111/28063235/",
+        "isEnhanced": false
+      }
+    },
+    {
+      "id": "kakogawa-shikorou",
+      "name": "加古川四興楼",
+      "address": "兵庫県加古川市別府町別府997-19",
+      "coordinates": {
+        "lat": 34.7314305,
+        "lng": 134.8471338
+      },
+      "district": "加古川市",
+      "businessHours": "11:00〜20:30 (豚まん販売 9:30〜20:00 / 定休日: 月曜)",
+      "features": ["元町四興樓のれん分け", "大ぶり豚まん", "別府駅徒歩2分", "店内飲食も可"],
+      "description": "神戸元町の名店・四興樓ののれん分け店。大ぶりでもっちり生地の豚まんが1個220円と手頃。中華定食も人気で地元に愛される店。",
+      "googleMapsUrl": "https://maps.google.com/?q=四興楼+加古川市別府町別府997-19",
+      "categories": ["テイクアウト", "店内飲食"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://tabelog.com/hyogo/A2804/A280402/28007654/",
+        "isEnhanced": false
+      }
+    },
+    {
+      "id": "miraku-nishiakashi",
+      "name": "味楽",
+      "address": "兵庫県明石市野々上2-2-1",
+      "coordinates": {
+        "lat": 34.6691128,
+        "lng": 134.9668544
+      },
+      "district": "明石市",
+      "businessHours": "11:00〜14:30 / 17:00〜22:00 (定休日: 火曜・不定休月1回)",
+      "features": ["創業37年本格中華", "豚まん「縁包」", "担々麺も人気", "西明石の名店"],
+      "description": "創業37年の本格中華料理店。名物の豚まん「縁包」はジューシーな餡とふわもち皮が特徴。担々麺との組み合わせが地元で人気。",
+      "googleMapsUrl": "https://maps.google.com/?q=味楽+明石市野々上2-2-1",
+      "categories": ["テイクアウト", "店内飲食"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://tabelog.com/hyogo/A2804/A280401/28005178/",
+        "isEnhanced": false
+      }
     }
   ]
 }

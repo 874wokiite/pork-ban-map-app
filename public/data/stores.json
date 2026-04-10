@@ -396,6 +396,286 @@
         "sourceUrl": "https://tabelog.com/hyogo/A2801/A280108/28013352/",
         "isEnhanced": true
       }
+    },
+    {
+      "id": "shunyouken",
+      "name": "春陽軒",
+      "address": "神戸市兵庫区新開地2-7-5",
+      "coordinates": {
+        "lat": 34.6773424,
+        "lng": 135.1687013
+      },
+      "district": "兵庫区",
+      "businessHours": "10:30〜売り切れ次第終了 (定休日: 日曜)",
+      "features": ["味噌味の餡", "自然発酵皮", "大正創業の老舗", "テイクアウト専門"],
+      "description": "大正14年創業の新開地名物。日本人の舌に合うようアレンジされた味噌味の餡と、自然発酵でじっくり熟成させたふかふかの皮が特徴の唯一無二の豚まん専門店。",
+      "googleMapsUrl": "https://maps.google.com/?q=春陽軒+神戸市兵庫区新開地2-7-5",
+      "categories": ["テイクアウト"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://tabelog.com/hyogo/A2801/A280109/28001850/",
+        "isEnhanced": false
+      }
+    },
+    {
+      "id": "gyoza-no-sou-higashiyama",
+      "name": "餃子の創 東山店",
+      "address": "神戸市兵庫区東山町1-1-7",
+      "coordinates": {
+        "lat": 34.6810686,
+        "lng": 135.1619239
+      },
+      "district": "兵庫区",
+      "businessHours": "10:00〜18:00 (定休日: 水曜)",
+      "features": ["手作り餃子", "たかちゃんのぶたまん", "東山商店街", "リーズナブル"],
+      "description": "東山商店街にある餃子テイクアウト専門店。厳選素材で手作りの餃子のほか、「たかちゃんのぶたまん」(120円)も人気。",
+      "googleMapsUrl": "https://maps.google.com/?q=餃子の創+東山店+神戸市兵庫区東山町1-1-7",
+      "categories": ["テイクアウト"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://tabelog.com/hyogo/A2801/A280109/28033475/",
+        "isEnhanced": false
+      }
+    },
+    {
+      "id": "tonton-gyoza",
+      "name": "とんとん餃子",
+      "address": "神戸市兵庫区荒田町4-28-1",
+      "coordinates": {
+        "lat": 34.682089,
+        "lng": 135.1357029
+      },
+      "district": "兵庫区",
+      "businessHours": "10:00〜19:30 (定休日: 水曜)",
+      "features": ["昭和51年創業", "特製味噌ダレ", "炊き焼き製法", "豚まんあり"],
+      "description": "昭和51年創業の老舗餃子店。ニンニク控えめのあっさり餃子と、讃岐白味噌と20種のスパイスを合わせた特製味噌ダレが特徴。豚まんも販売。",
+      "googleMapsUrl": "https://maps.google.com/?q=とんとん餃子+神戸市兵庫区荒田町4-28-1",
+      "categories": ["テイクアウト", "店内飲食"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://tabelog.com/hyogo/A2801/A280109/28022578/",
+        "isEnhanced": false
+      }
+    },
+    {
+      "id": "ninnintei",
+      "name": "ニンニン亭",
+      "address": "神戸市長田区五番町7-8-10",
+      "coordinates": {
+        "lat": 34.6686408,
+        "lng": 135.147955
+      },
+      "district": "長田区",
+      "businessHours": "10:00-19:00 (年中無休)",
+      "features": ["上海仕込み手作り", "もちもちジューシー", "TV紹介の人気店", "テイクアウト専門"],
+      "description": "上海出身の店主が毎日天候に合わせ発酵時間を調整して作る本格豚まん。大きめカットの玉ねぎの甘みとジューシーな餡、フワフワもちもちの皮が特徴。バナナマンのせっかくグルメでも紹介。",
+      "googleMapsUrl": "https://maps.google.com/?q=ニンニン亭+神戸市長田区五番町7-8-10",
+      "categories": ["テイクアウト"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://www.ekiten.jp/shop_6059304/",
+        "isEnhanced": false
+      }
+    },
+    {
+      "id": "maruyone",
+      "name": "肉の名門マルヨネ",
+      "address": "神戸市長田区二葉町3丁目11-3",
+      "coordinates": {
+        "lat": 34.7212146,
+        "lng": 135.2570032
+      },
+      "district": "長田区",
+      "businessHours": "10:00-17:00 (定休日: 火曜)",
+      "features": ["肉屋の本格豚まん", "ぼっかけコロッケ名物", "丸五市場内", "1963年創業"],
+      "description": "1963年創業の老舗精肉店。丸五市場内にあり、厳選した肉を使った豚まんとぼっかけコロッケが名物。肉屋ならではのこだわりが光る。",
+      "googleMapsUrl": "https://maps.google.com/?q=肉の名門マルヨネ+神戸市長田区二葉町3丁目11-3",
+      "categories": ["テイクアウト"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://retty.me/area/PRE28/ARE99/SUB9903/100000814874/",
+        "isEnhanced": false
+      }
+    },
+    {
+      "id": "nagomi",
+      "name": "和（なごみ）",
+      "address": "神戸市長田区腕塚町5-3-1 アスタくにづか1番館南棟101",
+      "coordinates": {
+        "lat": 34.6541094,
+        "lng": 134.9940777
+      },
+      "district": "長田区",
+      "businessHours": "Coming Soon...",
+      "features": ["ぼっかけ牛すじまん", "牛すじホルモン専門", "長田名物ぼっかけ", "リーズナブル"],
+      "description": "大正筋商店街沿いにある牛すじホルモン専門店。長田名物のぼっかけを使った「ぼっかけ牛すじまん」が人気で、甘辛く煮込んだ牛すじの旨みが詰まった一品。1個150円。",
+      "googleMapsUrl": "https://maps.google.com/?q=和+なごみ+神戸市長田区腕塚町5-3-1",
+      "categories": ["テイクアウト"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://tabelog.com/hyogo/A2801/A280110/28031601/",
+        "isEnhanced": false
+      }
+    },
+    {
+      "id": "shinnagata-ikkanrou",
+      "name": "新長田一貫楼",
+      "address": "神戸市長田区大橋町5丁目3-1-111",
+      "coordinates": {
+        "lat": 34.6552216,
+        "lng": 135.1426692
+      },
+      "district": "長田区",
+      "businessHours": "11:00-15:00, 17:00-20:00 (定休日: 水曜)",
+      "features": ["一貫楼のれん分け", "甘すぎない生地", "手作り実演", "新長田の顔"],
+      "description": "新長田一番街商店街の老舗中華料理店。一貫楼ののれん分けで、店頭でガラス越しに手包みの実演が見られる。甘すぎない生地と具のバランスが良く、地元に愛される。",
+      "googleMapsUrl": "https://maps.google.com/?q=新長田一貫楼+神戸市長田区大橋町5丁目3-1",
+      "categories": ["テイクアウト", "店内飲食"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://tabelog.com/hyogo/A2801/A280110/28010265/",
+        "isEnhanced": false
+      }
+    },
+    {
+      "id": "tenshinrou-takatori",
+      "name": "天津楼 鷹取店",
+      "address": "神戸市長田区長楽町2丁目3-19",
+      "coordinates": {
+        "lat": 34.651212,
+        "lng": 135.1332983
+      },
+      "district": "長田区",
+      "businessHours": "11:30-21:00 (定休日: 日曜)",
+      "features": ["鷹取駅前", "町中華の名店", "リーズナブル", "地元密着"],
+      "description": "JR鷹取駅から徒歩2分の町中華。ランチから夜まで通し営業で、リーズナブルな価格設定が魅力。地元客に長年愛される中華料理店。",
+      "googleMapsUrl": "https://maps.google.com/?q=天津楼+鷹取店+神戸市長田区長楽町2-3-19",
+      "categories": ["テイクアウト", "店内飲食"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://tabelog.com/hyogo/A2801/A280110/28010268/",
+        "isEnhanced": false
+      }
+    },
+    {
+      "id": "tarumi-hanten-suma",
+      "name": "垂水飯店 須磨店",
+      "address": "神戸市須磨区中落合2丁目2-1 須磨パティオ健康館1F",
+      "coordinates": {
+        "lat": 34.6787733,
+        "lng": 135.0907563
+      },
+      "district": "須磨区",
+      "businessHours": "10:30-21:30 (年中無休)",
+      "features": ["家庭的な大衆中華", "ボリューム満点", "リーズナブル", "テイクアウト可"],
+      "description": "須磨パティオ健康館1Fにある家庭的な大衆中華料理店。安価でボリュームたっぷりのセットメニューが魅力。名谷と六甲道に展開する地元密着の中華店。",
+      "googleMapsUrl": "https://maps.google.com/?q=垂水飯店+須磨店+神戸市須磨区中落合2丁目2-1+須磨パティオ",
+      "categories": ["テイクアウト", "店内飲食"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://retty.me/area/PRE28/ARE99/SUB10101/100000843439/",
+        "isEnhanced": false
+      }
+    },
+    {
+      "id": "gyoza-benkei",
+      "name": "餃子弁慶",
+      "address": "神戸市須磨区飛松町3丁目4-10",
+      "coordinates": {
+        "lat": 34.6612307,
+        "lng": 135.1301668
+      },
+      "district": "須磨区",
+      "businessHours": "11:30-15:00, 16:30-21:00 (定休日: 水曜・第2第4火曜)",
+      "features": ["手作り皮の餃子", "粗挽き豚肉の豚まん", "自家製麺ラーメン", "カウンター店"],
+      "description": "板宿駅徒歩3分の餃子と豚まんの店。皮から手作りする素朴な餃子と、粗挽き豚肉にゴロッとした玉ねぎ・椎茸が入った豚まんが名物。自家製麺のラーメンも人気。",
+      "googleMapsUrl": "https://maps.google.com/?q=餃子弁慶+神戸市須磨区飛松町3-4-10",
+      "categories": ["テイクアウト", "店内飲食"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://tabelog.com/hyogo/A2801/A280110/28011329/",
+        "isEnhanced": false
+      }
+    },
+    {
+      "id": "itayado-ikkanrou",
+      "name": "板宿一貫楼",
+      "address": "神戸市須磨区平田町1丁目5-6",
+      "coordinates": {
+        "lat": 34.6616489,
+        "lng": 135.1327697
+      },
+      "district": "須磨区",
+      "businessHours": "11:00-18:00 (定休日: 日曜)",
+      "features": ["一貫楼のれん分け", "ふかふか柔らか皮", "玉ねぎの甘み", "板宿の老舗"],
+      "description": "三宮一貫楼ののれん分け店舗。ふかふかとした柔らかい食感の生地と、豚肉の旨みと玉ねぎの甘みを感じられる餡が特徴。板宿駅から徒歩3分の地元に愛される中華店。",
+      "googleMapsUrl": "https://maps.google.com/?q=板宿一貫楼+神戸市須磨区平田町1-5-6",
+      "categories": ["テイクアウト", "店内飲食"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://www.ekiten.jp/shop_99548995/",
+        "isEnhanced": false
+      }
+    },
+    {
+      "id": "ourou-suma",
+      "name": "黄老 須磨店",
+      "address": "神戸市須磨区中落合2丁目2-4 大丸須磨店4F",
+      "coordinates": {
+        "lat": 34.6779705,
+        "lng": 135.0918561
+      },
+      "district": "須磨区",
+      "businessHours": "平日 11:00-15:00/17:00-19:30, 土日祝 11:00-19:30 (L.O.各30分前)",
+      "features": ["広東名菜", "大丸須磨店内", "本格中華コース", "ミニ豚まん"],
+      "description": "大丸須磨店4Fにある広東料理の名店。カジュアルな単品から本格的な中華コースまで幅広く提供。名谷駅直結で利便性も高い。",
+      "googleMapsUrl": "https://maps.google.com/?q=黄老+須磨店+神戸市須磨区中落合2-2-4+大丸須磨店",
+      "categories": ["テイクアウト", "店内飲食"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://www.daimaru.co.jp/suma/restaurant/oulou.html",
+        "isEnhanced": false
+      }
+    },
+    {
+      "id": "suzurandai-ikkanrou",
+      "name": "鈴蘭台一貫楼",
+      "address": "神戸市北区鈴蘭台東町1丁目12-9",
+      "coordinates": {
+        "lat": 34.7233768,
+        "lng": 135.1436478
+      },
+      "district": "北区",
+      "businessHours": "月・水・金 11:00-17:00 / 火・木・土 11:00-19:00 (定休日: 日曜)",
+      "features": ["一貫楼のれん分け", "玉ねぎの甘み", "ジューシー餡", "地元密着"],
+      "description": "三宮一貫楼からのれん分けし1982年創業。淡路島産玉ねぎの甘みが際立つジューシーな豚まんが名物の地元密着型中華料理店。",
+      "googleMapsUrl": "https://maps.google.com/?q=鈴蘭台一貫楼+神戸市北区鈴蘭台東町1丁目12-9",
+      "categories": ["テイクアウト", "店内飲食"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://tabelog.com/hyogo/A2801/A280112/28008882/",
+        "isEnhanced": false
+      }
+    },
+    {
+      "id": "maruyone-sumiyoshi",
+      "name": "肉の名門 マルヨネ 住吉店",
+      "address": "神戸市東灘区住吉本町1-23-7",
+      "coordinates": {
+        "lat": 34.7213798,
+        "lng": 135.2578854
+      },
+      "district": "東灘区",
+      "businessHours": "平日 10:00-18:00 / 日 11:30-14:00, 17:30-18:00 (定休日: 水曜)",
+      "features": ["100円豚まん", "精肉店の手作り", "行列人気", "ぼっかけコロッケ"],
+      "description": "住吉ありまみち商店街の老舗精肉店。100円の手作り豚まんが名物で行列ができるほどの人気。もちもち生地に粗挽き豚肉の餡が詰まった丁寧な仕上がり。",
+      "googleMapsUrl": "https://maps.google.com/?q=肉の名門+マルヨネ+住吉店+神戸市東灘区住吉本町1-23-7",
+      "categories": ["テイクアウト"],
+      "dataSource": {
+        "collectionDate": "2026-04-10",
+        "sourceUrl": "https://tabelog.com/hyogo/A2801/A280106/28022335/",
+        "isEnhanced": false
+      }
     }
   ]
 }

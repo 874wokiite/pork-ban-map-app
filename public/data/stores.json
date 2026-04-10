@@ -10,10 +10,17 @@
       },
       "district": "中央区",
       "businessHours": "月〜土 8:30-18:30 (定休日: 日曜)",
-      "features": ["伝統の醤油味", "もちもち麹発酵皮", "小ぶりサイズ", "老舗"],
+      "features": [
+        "伝統の醤油味",
+        "もちもち麹発酵皮",
+        "小ぶりサイズ",
+        "老舗"
+      ],
       "description": "豚饅の元祖として知られる老舗中の老舗。1915年創業以来受け継がれる伝統の醤油味ともちもちの麹発酵皮が特徴。",
       "googleMapsUrl": "https://maps.google.com/?q=老祥記+神戸市中央区元町通2-1-14",
-      "categories": ["テイクアウト"],
+      "categories": [
+        "テイクアウト"
+      ],
       "aiAnalysis": {
         "features": {
           "skinStyle": 8,
@@ -39,10 +46,19 @@
       },
       "district": "中央区",
       "businessHours": "11:00-20:00 (定休日: 火曜)",
-      "features": ["大ぶりサイズ", "ふっくら甘い皮", "ジューシー餡", "添加物なし"],
+      "features": [
+        "大ぶりサイズ",
+        "ふっくら甘い皮",
+        "ジューシー餡",
+        "添加物なし"
+      ],
       "description": "大ぶりでふっくらとした甘い皮が特徴。ジューシーな餡と添加物を使わない自然な味わい。",
       "googleMapsUrl": "https://maps.google.com/?q=四興樓+神戸市中央区元町通2-9-1+元町プラザビル",
-      "categories": ["テイクアウト", "店内飲食", "通販"],
+      "categories": [
+        "テイクアウト",
+        "店内飲食",
+        "通販"
+      ],
       "aiAnalysis": {
         "features": {
           "skinStyle": 4,
@@ -68,10 +84,19 @@
       },
       "district": "中央区",
       "businessHours": "11:30-20:30 (定休日: 月曜)",
-      "features": ["玉ねぎの甘み", "甘めの皮", "ジューシー", "観光客向け"],
+      "features": [
+        "玉ねぎの甘み",
+        "甘めの皮",
+        "ジューシー",
+        "観光客向け"
+      ],
       "description": "玉ねぎの甘みが強く、甘めの皮とジューシーな餡が特徴。三宮の中心部にあり観光客にも人気。",
       "googleMapsUrl": "https://maps.google.com/?q=三宮一貫楼+神戸市中央区三宮町3-9-9",
-      "categories": ["テイクアウト", "店内飲食", "通販"],
+      "categories": [
+        "テイクアウト",
+        "店内飲食",
+        "通販"
+      ],
       "aiAnalysis": {
         "features": {
           "skinStyle": 4,
@@ -97,10 +122,18 @@
       },
       "district": "中央区",
       "businessHours": "11:00-19:00 (定休日: 水曜)",
-      "features": ["椎茸豚肉包専門", "老祥記姉店", "手作り皮", "中華街風味"],
+      "features": [
+        "椎茸豚肉包専門",
+        "老祥記姉店",
+        "手作り皮",
+        "中華街風味"
+      ],
       "description": "椎茸豚肉包専門店で老祥記の姉店。本格的な中華の技法で作られる豚饅。手作りの皮が自慢。",
       "googleMapsUrl": "https://maps.google.com/?q=曹家包子館+神戸市中央区元町通1-3-7",
-      "categories": ["テイクアウト", "店内飲食"],
+      "categories": [
+        "テイクアウト",
+        "店内飲食"
+      ],
       "aiAnalysis": {
         "features": {
           "skinStyle": 7,
@@ -126,10 +159,18 @@
       },
       "district": "中央区",
       "businessHours": "11:00-21:00 (定休日: 不定休)",
-      "features": ["大サイズ", "甘くジューシー", "70年伝統", "満腹感"],
+      "features": [
+        "大サイズ",
+        "甘くジューシー",
+        "70年伝統",
+        "満腹感"
+      ],
       "description": "70年の伝統を持つ歴史ある中華料理店。大サイズで甘くジューシーな豚饅が特徴。ボリュームがあり食べ応え十分。",
       "googleMapsUrl": "https://maps.google.com/?q=太平閣+神戸市中央区三宮町1-8-1+さんプラザ+１F",
-      "categories": ["テイクアウト", "店内飲食"],
+      "categories": [
+        "テイクアウト",
+        "店内飲食"
+      ],
       "aiAnalysis": {
         "features": {
           "skinStyle": 5,
@@ -155,10 +196,18 @@
       },
       "district": "中央区",
       "businessHours": "11:00-19:00 (定休日: 月曜)",
-      "features": ["神戸牛まん人気", "厳選素材", "手作り製法", "高級感"],
+      "features": [
+        "神戸牛まん人気",
+        "厳選素材",
+        "手作り製法",
+        "高級感"
+      ],
       "description": "神戸牛まんで人気の店舗。厳選された素材と手作り製法にこだわった高級感のある豚饅を提供。",
       "googleMapsUrl": "https://maps.google.com/?q=皇蘭+神戸市中央区栄町通2-10-6",
-      "categories": ["テイクアウト", "店内飲食"],
+      "categories": [
+        "テイクアウト",
+        "店内飲食"
+      ],
       "aiAnalysis": {
         "features": {
           "skinStyle": 6,
@@ -184,10 +233,18 @@
       },
       "district": "中央区",
       "businessHours": "11:00-20:00 (定休日: 木曜)",
-      "features": ["ジューシー豚まん", "焼き豚まん", "フカヒレ豚まん", "専門店"],
+      "features": [
+        "ジューシー豚まん",
+        "焼き豚まん",
+        "フカヒレ豚まん",
+        "専門店"
+      ],
       "description": "ジューシーな豚まん、焼き豚まん、フカヒレ豚まんを専門とする店舗。バリエーション豊富なメニューが魅力。",
       "googleMapsUrl": "https://maps.google.com/?q=朋榮+神戸市中央区元町通2-3-1",
-      "categories": ["テイクアウト", "店内飲食"],
+      "categories": [
+        "テイクアウト",
+        "店内飲食"
+      ],
       "aiAnalysis": {
         "features": {
           "skinStyle": 7,
@@ -209,14 +266,22 @@
       "address": "神戸市中央区下山手通4-13-14",
       "coordinates": {
         "lat": 34.69294,
-        "lng": 135.18600
+        "lng": 135.186
       },
       "district": "中央区",
       "businessHours": "11:00-21:00 (定休日: 水曜)",
-      "features": ["伝統中華粥店", "粥との相性", "老舗の味", "中華街文化"],
+      "features": [
+        "伝統中華粥店",
+        "粥との相性",
+        "老舗の味",
+        "中華街文化"
+      ],
       "description": "伝統的な中華粥店として知られ、粥との相性を考えた豚饅を提供。老舗ならではの中華街文化を感じられる味。",
       "googleMapsUrl": "https://maps.google.com/?q=杏杏+神戸市中央区下山手通4-13-14",
-      "categories": ["テイクアウト", "店内飲食"],
+      "categories": [
+        "テイクアウト",
+        "店内飲食"
+      ],
       "aiAnalysis": {
         "features": {
           "skinStyle": 5,
@@ -242,10 +307,19 @@
       },
       "district": "中央区",
       "businessHours": "10:00-19:00 (定休日: 火曜)",
-      "features": ["本格点心", "冷凍対応", "技術力高", "モダン中華"],
+      "features": [
+        "本格点心",
+        "冷凍対応",
+        "技術力高",
+        "モダン中華"
+      ],
       "description": "本格的な点心技術を駆使し、冷凍にも対応した高品質な豚饅を提供。モダンな中華料理店として技術力の高さが評価される。",
       "googleMapsUrl": "https://maps.google.com/?q=点心Tsubakien+神戸市中央区旗塚通3-1-18+ベルメゾン旗塚+1F",
-      "categories": ["テイクアウト", "店内飲食", "通販"],
+      "categories": [
+        "テイクアウト",
+        "店内飲食",
+        "通販"
+      ],
       "aiAnalysis": {
         "features": {
           "skinStyle": 8,
@@ -271,14 +345,27 @@
       },
       "district": "中央区",
       "businessHours": "Coming Soon...",
-      "features": ["Coming Soon"],
+      "features": [
+        "Coming Soon"
+      ],
       "description": "詳細情報を調査中です。近日中に詳しい情報をお届けします。",
       "googleMapsUrl": "https://maps.google.com/?q=新安源商店+神戸市中央区八雲通4丁目6-8",
-      "categories": ["テイクアウト"],
+      "categories": [
+        "テイクアウト"
+      ],
       "dataSource": {
         "collectionDate": "2025-10-16",
         "sourceUrl": "",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 5,
+          "fillingStyle": 5,
+          "overallTaste": 5,
+          "size": 4
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -291,10 +378,17 @@
       },
       "district": "灘区",
       "businessHours": "火〜日 10:00-19:00 (定休日: 月曜)",
-      "features": ["もも肉使用であっさり", "天然酵母もちもち皮", "台湾仕込み点心", "中華菓子も豊富"],
+      "features": [
+        "もも肉使用であっさり",
+        "天然酵母もちもち皮",
+        "台湾仕込み点心",
+        "中華菓子も豊富"
+      ],
       "description": "昭和52年創業の台湾仕込み点心専門店。豚まんは主流のバラ肉ではなくもも肉を使用し、天然酵母でゆっくり発酵させたもちもちの皮が特徴。あっさりした味わいの中に深みがあり、健康志向の方に人気。",
       "googleMapsUrl": "https://maps.google.com/?q=天一製菓+神戸市灘区新在家北町2-4-22",
-      "categories": ["テイクアウト"],
+      "categories": [
+        "テイクアウト"
+      ],
       "aiAnalysis": {
         "features": {
           "skinStyle": 8,
@@ -315,15 +409,22 @@
       "name": "ぶたまんや",
       "address": "神戸市灘区岸地通4-1-10 坂本ハイツ 1F",
       "coordinates": {
-        "lat": 34.711230,
+        "lat": 34.71123,
         "lng": 135.223215
       },
       "district": "灘区",
       "businessHours": "月〜土 10:00-18:00 (定休日: 日曜) ※売切れ次第閉店",
-      "features": ["もちもち皮", "野菜の甘みある餡", "昭和32年創業老舗", "午前中で売り切れる人気"],
+      "features": [
+        "もちもち皮",
+        "野菜の甘みある餡",
+        "昭和32年創業老舗",
+        "午前中で売り切れる人気"
+      ],
       "description": "1957年創業の老舗豚まん専門店。住宅街の裏路地にひっそりと構え、平日でも午後早くには売り切れる人気店。モチモチの皮と野菜の甘みが感じられる優しい味付けの餡が特徴。1個108円とリーズナブル。",
       "googleMapsUrl": "https://maps.google.com/?q=ぶたまんや+神戸市灘区岸地通4-1-10",
-      "categories": ["テイクアウト"],
+      "categories": [
+        "テイクアウト"
+      ],
       "aiAnalysis": {
         "features": {
           "skinStyle": 7,
@@ -349,10 +450,18 @@
       },
       "district": "灘区",
       "businessHours": "11:00-21:00 (定休日: 水曜)",
-      "features": ["あっさり味", "味噌タレ餃子", "リーズナブル", "地元密着の老舗"],
+      "features": [
+        "あっさり味",
+        "味噌タレ餃子",
+        "リーズナブル",
+        "地元密着の老舗"
+      ],
       "description": "1969年創業、一貫楼ののれん分け店舗の一つ。住宅街にある地元密着型の大衆中華料理店で、優しい味付けと驚きの安さが魅力。中華ランチ550円、ワンタン400円と財布に優しく、常連客で賑わう人気店。",
       "googleMapsUrl": "https://maps.google.com/?q=大石一貫楼+神戸市灘区鹿ノ下通2-3-10",
-      "categories": ["テイクアウト", "イートイン"],
+      "categories": [
+        "テイクアウト",
+        "イートイン"
+      ],
       "aiAnalysis": {
         "features": {
           "skinStyle": 5,
@@ -378,10 +487,18 @@
       },
       "district": "灘区",
       "businessHours": "11:00-21:30 (定休日: 木曜)",
-      "features": ["駅直結の好立地", "優しい味わい", "地元民に愛される", "リーズナブル"],
+      "features": [
+        "駅直結の好立地",
+        "優しい味わい",
+        "地元民に愛される",
+        "リーズナブル"
+      ],
       "description": "JR六甲道駅直結の便利な立地にある町中華。垂水に本店があったが現在は名谷と六甲道のみ。優しい味わいと素朴だが上質なスープが評判。地元客に愛される繁盛店で、焼飯やワンタン麺も人気。",
       "googleMapsUrl": "https://maps.google.com/?q=垂水飯店+六甲道店+神戸市灘区深田町4-1-1",
-      "categories": ["テイクアウト", "イートイン"],
+      "categories": [
+        "テイクアウト",
+        "イートイン"
+      ],
       "aiAnalysis": {
         "features": {
           "skinStyle": 5,
@@ -407,14 +524,30 @@
       },
       "district": "兵庫区",
       "businessHours": "10:30〜売り切れ次第終了 (定休日: 日曜)",
-      "features": ["味噌味の餡", "自然発酵皮", "大正創業の老舗", "テイクアウト専門"],
+      "features": [
+        "味噌味の餡",
+        "自然発酵皮",
+        "大正創業の老舗",
+        "テイクアウト専門"
+      ],
       "description": "大正14年創業の新開地名物。日本人の舌に合うようアレンジされた味噌味の餡と、自然発酵でじっくり熟成させたふかふかの皮が特徴の唯一無二の豚まん専門店。",
       "googleMapsUrl": "https://maps.google.com/?q=春陽軒+神戸市兵庫区新開地2-7-5",
-      "categories": ["テイクアウト"],
+      "categories": [
+        "テイクアウト"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://tabelog.com/hyogo/A2801/A280109/28001850/",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 7,
+          "fillingStyle": 7,
+          "overallTaste": 8,
+          "size": 4
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -427,14 +560,30 @@
       },
       "district": "兵庫区",
       "businessHours": "10:00〜18:00 (定休日: 水曜)",
-      "features": ["手作り餃子", "たかちゃんのぶたまん", "東山商店街", "リーズナブル"],
+      "features": [
+        "手作り餃子",
+        "たかちゃんのぶたまん",
+        "東山商店街",
+        "リーズナブル"
+      ],
       "description": "東山商店街にある餃子テイクアウト専門店。厳選素材で手作りの餃子のほか、「たかちゃんのぶたまん」(120円)も人気。",
       "googleMapsUrl": "https://maps.google.com/?q=餃子の創+東山店+神戸市兵庫区東山町1-1-7",
-      "categories": ["テイクアウト"],
+      "categories": [
+        "テイクアウト"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://tabelog.com/hyogo/A2801/A280109/28033475/",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 4,
+          "fillingStyle": 5,
+          "overallTaste": 4,
+          "size": 4
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -447,14 +596,31 @@
       },
       "district": "兵庫区",
       "businessHours": "10:00〜19:30 (定休日: 水曜)",
-      "features": ["昭和51年創業", "特製味噌ダレ", "炊き焼き製法", "豚まんあり"],
+      "features": [
+        "昭和51年創業",
+        "特製味噌ダレ",
+        "炊き焼き製法",
+        "豚まんあり"
+      ],
       "description": "昭和51年創業の老舗餃子店。ニンニク控えめのあっさり餃子と、讃岐白味噌と20種のスパイスを合わせた特製味噌ダレが特徴。豚まんも販売。",
       "googleMapsUrl": "https://maps.google.com/?q=とんとん餃子+神戸市兵庫区荒田町4-28-1",
-      "categories": ["テイクアウト", "店内飲食"],
+      "categories": [
+        "テイクアウト",
+        "店内飲食"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://tabelog.com/hyogo/A2801/A280109/28022578/",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 3,
+          "fillingStyle": 6,
+          "overallTaste": 5,
+          "size": 3
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -467,14 +633,30 @@
       },
       "district": "長田区",
       "businessHours": "10:00-19:00 (年中無休)",
-      "features": ["上海仕込み手作り", "もちもちジューシー", "TV紹介の人気店", "テイクアウト専門"],
+      "features": [
+        "上海仕込み手作り",
+        "もちもちジューシー",
+        "TV紹介の人気店",
+        "テイクアウト専門"
+      ],
       "description": "上海出身の店主が毎日天候に合わせ発酵時間を調整して作る本格豚まん。大きめカットの玉ねぎの甘みとジューシーな餡、フワフワもちもちの皮が特徴。バナナマンのせっかくグルメでも紹介。",
       "googleMapsUrl": "https://maps.google.com/?q=ニンニン亭+神戸市長田区五番町7-8-10",
-      "categories": ["テイクアウト"],
+      "categories": [
+        "テイクアウト"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://www.ekiten.jp/shop_6059304/",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 3,
+          "fillingStyle": 7,
+          "overallTaste": 5,
+          "size": 7
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -487,14 +669,30 @@
       },
       "district": "長田区",
       "businessHours": "10:00-17:00 (定休日: 火曜)",
-      "features": ["肉屋の本格豚まん", "ぼっかけコロッケ名物", "丸五市場内", "1963年創業"],
+      "features": [
+        "肉屋の本格豚まん",
+        "ぼっかけコロッケ名物",
+        "丸五市場内",
+        "1963年創業"
+      ],
       "description": "1963年創業の老舗精肉店。丸五市場内にあり、厳選した肉を使った豚まんとぼっかけコロッケが名物。肉屋ならではのこだわりが光る。",
       "googleMapsUrl": "https://maps.google.com/?q=肉の名門マルヨネ+神戸市長田区二葉町3丁目11-3",
-      "categories": ["テイクアウト"],
+      "categories": [
+        "テイクアウト"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://retty.me/area/PRE28/ARE99/SUB9903/100000814874/",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 4,
+          "fillingStyle": 6,
+          "overallTaste": 4,
+          "size": 5
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -507,14 +705,30 @@
       },
       "district": "長田区",
       "businessHours": "Coming Soon...",
-      "features": ["ぼっかけ牛すじまん", "牛すじホルモン専門", "長田名物ぼっかけ", "リーズナブル"],
+      "features": [
+        "ぼっかけ牛すじまん",
+        "牛すじホルモン専門",
+        "長田名物ぼっかけ",
+        "リーズナブル"
+      ],
       "description": "大正筋商店街沿いにある牛すじホルモン専門店。長田名物のぼっかけを使った「ぼっかけ牛すじまん」が人気で、甘辛く煮込んだ牛すじの旨みが詰まった一品。1個150円。",
       "googleMapsUrl": "https://maps.google.com/?q=和+なごみ+神戸市長田区腕塚町5-3-1",
-      "categories": ["テイクアウト"],
+      "categories": [
+        "テイクアウト"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://tabelog.com/hyogo/A2801/A280110/28031601/",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 4,
+          "fillingStyle": 5,
+          "overallTaste": 7,
+          "size": 4
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -527,14 +741,31 @@
       },
       "district": "長田区",
       "businessHours": "11:00-15:00, 17:00-20:00 (定休日: 水曜)",
-      "features": ["一貫楼のれん分け", "甘すぎない生地", "手作り実演", "新長田の顔"],
+      "features": [
+        "一貫楼のれん分け",
+        "甘すぎない生地",
+        "手作り実演",
+        "新長田の顔"
+      ],
       "description": "新長田一番街商店街の老舗中華料理店。一貫楼ののれん分けで、店頭でガラス越しに手包みの実演が見られる。甘すぎない生地と具のバランスが良く、地元に愛される。",
       "googleMapsUrl": "https://maps.google.com/?q=新長田一貫楼+神戸市長田区大橋町5丁目3-1",
-      "categories": ["テイクアウト", "店内飲食"],
+      "categories": [
+        "テイクアウト",
+        "店内飲食"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://tabelog.com/hyogo/A2801/A280110/28010265/",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 4,
+          "fillingStyle": 7,
+          "overallTaste": 4,
+          "size": 7
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -547,14 +778,31 @@
       },
       "district": "長田区",
       "businessHours": "11:30-21:00 (定休日: 日曜)",
-      "features": ["鷹取駅前", "町中華の名店", "リーズナブル", "地元密着"],
+      "features": [
+        "鷹取駅前",
+        "町中華の名店",
+        "リーズナブル",
+        "地元密着"
+      ],
       "description": "JR鷹取駅から徒歩2分の町中華。ランチから夜まで通し営業で、リーズナブルな価格設定が魅力。地元客に長年愛される中華料理店。",
       "googleMapsUrl": "https://maps.google.com/?q=天津楼+鷹取店+神戸市長田区長楽町2-3-19",
-      "categories": ["テイクアウト", "店内飲食"],
+      "categories": [
+        "テイクアウト",
+        "店内飲食"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://tabelog.com/hyogo/A2801/A280110/28010268/",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 5,
+          "fillingStyle": 6,
+          "overallTaste": 6,
+          "size": 5
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -567,14 +815,31 @@
       },
       "district": "須磨区",
       "businessHours": "10:30-21:30 (年中無休)",
-      "features": ["家庭的な大衆中華", "ボリューム満点", "リーズナブル", "テイクアウト可"],
+      "features": [
+        "家庭的な大衆中華",
+        "ボリューム満点",
+        "リーズナブル",
+        "テイクアウト可"
+      ],
       "description": "須磨パティオ健康館1Fにある家庭的な大衆中華料理店。安価でボリュームたっぷりのセットメニューが魅力。名谷と六甲道に展開する地元密着の中華店。",
       "googleMapsUrl": "https://maps.google.com/?q=垂水飯店+須磨店+神戸市須磨区中落合2丁目2-1+須磨パティオ",
-      "categories": ["テイクアウト", "店内飲食"],
+      "categories": [
+        "テイクアウト",
+        "店内飲食"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://retty.me/area/PRE28/ARE99/SUB10101/100000843439/",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 5,
+          "fillingStyle": 5,
+          "overallTaste": 5,
+          "size": 5
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -587,14 +852,31 @@
       },
       "district": "須磨区",
       "businessHours": "11:30-15:00, 16:30-21:00 (定休日: 水曜・第2第4火曜)",
-      "features": ["手作り皮の餃子", "粗挽き豚肉の豚まん", "自家製麺ラーメン", "カウンター店"],
+      "features": [
+        "手作り皮の餃子",
+        "粗挽き豚肉の豚まん",
+        "自家製麺ラーメン",
+        "カウンター店"
+      ],
       "description": "板宿駅徒歩3分の餃子と豚まんの店。皮から手作りする素朴な餃子と、粗挽き豚肉にゴロッとした玉ねぎ・椎茸が入った豚まんが名物。自家製麺のラーメンも人気。",
       "googleMapsUrl": "https://maps.google.com/?q=餃子弁慶+神戸市須磨区飛松町3-4-10",
-      "categories": ["テイクアウト", "店内飲食"],
+      "categories": [
+        "テイクアウト",
+        "店内飲食"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://tabelog.com/hyogo/A2801/A280110/28011329/",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 5,
+          "fillingStyle": 7,
+          "overallTaste": 5,
+          "size": 5
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -607,14 +889,31 @@
       },
       "district": "須磨区",
       "businessHours": "11:00-18:00 (定休日: 日曜)",
-      "features": ["一貫楼のれん分け", "ふかふか柔らか皮", "玉ねぎの甘み", "板宿の老舗"],
+      "features": [
+        "一貫楼のれん分け",
+        "ふかふか柔らか皮",
+        "玉ねぎの甘み",
+        "板宿の老舗"
+      ],
       "description": "三宮一貫楼ののれん分け店舗。ふかふかとした柔らかい食感の生地と、豚肉の旨みと玉ねぎの甘みを感じられる餡が特徴。板宿駅から徒歩3分の地元に愛される中華店。",
       "googleMapsUrl": "https://maps.google.com/?q=板宿一貫楼+神戸市須磨区平田町1-5-6",
-      "categories": ["テイクアウト", "店内飲食"],
+      "categories": [
+        "テイクアウト",
+        "店内飲食"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://www.ekiten.jp/shop_99548995/",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 4,
+          "fillingStyle": 5,
+          "overallTaste": 4,
+          "size": 6
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -627,14 +926,31 @@
       },
       "district": "須磨区",
       "businessHours": "平日 11:00-15:00/17:00-19:30, 土日祝 11:00-19:30 (L.O.各30分前)",
-      "features": ["広東名菜", "大丸須磨店内", "本格中華コース", "ミニ豚まん"],
+      "features": [
+        "広東名菜",
+        "大丸須磨店内",
+        "本格中華コース",
+        "ミニ豚まん"
+      ],
       "description": "大丸須磨店4Fにある広東料理の名店。カジュアルな単品から本格的な中華コースまで幅広く提供。名谷駅直結で利便性も高い。",
       "googleMapsUrl": "https://maps.google.com/?q=黄老+須磨店+神戸市須磨区中落合2-2-4+大丸須磨店",
-      "categories": ["テイクアウト", "店内飲食"],
+      "categories": [
+        "テイクアウト",
+        "店内飲食"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://www.daimaru.co.jp/suma/restaurant/oulou.html",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 3,
+          "fillingStyle": 4,
+          "overallTaste": 3,
+          "size": 2
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -647,14 +963,31 @@
       },
       "district": "北区",
       "businessHours": "月・水・金 11:00-17:00 / 火・木・土 11:00-19:00 (定休日: 日曜)",
-      "features": ["一貫楼のれん分け", "玉ねぎの甘み", "ジューシー餡", "地元密着"],
+      "features": [
+        "一貫楼のれん分け",
+        "玉ねぎの甘み",
+        "ジューシー餡",
+        "地元密着"
+      ],
       "description": "三宮一貫楼からのれん分けし1982年創業。淡路島産玉ねぎの甘みが際立つジューシーな豚まんが名物の地元密着型中華料理店。",
       "googleMapsUrl": "https://maps.google.com/?q=鈴蘭台一貫楼+神戸市北区鈴蘭台東町1丁目12-9",
-      "categories": ["テイクアウト", "店内飲食"],
+      "categories": [
+        "テイクアウト",
+        "店内飲食"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://tabelog.com/hyogo/A2801/A280112/28008882/",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 4,
+          "fillingStyle": 5,
+          "overallTaste": 4,
+          "size": 6
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -667,14 +1000,30 @@
       },
       "district": "東灘区",
       "businessHours": "平日 10:00-18:00 / 日 11:30-14:00, 17:30-18:00 (定休日: 水曜)",
-      "features": ["100円豚まん", "精肉店の手作り", "行列人気", "ぼっかけコロッケ"],
+      "features": [
+        "100円豚まん",
+        "精肉店の手作り",
+        "行列人気",
+        "ぼっかけコロッケ"
+      ],
       "description": "住吉ありまみち商店街の老舗精肉店。100円の手作り豚まんが名物で行列ができるほどの人気。もちもち生地に粗挽き豚肉の餡が詰まった丁寧な仕上がり。",
       "googleMapsUrl": "https://maps.google.com/?q=肉の名門+マルヨネ+住吉店+神戸市東灘区住吉本町1-23-7",
-      "categories": ["テイクアウト"],
+      "categories": [
+        "テイクアウト"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://tabelog.com/hyogo/A2801/A280106/28022335/",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 3,
+          "fillingStyle": 7,
+          "overallTaste": 5,
+          "size": 6
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -687,14 +1036,31 @@
       },
       "district": "尼崎市",
       "businessHours": "10:00〜20:00 (定休日: 火曜)",
-      "features": ["手作り豚まん専門", "大阪発チェーン", "全国発送対応", "テイクアウト専門"],
+      "features": [
+        "手作り豚まん専門",
+        "大阪発チェーン",
+        "全国発送対応",
+        "テイクアウト専門"
+      ],
       "description": "大阪・駒川中野発の手作り豚まん専門店。本格中華の技法で日本人好みにアレンジした豚まんが人気。1日400個売れる実力店の尼崎支店。",
       "googleMapsUrl": "https://maps.google.com/?q=龍福+尼崎店+尼崎市神田中通4-88-6",
-      "categories": ["テイクアウト", "通販"],
+      "categories": [
+        "テイクアウト",
+        "通販"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://tabelog.com/hyogo/A2803/A280304/28047854/",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 3,
+          "fillingStyle": 5,
+          "overallTaste": 4,
+          "size": 7
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -707,14 +1073,30 @@
       },
       "district": "姫路市",
       "businessHours": "10:00〜19:30 (定休日: 山陽百貨店休館日に準ずる)",
-      "features": ["淡路産玉葱使用", "皮から手作り", "百貨店地下", "姫路名物"],
+      "features": [
+        "淡路産玉葱使用",
+        "皮から手作り",
+        "百貨店地下",
+        "姫路名物"
+      ],
       "description": "淡路産玉ねぎを使い皮から手作りする姫路の豚まん名店。山陽百貨店B1Fで手軽に購入可能。1個230円の手頃な価格も魅力。",
       "googleMapsUrl": "https://maps.google.com/?q=姫路一貫楼+山陽百貨店+姫路市南町1",
-      "categories": ["テイクアウト"],
+      "categories": [
+        "テイクアウト"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://tabelog.com/hyogo/A2805/A280501/28039035/",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 4,
+          "fillingStyle": 6,
+          "overallTaste": 4,
+          "size": 7
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -727,14 +1109,30 @@
       },
       "district": "神戸市西区",
       "businessHours": "10:00〜20:00 (定休日: エキソアレ西神中央休館日に準ずる)",
-      "features": ["淡路産玉葱使用", "皮から手作り", "駅直結商業施設", "姫路の味"],
+      "features": [
+        "淡路産玉葱使用",
+        "皮から手作り",
+        "駅直結商業施設",
+        "姫路の味"
+      ],
       "description": "姫路一貫楼の西神中央支店。エキソアレ西神中央内にあり、西神中央駅直結で便利。姫路本店と同じ淡路産玉ねぎの手作り豚まんを提供。",
       "googleMapsUrl": "https://maps.google.com/?q=姫路一貫楼+エキソアレ西神中央+神戸市西区糀台5-9-4",
-      "categories": ["テイクアウト"],
+      "categories": [
+        "テイクアウト"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://tabelog.com/hyogo/A2801/A280111/28063235/",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 5,
+          "fillingStyle": 6,
+          "overallTaste": 4,
+          "size": 7
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -747,14 +1145,31 @@
       },
       "district": "加古川市",
       "businessHours": "11:00〜20:30 (豚まん販売 9:30〜20:00 / 定休日: 月曜)",
-      "features": ["元町四興樓のれん分け", "大ぶり豚まん", "別府駅徒歩2分", "店内飲食も可"],
+      "features": [
+        "元町四興樓のれん分け",
+        "大ぶり豚まん",
+        "別府駅徒歩2分",
+        "店内飲食も可"
+      ],
       "description": "神戸元町の名店・四興樓ののれん分け店。大ぶりでもっちり生地の豚まんが1個220円と手頃。中華定食も人気で地元に愛される店。",
       "googleMapsUrl": "https://maps.google.com/?q=四興楼+加古川市別府町別府997-19",
-      "categories": ["テイクアウト", "店内飲食"],
+      "categories": [
+        "テイクアウト",
+        "店内飲食"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://tabelog.com/hyogo/A2804/A280402/28007654/",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 4,
+          "fillingStyle": 7,
+          "overallTaste": 4,
+          "size": 8
+        },
+        "analysisDate": "2026-04-10"
       }
     },
     {
@@ -767,14 +1182,31 @@
       },
       "district": "明石市",
       "businessHours": "11:00〜14:30 / 17:00〜22:00 (定休日: 火曜・不定休月1回)",
-      "features": ["創業37年本格中華", "豚まん「縁包」", "担々麺も人気", "西明石の名店"],
+      "features": [
+        "創業37年本格中華",
+        "豚まん「縁包」",
+        "担々麺も人気",
+        "西明石の名店"
+      ],
       "description": "創業37年の本格中華料理店。名物の豚まん「縁包」はジューシーな餡とふわもち皮が特徴。担々麺との組み合わせが地元で人気。",
       "googleMapsUrl": "https://maps.google.com/?q=味楽+明石市野々上2-2-1",
-      "categories": ["テイクアウト", "店内飲食"],
+      "categories": [
+        "テイクアウト",
+        "店内飲食"
+      ],
       "dataSource": {
         "collectionDate": "2026-04-10",
         "sourceUrl": "https://tabelog.com/hyogo/A2804/A280401/28005178/",
-        "isEnhanced": false
+        "isEnhanced": true
+      },
+      "aiAnalysis": {
+        "features": {
+          "skinStyle": 6,
+          "fillingStyle": 7,
+          "overallTaste": 5,
+          "size": 3
+        },
+        "analysisDate": "2026-04-10"
       }
     }
   ]

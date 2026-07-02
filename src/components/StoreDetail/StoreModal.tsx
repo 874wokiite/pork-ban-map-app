@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react'
 import { ExtendedStore } from '@/types/store'
 import StoreSpectrumSection from './StoreSpectrumSection'
+import MusumeCommentSection from './MusumeCommentSection'
 import ServiceTypeIcon from '@/components/ServiceTypeIcon'
 
 interface StoreModalProps {
@@ -111,7 +112,12 @@ export default function StoreModal({ isOpen, onClose, store }: StoreModalProps) 
               </div>
             )}
 
-            {/* 3. 住所と営業時間（横並び） */}
+            {/* 3. 豚饅娘の一言（訪問済み店舗のみ） */}
+            {store.musumeComment && (
+              <MusumeCommentSection comment={store.musumeComment} />
+            )}
+
+            {/* 4. 住所と営業時間（横並び） */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* 住所 */}
               <div>

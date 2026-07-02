@@ -63,6 +63,24 @@ export interface AIAnalysisData {
 }
 
 /**
+ * 豚饅娘のキャラクター識別子
+ */
+export type MusumeCharacter = 'kanon' | 'saki'
+
+/**
+ * 豚饅娘の一言コメント
+ * このフィールドを持つ店舗 = 豚饅娘が実際に食べたことのある店舗
+ */
+export interface MusumeComment {
+  /** 一言コメント本文 */
+  text: string
+  /** コメントしたキャラクター */
+  character: MusumeCharacter
+  /** 訪問日（YYYY-MM-DD、オプション） */
+  visitDate?: string
+}
+
+/**
  * データ収集メタデータ
  */
 export interface DataSourceMetadata {
@@ -85,4 +103,6 @@ export interface ExtendedStore extends Store {
   dataSource: DataSourceMetadata
   /** 特典・サービス一覧（オプション） */
   benefits?: string[]
+  /** 豚饅娘の一言（オプション、あれば訪問済み店舗） */
+  musumeComment?: MusumeComment
 }

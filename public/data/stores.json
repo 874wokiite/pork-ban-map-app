@@ -21,6 +21,10 @@
       "categories": [
         "テイクアウト"
       ],
+      "musumeComment": {
+        "text": "何個でも食べられる。食べ出したら食べ切るまで止まらない",
+        "character": "kanon"
+      },
       "aiAnalysis": {
         "features": {
           "skinStyle": 8,

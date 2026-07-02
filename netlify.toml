@@ -5,7 +5,7 @@
   publish = "out"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
 
 # セキュリティヘッダー設定
 [[headers]]

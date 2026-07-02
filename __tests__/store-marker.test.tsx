@@ -1,25 +1,24 @@
-import { render } from '@testing-library/react'
+import { render, waitFor } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import StoreMarker from '@/components/StoreMarker'
-import { Store } from '@/types/store'
+import { ExtendedStore } from '@/types/store'
 
-// Google Maps APIのモック
-const mockMarker = {
-  setPosition: jest.fn(),
-  setVisible: jest.fn(),
+// AdvancedMarkerElementインスタンスのモック
+const mockMarkerInstance = {
   addListener: jest.fn(),
-  setMap: jest.fn(),
+  map: null as unknown,
+  position: null as unknown,
 }
 
+// Google Maps APIのモック（AdvancedMarkerElement対応）
 const mockGoogleMaps = {
-  Marker: jest.fn(() => mockMarker),
-  LatLng: jest.fn((lat, lng) => ({ lat, lng })),
-  Size: jest.fn((width, height) => ({ width, height })),
-  Point: jest.fn((x, y) => ({ x, y })),
+  importLibrary: jest.fn(),
+  marker: {
+    AdvancedMarkerElement: jest.fn(() => mockMarkerInstance),
+  },
   event: {
-    addListener: jest.fn(),
-    clearInstanceListeners: jest.fn(),
-  }
+    removeListener: jest.fn(),
+  },
 }
 
 // グローバルgoogleオブジェクトのモック
@@ -31,7 +30,7 @@ Object.defineProperty(window, 'google', {
 })
 
 // テスト用の店舗データ
-const mockStore: Store = {
+const mockStore: ExtendedStore = {
   id: 'roushouki',
   name: '老祥記',
   address: '〒650-0022 兵庫県神戸市中央区元町通2-1-14',
@@ -44,7 +43,12 @@ const mockStore: Store = {
   features: ['伝統の味', '行列必至', '豚饅発祥', '老舗'],
   description: '豚饅の元祖として知られる老舗',
   googleMapsUrl: 'https://maps.google.com/?q=老祥記',
-  categories: ['テイクアウト']
+  categories: ['テイクアウト'],
+  dataSource: {
+    collectionDate: '2026-01-13',
+    sourceUrl: 'https://example.com',
+    isEnhanced: false
+  }
 }
 
 const mockMap = {
@@ -55,111 +59,162 @@ const mockMap = {
 describe('StoreMarker', () => {
   beforeEach(() => {
     jest.clearAllMocks()
+    mockGoogleMaps.importLibrary.mockResolvedValue({})
+    mockMarkerInstance.addListener.mockReturnValue({ remove: jest.fn() })
+    mockMarkerInstance.map = null
+    mockMarkerInstance.position = null
   })
 
-  test('店舗データからマーカーが正しく作成されること', () => {
+  test('店舗データからマーカーが正しく作成されること', async () => {
     render(<StoreMarker store={mockStore} map={mockMap} />)
-    
-    expect(mockGoogleMaps.Marker).toHaveBeenCalledWith({
-      position: mockStore.coordinates,
-      map: mockMap,
-      title: mockStore.name,
-      icon: expect.objectContaining({
-        url: expect.stringContaining('butaman'),
-        scaledSize: expect.any(Object),
-        anchor: expect.any(Object)
-      })
+
+    await waitFor(() => {
+      expect(mockGoogleMaps.marker.AdvancedMarkerElement).toHaveBeenCalledWith(
+        expect.objectContaining({
+          position: mockStore.coordinates,
+          map: mockMap,
+          title: mockStore.name,
+        })
+      )
     })
   })
 
-  test('マーカーにクリックイベントリスナーが追加されること', () => {
+  test('markerライブラリが動的インポートされること', async () => {
     render(<StoreMarker store={mockStore} map={mockMap} />)
-    
-    expect(mockMarker.addListener).toHaveBeenCalledWith(
-      'click',
-      expect.any(Function)
-    )
+
+    await waitFor(() => {
+      expect(mockGoogleMaps.importLibrary).toHaveBeenCalledWith('marker')
+    })
   })
 
-  test('マーカークリック時にonMarkerClick関数が呼ばれること', () => {
+  test('マーカーにクリックイベントリスナーが追加されること', async () => {
+    render(<StoreMarker store={mockStore} map={mockMap} />)
+
+    await waitFor(() => {
+      expect(mockMarkerInstance.addListener).toHaveBeenCalledWith(
+        'click',
+        expect.any(Function)
+      )
+    })
+  })
+
+  test('マーカークリック時にonMarkerClick関数が呼ばれること', async () => {
     const mockOnMarkerClick = jest.fn()
-    
+
     render(
-      <StoreMarker 
-        store={mockStore} 
-        map={mockMap} 
+      <StoreMarker
+        store={mockStore}
+        map={mockMap}
         onMarkerClick={mockOnMarkerClick}
       />
     )
-    
+
+    await waitFor(() => {
+      expect(mockMarkerInstance.addListener).toHaveBeenCalledWith(
+        'click',
+        expect.any(Function)
+      )
+    })
+
     // マーカーのクリックイベントを模擬実行
-    const clickHandler = mockMarker.addListener.mock.calls.find(
+    const clickHandler = mockMarkerInstance.addListener.mock.calls.find(
       call => call[0] === 'click'
     )?.[1]
-    
+
     if (clickHandler) {
       clickHandler()
     }
-    
+
     expect(mockOnMarkerClick).toHaveBeenCalledWith(mockStore)
   })
 
-  test('カスタムアイコンが正しく設定されること', () => {
+  test('カスタムアイコンがコンテンツとして設定されること', async () => {
     render(<StoreMarker store={mockStore} map={mockMap} />)
-    
-    const markerCall = (mockGoogleMaps.Marker as jest.MockedFunction<any>).mock.calls[0]?.[0]
+
+    await waitFor(() => {
+      expect(mockGoogleMaps.marker.AdvancedMarkerElement).toHaveBeenCalled()
+    })
+
+    const markerCall = (mockGoogleMaps.marker.AdvancedMarkerElement as jest.Mock).mock.calls[0]?.[0]
     expect(markerCall).toBeDefined()
-    if (markerCall && typeof markerCall === 'object' && 'icon' in markerCall) {
-      expect((markerCall.icon as any).url).toBe('/icons/butaman-marker.svg')
-    }
-    expect(mockGoogleMaps.Size).toHaveBeenCalledWith(40, 40)
-    expect(mockGoogleMaps.Point).toHaveBeenCalledWith(20, 40)
+    const content = markerCall.content as HTMLImageElement
+    expect(content).toBeInstanceOf(HTMLImageElement)
+    expect(content.src).toContain('/icons/ban-logo.svg')
+    expect(content.style.width).toBe('40px')
+    expect(content.style.height).toBe('40px')
   })
 
-  test('マーカーが正しい位置に配置されること', () => {
+  test('マーカーが正しい位置に配置されること', async () => {
     render(<StoreMarker store={mockStore} map={mockMap} />)
-    
-    const markerCall = (mockGoogleMaps.Marker as jest.MockedFunction<any>).mock.calls[0]?.[0]
-    expect(markerCall).toBeDefined()
-    if (markerCall && typeof markerCall === 'object' && 'position' in markerCall) {
-      expect(markerCall.position).toEqual(mockStore.coordinates)
-    }
+
+    await waitFor(() => {
+      expect(mockGoogleMaps.marker.AdvancedMarkerElement).toHaveBeenCalled()
+    })
+
+    const markerCall = (mockGoogleMaps.marker.AdvancedMarkerElement as jest.Mock).mock.calls[0]?.[0]
+    expect(markerCall.position).toEqual(mockStore.coordinates)
   })
 
-  test('店舗名がマーカーのタイトルに設定されること', () => {
+  test('店舗名がマーカーのタイトルに設定されること', async () => {
     render(<StoreMarker store={mockStore} map={mockMap} />)
-    
-    const markerCall = (mockGoogleMaps.Marker as jest.MockedFunction<any>).mock.calls[0]?.[0]
-    expect(markerCall).toBeDefined()
-    if (markerCall && typeof markerCall === 'object' && 'title' in markerCall) {
-      expect(markerCall.title).toBe(mockStore.name)
-    }
+
+    await waitFor(() => {
+      expect(mockGoogleMaps.marker.AdvancedMarkerElement).toHaveBeenCalled()
+    })
+
+    const markerCall = (mockGoogleMaps.marker.AdvancedMarkerElement as jest.Mock).mock.calls[0]?.[0]
+    expect(markerCall.title).toBe(mockStore.name)
   })
 
-  test('mapプロパティが変更された時にマーカーが更新されること', () => {
+  test('mapプロパティが変更された時にマーカーが再作成されること', async () => {
     const newMap = { setCenter: jest.fn(), setZoom: jest.fn() }
     const { rerender } = render(<StoreMarker store={mockStore} map={mockMap} />)
-    
+
+    await waitFor(() => {
+      expect(mockGoogleMaps.marker.AdvancedMarkerElement).toHaveBeenCalled()
+    })
+
     rerender(<StoreMarker store={mockStore} map={newMap} />)
-    
-    expect(mockMarker.setMap).toHaveBeenCalledWith(newMap)
+
+    await waitFor(() => {
+      expect(mockGoogleMaps.marker.AdvancedMarkerElement).toHaveBeenLastCalledWith(
+        expect.objectContaining({ map: newMap })
+      )
+    })
   })
 
-  test('店舗データが変更された時にマーカーが更新されること', () => {
-    const updatedStore = { ...mockStore, name: '更新された店舗名' }
+  test('店舗データが変更された時にマーカーが更新されること', async () => {
+    const updatedStore = {
+      ...mockStore,
+      coordinates: { lat: 34.7, lng: 135.2 }
+    }
     const { rerender } = render(<StoreMarker store={mockStore} map={mockMap} />)
-    
+
+    await waitFor(() => {
+      expect(mockGoogleMaps.marker.AdvancedMarkerElement).toHaveBeenCalled()
+    })
+
     rerender(<StoreMarker store={updatedStore} map={mockMap} />)
-    
-    expect(mockMarker.setPosition).toHaveBeenCalledWith(updatedStore.coordinates)
+
+    await waitFor(() => {
+      expect(mockGoogleMaps.marker.AdvancedMarkerElement).toHaveBeenLastCalledWith(
+        expect.objectContaining({ position: updatedStore.coordinates })
+      )
+    })
   })
 
-  test('コンポーネントアンマウント時にマーカーがクリーンアップされること', () => {
+  test('コンポーネントアンマウント時にマーカーがクリーンアップされること', async () => {
     const { unmount } = render(<StoreMarker store={mockStore} map={mockMap} />)
-    
+
+    await waitFor(() => {
+      expect(mockGoogleMaps.marker.AdvancedMarkerElement).toHaveBeenCalled()
+    })
+
     unmount()
-    
-    expect(mockMarker.setMap).toHaveBeenCalledWith(null)
+
+    // イベントリスナーが削除され、マーカーが地図から外れること
+    expect(mockGoogleMaps.event.removeListener).toHaveBeenCalled()
+    expect(mockMarkerInstance.map).toBeNull()
   })
 
   test('onMarkerClickが未提供でもエラーが発生しないこと', () => {

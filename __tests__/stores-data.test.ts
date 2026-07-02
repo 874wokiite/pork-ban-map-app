@@ -56,15 +56,15 @@ describe('Store Data Validation', () => {
     })
   })
 
-  test('座標データが有効な神戸市内の値であること', () => {
+  test('座標データが有効な兵庫県内の値であること', () => {
     storesData.stores.forEach((store) => {
       const { lat, lng } = store.coordinates
-      
-      // 神戸市の緯度経度範囲（概算）
-      expect(lat).toBeGreaterThan(34.6)
-      expect(lat).toBeLessThan(34.8)
-      expect(lng).toBeGreaterThan(135.0)
-      expect(lng).toBeLessThan(135.3)
+
+      // 兵庫県南部（姫路〜尼崎）の緯度経度範囲（概算）
+      expect(lat).toBeGreaterThan(34.5)
+      expect(lat).toBeLessThan(35.0)
+      expect(lng).toBeGreaterThan(134.5)
+      expect(lng).toBeLessThan(135.6)
     })
   })
 

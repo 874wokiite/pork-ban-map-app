@@ -2,13 +2,13 @@ import { render, screen, waitFor } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import MapWithStores from '@/components/MapWithStores'
 import * as storeDataModule from '@/lib/store-data'
+import { ExtendedStore } from '@/types/store'
 
-// Google Maps APIのモック
-const mockMarker = {
-  setPosition: jest.fn(),
-  setVisible: jest.fn(),
-  addListener: jest.fn(),
-  setMap: jest.fn(),
+// AdvancedMarkerElementインスタンスのモック
+const mockMarkerInstance = {
+  addListener: jest.fn(() => ({ remove: jest.fn() })),
+  map: null as unknown,
+  position: null as unknown,
 }
 
 const mockMap = {
@@ -17,12 +17,16 @@ const mockMap = {
   addListener: jest.fn(),
 }
 
+// Google Maps APIのモック（AdvancedMarkerElement対応）
 const mockGoogleMaps = {
   Map: jest.fn(() => mockMap),
-  Marker: jest.fn(() => mockMarker),
-  LatLng: jest.fn((lat, lng) => ({ lat, lng })),
-  Size: jest.fn((width, height) => ({ width, height })),
-  Point: jest.fn((x, y) => ({ x, y })),
+  importLibrary: jest.fn(),
+  marker: {
+    AdvancedMarkerElement: jest.fn(() => mockMarkerInstance),
+  },
+  event: {
+    removeListener: jest.fn(),
+  },
   MapTypeId: {
     ROADMAP: 'roadmap'
   }
@@ -36,7 +40,7 @@ Object.defineProperty(window, 'google', {
 })
 
 // テスト用の店舗データ
-const mockStores = [
+const mockStores: ExtendedStore[] = [
   {
     id: 'roushouki',
     name: '老祥記',
@@ -46,7 +50,12 @@ const mockStores = [
     businessHours: '月〜土 8:30-18:30',
     features: ['伝統の味'],
     googleMapsUrl: 'https://maps.google.com',
-    categories: ['テイクアウト' as const]
+    categories: ['テイクアウト'],
+    dataSource: {
+      collectionDate: '2026-01-13',
+      sourceUrl: 'https://example.com',
+      isEnhanced: false
+    }
   },
   {
     id: 'shikohroh',
@@ -57,63 +66,70 @@ const mockStores = [
     businessHours: '11:00-20:00',
     features: ['バリエーション豊富'],
     googleMapsUrl: 'https://maps.google.com',
-    categories: ['テイクアウト' as const]
+    categories: ['テイクアウト'],
+    dataSource: {
+      collectionDate: '2026-01-13',
+      sourceUrl: 'https://example.com',
+      isEnhanced: false
+    }
   }
 ]
 
 // store-dataモジュールのモック
 jest.mock('@/lib/store-data', () => ({
-  getStoresData: jest.fn()
+  getExtendedStoresData: jest.fn()
 }))
 
-const mockGetStoresData = storeDataModule.getStoresData as jest.MockedFunction<typeof storeDataModule.getStoresData>
+const mockGetExtendedStoresData = storeDataModule.getExtendedStoresData as jest.MockedFunction<typeof storeDataModule.getExtendedStoresData>
 
 describe('MapWithStores Integration', () => {
   beforeEach(() => {
     jest.clearAllMocks()
-    mockGetStoresData.mockResolvedValue(mockStores)
+    mockGetExtendedStoresData.mockResolvedValue(mockStores)
+    mockGoogleMaps.importLibrary.mockResolvedValue({})
+    mockMarkerInstance.addListener.mockReturnValue({ remove: jest.fn() })
   })
 
   test('店舗データが読み込まれてマーカーが作成されること', async () => {
     render(<MapWithStores />)
-    
+
     await waitFor(() => {
-      expect(mockGetStoresData).toHaveBeenCalled()
+      expect(mockGetExtendedStoresData).toHaveBeenCalled()
     })
-    
+
     await waitFor(() => {
       // 各店舗に対してマーカーが作成されることを確認
-      expect(mockGoogleMaps.Marker).toHaveBeenCalledTimes(mockStores.length)
+      expect(mockGoogleMaps.marker.AdvancedMarkerElement).toHaveBeenCalledTimes(mockStores.length)
     })
   })
 
   test('各店舗マーカーが正しい位置に配置されること', async () => {
     render(<MapWithStores />)
-    
+
     await waitFor(() => {
-      expect(mockGoogleMaps.Marker).toHaveBeenCalledTimes(2)
+      expect(mockGoogleMaps.marker.AdvancedMarkerElement).toHaveBeenCalledTimes(2)
     })
 
     // 第1店舗（老祥記）のマーカー
-    expect(mockGoogleMaps.Marker).toHaveBeenNthCalledWith(1, expect.objectContaining({
+    expect(mockGoogleMaps.marker.AdvancedMarkerElement).toHaveBeenNthCalledWith(1, expect.objectContaining({
       position: mockStores[0].coordinates,
       title: mockStores[0].name
     }))
 
     // 第2店舗（四興樓）のマーカー
-    expect(mockGoogleMaps.Marker).toHaveBeenNthCalledWith(2, expect.objectContaining({
+    expect(mockGoogleMaps.marker.AdvancedMarkerElement).toHaveBeenNthCalledWith(2, expect.objectContaining({
       position: mockStores[1].coordinates,
       title: mockStores[1].name
     }))
   })
 
   test('店舗データ読み込みエラー時に適切に処理されること', async () => {
-    mockGetStoresData.mockRejectedValue(new Error('データ読み込み失敗'))
-    
+    mockGetExtendedStoresData.mockRejectedValue(new Error('データ読み込み失敗'))
+
     render(<MapWithStores />)
-    
+
     await waitFor(() => {
-      expect(mockGetStoresData).toHaveBeenCalled()
+      expect(mockGetExtendedStoresData).toHaveBeenCalled()
     })
 
     // エラー時でもマップコンポーネントは表示される
@@ -123,33 +139,36 @@ describe('MapWithStores Integration', () => {
 
   test('地図とマーカーが同時に初期化されること', async () => {
     render(<MapWithStores />)
-    
+
     await waitFor(() => {
       expect(mockGoogleMaps.Map).toHaveBeenCalled()
-      expect(mockGoogleMaps.Marker).toHaveBeenCalledTimes(2)
+      expect(mockGoogleMaps.marker.AdvancedMarkerElement).toHaveBeenCalledTimes(2)
     })
 
     // マーカーが正しいマップインスタンスに追加されることを確認
-    const markerCalls = (mockGoogleMaps.Marker as jest.MockedFunction<any>).mock.calls
-    markerCalls.forEach((call: any[]) => {
-      if (call[0] && typeof call[0] === 'object' && 'map' in call[0]) {
-        expect(call[0].map).toBe(mockMap)
+    const markerCalls = (mockGoogleMaps.marker.AdvancedMarkerElement as jest.Mock).mock.calls
+    markerCalls.forEach((call) => {
+      const options = call[0] as { map?: unknown } | undefined
+      if (options && 'map' in options) {
+        expect(options.map).toBe(mockMap)
       }
     })
   })
 
   test('マーカークリック時に店舗詳細モーダルが表示される予定', async () => {
     render(<MapWithStores />)
-    
+
     await waitFor(() => {
-      expect(mockMarker.addListener).toHaveBeenCalledWith(
+      expect(mockMarkerInstance.addListener).toHaveBeenCalledWith(
         'click',
         expect.any(Function)
       )
     })
-    
+
     // 将来実装予定：クリックイベントハンドラの動作確認
     // ここではイベントリスナーが正しく追加されていることのみ確認
-    expect(mockMarker.addListener).toHaveBeenCalledTimes(2) // 2つの店舗
+    await waitFor(() => {
+      expect(mockMarkerInstance.addListener).toHaveBeenCalledTimes(2) // 2つの店舗
+    })
   })
 })

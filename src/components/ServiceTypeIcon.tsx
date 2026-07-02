@@ -12,6 +12,7 @@ const ServiceTypeIcon: React.FC<ServiceTypeIconProps> = ({ serviceType, classNam
   const baseClassName = `w-5 h-5 ${iconStyle} ${className}`
 
   switch (serviceType) {
+    case '店内飲食':
     case 'イートイン':
     case 'store':
       return (

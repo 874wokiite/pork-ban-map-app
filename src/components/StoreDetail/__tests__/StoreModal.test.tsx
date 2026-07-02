@@ -1,9 +1,9 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import StoreModal from '../StoreModal'
-import { Store } from '@/types/store'
+import { ExtendedStore } from '@/types/store'
 
-const mockStore: Store = {
+const mockStore: ExtendedStore = {
   id: 'test-store',
   name: 'テスト店舗',
   address: '〒650-0001 兵庫県神戸市中央区テスト町1-2-3',
@@ -13,7 +13,12 @@ const mockStore: Store = {
   features: ['テスト特徴1', 'テスト特徴2'],
   description: 'テスト店舗の説明文',
   googleMapsUrl: 'https://maps.google.com/?q=test',
-  categories: ['テイクアウト']
+  categories: ['テイクアウト'],
+  dataSource: {
+    collectionDate: '2026-01-13',
+    sourceUrl: 'https://example.com',
+    isEnhanced: false
+  }
 }
 
 describe('StoreModal', () => {

@@ -74,7 +74,7 @@ describe('StoreSpectrumSection', () => {
 
       render(<StoreSpectrumSection store={store} />)
 
-      expect(screen.getByText('豚饅の特徴')).toBeInTheDocument()
+      expect(screen.getByText('豚饅の特徴（AI分析）')).toBeInTheDocument()
     })
   })
 

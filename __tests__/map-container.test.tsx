@@ -53,7 +53,7 @@ describe('MapContainer', () => {
         expect.any(HTMLElement),
         expect.objectContaining({
           center: { lat: 34.6925, lng: 135.1955 }, // 神戸市中心
-          zoom: 13,
+          zoom: 15, // jsdomのwindow.innerWidth=1024はデスクトップ扱い
           mapTypeId: 'roadmap'
         })
       )

@@ -24,7 +24,7 @@ describe('Netlify設定', () => {
     const netlifyConfigPath = path.join(process.cwd(), 'netlify.toml')
     const configContent = fs.readFileSync(netlifyConfigPath, 'utf-8')
     
-    expect(configContent).toContain('NODE_VERSION = "18"')
+    expect(configContent).toContain('NODE_VERSION = "20"')
   })
 
   test('セキュリティヘッダーが設定されている', () => {

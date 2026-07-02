@@ -20,11 +20,6 @@ const nextConfig: NextConfig = {
   // TypeScript厳密チェック
   typescript: {
     ignoreBuildErrors: false
-  },
-  
-  // ESLint設定
-  eslint: {
-    ignoreDuringBuilds: false
   }
 };
 

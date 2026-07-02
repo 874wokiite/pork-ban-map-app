@@ -22,6 +22,13 @@ export const spectrumFeatureAnalysisSchema = z.object({
 /** YYYY-MM-DD形式の日付文字列 */
 const dateStringSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'YYYY-MM-DD形式で指定してください')
 
+/** 豚饅娘の一言コメント（MusumeComment型と対応） */
+export const musumeCommentSchema = z.object({
+  text: z.string().min(1),
+  character: z.enum(['kanon', 'saki']),
+  visitDate: dateStringSchema.optional(),
+})
+
 export const extendedStoreSchema = z
   .object({
     id: z.string().min(1),
@@ -38,6 +45,7 @@ export const extendedStoreSchema = z
     description: z.string().optional(),
     googleMapsUrl: z.string().startsWith('https://'),
     categories: z.array(storeCategorySchema).min(1),
+    musumeComment: musumeCommentSchema.optional(),
     aiAnalysis: z
       .object({
         features: spectrumFeatureAnalysisSchema,

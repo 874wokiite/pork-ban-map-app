@@ -10,6 +10,10 @@ updates:
         update-types:
           - minor
           - patch
+    # メジャーアップデート（next 16等）は破壊的変更を含むため手動で対応する
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
 
   # GitHub Actionsの更新
   - package-ecosystem: github-actions
